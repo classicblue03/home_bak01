@@ -1,0 +1,285 @@
+@charset "utf-8";
+body{
+
+}
+
+
+.quick{
+    position: fixed;
+    left:50%;
+    margin-left:600px;
+    /*right:20px; 화면을 작게하면 문제가 생김 */
+    top:50%;
+    transform: translateY(-50%);
+    z-index:20;
+}
+
+.quick li{
+    padding:10px;
+}
+
+.quick li a{ 
+    display: block;
+    width: 20px; height: 20px;
+    background:url("../images/page_bg.png") no-repeat;
+    text-indent:-99999px;
+}
+
+.quick li a:hover{ 
+    background-position-y:-20px; /*스플라이트 이미지 사용시 백그라운드포지션y 명령어 이용*/
+}
+
+/* on class를 추가 */
+.quick li.on a{ 
+    background-position-y:-20px;
+
+}
+
+
+.section1{
+
+    width: 100%;
+    height: 1277px;
+    background: #dcd8d5;
+    position: relative;
+    z-index:10;
+}
+.section1 .btn_shop1{
+    position: absolute;
+    left:20px;
+    top:16px;
+}
+.section1 .btn_shop1 img{
+    width: 57px;
+}
+.section1 .btn_shop2{
+    position: absolute;
+    right:20px;
+    top:16px;
+}
+.section1 .btn_shop2 img{
+    width: 57px;
+}
+
+.section1 .section1_inner{
+    width: 1000px;
+    margin:0 auto;
+    position: relative;
+    border:1px solid red;
+}
+.section1 .section1_inner .tit{
+    position: absolute;
+    left:60px;
+    top:350px;
+    text-align:center;
+}
+.section1 .section1_inner .tit p{
+    font-size: 14px;
+    line-height: 18px;
+    color: #978f88;
+    margin-top: 20px;
+}
+.section1 .section1_inner .tit .btn_down1{
+    display:block;
+    margin-top:30px;
+}
+/* --------------------------------- section2 ---------------------------------- */
+.section2{
+    width: 100%;
+    height: 1025px;
+    background:url("../images/con_02_bg.jpg") repeat-x;
+}
+.section2 .header{
+    width: 100%;
+    height: 90px;
+    background:rgba(255,255,255,0.5);
+    position: relative;
+    z-index:10;
+}
+.section2 .header.on{
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.section2 .header .btn_shop1{
+    position: absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
+}
+.section2 .header .btn_shop1 img{
+    width: 57px;
+}
+.section2 .header h1{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+.section2 .header .btn_shop2{
+    position: absolute;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+}
+.section2 .header .btn_shop2 img{
+    width: 57px;
+}
+.section2 .section2_inner{
+    width: 1000px;
+    height: 1025px;
+    margin:0 auto;
+    border:1px solid red;
+    position: relative;
+
+}
+
+/* ------------------휴대폰 케이스 애니메이션------------------------- */
+
+.section2 .section2_inner .mobile_case{
+    position: absolute;
+    top: -1060px;
+    left:50px;
+}
+
+.section2 .section2_inner .mobile_case.on{
+    /*애니메이션 실행*/
+    animation:case_ani 2s ease;
+    animation-fill-mode:forwards ; /*이 명령어 넣으면 되돌아가지 않는다*/
+}
+
+/* 모바일케이스 애니메이션 */
+@keyframes case_ani{
+    0%{left:50px; top:-1060px;}
+    50%{top:100px;}
+    100%{top:20px;}
+}
+
+.section2 .section2_inner .tit{
+    position: absolute;
+    left:50%;
+    top:270px;
+}
+.section2 .section2_inner .tit h2{
+    font-size: 24px;
+    color: #d1b694;
+    margin-top: 20px;
+}
+.section2 .section2_inner .tit p{
+    color: #c1b9b2;
+    line-height: 26px;
+    margin-top: 20px;
+}
+.section2 .section2_inner .tit .btn_down2{
+    display:block;
+    margin-top:30px;
+}
+/* -------------------- section3 --------------------- */
+.section3{
+    width: 100%;
+    height: 1000px;
+    background: #fff;
+    overflow: hidden;/*넘치는 애들은 안보이게*/
+}
+.section3 .section3_inner{
+    width: 1000px;
+    height: 1000px;
+    margin:0 auto;
+    border:1px solid red;
+    position: relative;
+}
+.section3 .section3_inner .txt{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top:140px;
+    border:1px solid red;
+    text-align: center;
+    z-index: 5;
+}
+
+.section3 .section3_inner .txt h2{
+    text-align: center;
+    font-size: 32px;
+    color: #444;
+    font-weight: bold;
+}
+
+.section3 .section3_inner .txt p{
+    font-size: 16px;
+    color: #666;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+.section3 .section3_inner .txt .btn_down3{
+}
+
+.section3 .section3_inner .cat{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    bottom:-1000px;
+    
+}
+
+.section3 .section3_inner .cat.on{
+    animation:cat_ani 4s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cat_ani{
+    0%{bottom:-1000px;}
+    25%{bottom:0;}
+    50%{bottom:0;}
+    75%{opacity:1;}
+    100%{bottom:0; opacity:0;}
+
+}
+
+.section3 .section3_inner .phone{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    bottom:0;
+    opacity:0;
+   
+}
+
+.section3 .section3_inner .phone.on{
+    animation:phone_ani 4s 3s ease; /*4초동안 애니메이션 주는데 3초때 시작하겠다는 뜻*/
+    animation-fill-mode: forwards;
+}
+
+@keyframes phone_ani{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/* -------------------- section4 --------------------- */
+.section4{
+    width: 100%;
+    height: 1140px;
+    background: url("../images/con_04_bg.jpg") repeat-x;
+}
+.section4 .section4_inner{
+    width: 1000px;
+    height: 1140px;
+    margin:0 auto;
+    border:1px solid red;
+}
+
+/* -------------------- section5 --------------------- */
+.section5{
+    width: 100%;
+    height: 1040px;
+    background: #dcd8d5;
+}
+.section5 .section5_inner{
+    width: 1000px;
+    height: 1040px;
+    margin:0 auto;
+    border:1px solid red;
+}
+
+

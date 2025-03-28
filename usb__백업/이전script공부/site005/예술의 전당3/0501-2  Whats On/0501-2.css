@@ -1,0 +1,140 @@
+* {margin: 0; padding: 0;}
+a {color: black; text-decoration: none;}
+li {list-style: none;}
+img {display: black;}
+
+/*------- container_what --------*/
+#wrap01 {
+    background:white;
+}
+
+#container_what {
+    width:1350px; height: 800px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+}
+.what_frame {
+    width:1150px; height: 600px;
+    margin: 0 auto;
+}
+.what_frame li {width:1150px;}
+
+.what_btn a {
+    background: rgba(0,0,0,0);
+    overflow: hidden;
+}
+.what_btn a::before {
+    content: url(art_img/btns.png);
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+.what_btn a {
+    position: absolute;
+    top:50%; left: 50%;
+    width:72px; height: 72px;
+    margin-top:-36px;
+}
+.what_btn a.what_left{
+    margin-left: -655px;
+}
+.what_btn a.what_left::before {
+    margin-top:-20px;
+}
+.what_btn a.what_right {
+    margin-left: 590px;
+}
+.what_btn a.what_right::before {
+    margin-left: -80px;
+    margin-top:-20px;
+}
+.what_indi {
+    width:60px;
+    margin: 0 auto;
+    text-align: center;
+}
+.what_indi a {
+    display: block;
+    float: left;
+    width:15px; height: 15px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+
+
+
+/*  위치 지정 및 움직임 */
+
+
+/*~1*/
+.sheet{overflow: hidden;}
+
+.left_box{
+    float: left;
+    margin-right: 10px;
+}
+.right_box{
+    float: left;
+}
+
+/*~1 위까지하면 좌우로 나뉨*/
+
+
+
+
+.left_b{
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.right_t{ overflow: hidden;}
+
+.left_b div, .right_t div{float: left;}
+.left_b left, .right_t left{margin-right: 10px;}
+
+
+.right_t{
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+/* 효과 */
+
+.whaton .left_t{
+    width: 570px; height: 385px;
+    overflow:hidden;
+    position: relative;
+}
+
+.cover{
+    width: 100%; height: 100px;
+    background:darkcyan;
+    opacity: 0.3;
+    position: absolute;
+    bottom: -100px; left: 0;     /*처음에는 밖에있고 마우스 오버시 보여야함*/
+
+    transition: all 0.5s;
+}
+
+.left_t:hover .cover{
+    bottom: 0;
+}
+
+
+
+
+/*밑에거 쓰면 바로 최종정렬됨*/
+
+#cover_box{
+    position: relative;
+    width: 280px; height: 190px;
+    overflow: hidden;
+}

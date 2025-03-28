@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    display: block;
+    border: 0;
+}
+
+@media all and (min-width:1200px) {
+    #wrap {
+        width: 100%;
+    }
+    header {
+        width: 100%;
+        height: 100px;
+        background-color: lightgreen;
+        float: left;
+    }
+    #in_header {
+        width: 1200px;
+        height: 100px;
+        background-color: lightgray;
+        margin: 0 auto;
+    }
+    #logo {
+        width: 150px;
+        height: 100%;
+        background-color: firebrick;
+        float: left;
+    }
+    #menu {
+        width: 900px;
+        height: 100px;
+        background-color: aquamarine;
+        float: left;
+        margin-left: 50px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 24px;
+        position: relative;
+    }
+    .top_menu {
+        width: 25%;
+        height: 100%;
+        background-color: cadetblue;
+        float: left;
+    }
+    #sub_menu {
+        width: 1200px;
+        height: 0;
+        background-color: lightsalmon;
+        position: absolute;
+        top: 100px;
+        transition-duration: 0.5s;
+        z-index: 99999;
+    }
+    header:hover #sub_menu {
+        height: 300px;
+    }
+    #mo_wrap {
+        display: none;
+    }
+    #section_1 {
+        width: 100%;
+        height: 600px;
+        background-image: url(../img/a.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        float: left;
+    }
+    #section_2 {
+        width: 100%;
+        background-color: lightgoldenrodyellow;
+        float: left;
+        margin-bottom: 100px;
+    }
+    /*****in_wrap*****/
+    .in_wrap {
+        width: 1200px;
+        background-color: lightsteelblue;
+        margin: 100px auto;
+        overflow: hidden;
+        /*->부모를 자식에게 높이값을 맞추기 위해서 했는데 결론적으로 부모의 높이값이 0이 나오면 overflow:hidden값을 넣어줌 
+            ->포지션이 들어갔다면 예외*/
+    }
+    /*****in_wrap*****/
+    .con_1 {
+        width: 585px;
+        float: left;
+        margin-right: 30px;
+        overflow: hidden;
+    }
+    .con_1>img {
+        width: 100%;
+        height: auto;
+        /*=>이미지태그의 높이값을 auto로 잡아둘시 부모 %에 맞춰 비율대로 줄어듬*/
+        transition-duration: 0.5s;
+        transform: scale(1);
+    }
+    .con_1:hover img {
+        transform: scale(1.2);
+    }
+    .con_1:nth-child(2),
+    .con_1:last-child {
+        margin-right: 0;
+    }
+    .con_1:first-child,
+    .con_1:nth-child(2) {
+        margin-bottom: 30px;
+    }
+    /*->최종적으로 각 부모의 크기는 없어지고, 이미지 태그 고유의 높이값을 사용하게 됨
+    ->이미지를 감싸고 있는 부모의 높이값이 px단위로 존재한다면 반응형 작업시 원치않은 높이값이 생성되거나, 구조가 무너질수있음
+    ->컨텐츠에 들어가는 이미지는 비율에 맞는걸 사용해주고, 실제 디자인 작업 후 잘라진 이미지는 비율에 맞기 때문에 반응형 작업시 이미지크기에 대한 문제 는 없음*/
+    #section_3 {
+        width: 100%;
+        height: 300px;
+        background-color: lightblue;
+        float: left;
+    }
+    #section_4 {
+        width: 100%;
+        height: 660px;
+        background-color: lightcoral;
+        float: left;
+        margin-top: 100px;
+    }
+    #in_wrap_2 {
+        height: 400px;
+        background-color: cornflowerblue;
+    }
+    .con_2 {
+        width: 380px;
+        height: 400px;
+        background-color: beige;
+        float: left;
+        margin-right: 30px;
+    }
+    .con_2:last-child {
+        margin-right: 0;
+    }
+}

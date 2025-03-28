@@ -1,0 +1,354 @@
+// 1280px < width < 1599px 일 경우
+@media screen and (max-width: 1599px) {
+  .wrap {
+    padding-left: 0;
+  }
+
+  header {
+    border-bottom: 1px solid #eee;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 100px;
+
+    .logo {
+      height: auto;
+
+      a {
+        width: 150px;
+        height: 100%;
+        margin: 0 0 0 3rem;
+      }
+    }
+
+    #gnb {
+      margin-top: 0;
+
+      ul {
+        display: flex;
+      }
+
+      a {
+        height: 100px;
+        padding: 0 30px;
+        line-height: 100px;
+      }
+    }
+
+    .nav-goto {
+      display: none;
+    }
+  }
+
+  .container {
+    height: calc(100vh - 100px);
+  }
+}
+
+// 1023px < width < 1280px 일 경우
+@media screen and (max-width: 1280px) {
+  .container {
+    // overflow: hidden;
+    // height: auto;
+    // 기존 1599이하일 경우에 설정되었던 높이 값을 취소하고 defult로 설정
+  }
+
+  // 변수 재선언
+  $w : 25%;
+  $h : 280px;
+
+  article {
+    width: $w;
+    height: $h;
+
+    &:first-child {
+      width: $w * 3;
+      height: $h * 2;
+    }
+
+    &:nth-child(2) {
+      width: $w;
+      height: $h;
+    }
+
+    &:nth-child(6) {
+      width: $w * 2;
+      height: $h;
+    }
+
+    &:nth-child(7) {
+      width: $w * 2;
+      height: $h;
+    }
+
+    &:nth-child(8) {
+      border-top: 1px solid #929291;
+      border-bottom: 1px solid #929291;
+    }
+
+    &:nth-child(9) {
+      width: $w;
+      height: $h;
+    }
+
+    &:nth-child(10) {
+      width: $w * 2;
+      height: $h;
+    }
+  }
+
+}
+
+// 779px < width < 1023px 일 경우
+@media screen and (max-width: 1023px) {
+  // 변수 재선언
+  $w: 33.333%;
+
+  article {
+    width: $w;
+
+    &:first-child {
+      width: $w * 3;
+      // height: 400px;
+    }
+
+    &:nth-child(2) {
+      width: $w * 2;
+    }
+
+    &:nth-child(6) {
+      width: $w * 2;
+      border-top: 1px solid #929291;
+      border-bottom: 1px solid #929291;
+    }
+
+    &:nth-child(9) {
+      width: $w;
+    }
+
+    &:nth-child(4),
+    &:nth-child(7),
+    &:nth-child(10),
+    &:nth-child(12) {
+      display: none;
+    }
+  }
+}
+
+// 639px < width < 779px 일 경우
+@media screen and (max-width: 779px) {
+  header {
+    flex-direction: column;
+    height: auto;
+
+    .logo {
+      margin: 15px 0;
+
+      a {
+        width: 150px;
+        height: 100px;
+        margin: 0 auto;
+        background-size: contain;
+      }
+    }
+
+    #gnb {
+      border-top: 1px solid #eee;
+
+      ul {
+        justify-content: space-between;
+      }
+
+      a {
+        height: 60px;
+        line-height: 60px;
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .nav-util {
+    display: none;
+  }
+
+  // 변수 재선언
+  $w : 50%;
+
+  article {
+    width: $w;
+
+    &:nth-child(2) {
+      width: $w * 2;
+    }
+
+    &:nth-child(n+3) {
+      width: $w;
+    }
+
+    &:nth-child(6) {
+      border-right: 1px solid #929291;
+    }
+
+    &:nth-child(11) {
+      background: url(../../images/aside.jpg);
+    }
+  }
+}
+
+// 479px < width < 639px 일 경우
+@media screen and (max-width: 639px) {
+  header {
+    #gnb {
+      ul {
+        padding: 0 2%;
+      }
+
+      a {
+        padding: 0;
+      }
+    }
+  }
+
+  // 변수 재선언
+  // $h : 200px;
+
+  article {
+    h2 {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    &:nth-child(2) {
+      h2 {
+        width: 60%;
+        font-weight: bold;
+      }
+    }
+
+    &:nth-child(n+2) {
+      // height: $h;
+    }
+
+    &:nth-child(3) h2,
+    &:nth-child(6) h2,
+    &:nth-child(8) h2,
+    &:nth-child(11) h2 {
+      font-weight: bold;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+
+    h2 {
+      // font-size: 1.7em;
+      font-weight: 300;
+    }
+
+    p {
+      display: none;
+    }
+  }
+}
+
+// width 479px 이하일 경우
+@media screen and (max-width: 479px) {
+  header {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    background: url(../../images/w01.jpg) 60% 0 no-repeat;
+    // background: url(../../images/w01.jpg) no-repeat;
+    background-size: cover;
+
+    // display: none;
+    // content: '';
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+
+    .logo {
+      margin: 0 0 50px;
+
+      a {
+        // width: 400px;
+        margin-bottom: 0;
+        display: block;
+        height: 180px;
+        background-image: url(../../images/wynn-mobile.png);
+        background-size: cover;
+      }
+    }
+
+    #gnb {
+      width: 60%;
+      margin: 0 auto;
+      border: none;
+
+      ul {
+        flex-direction: column;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      a {
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 15px;
+        text-align: center;
+        font-size: 1.3rem;
+        color: #fff;
+      }
+    }
+  }
+
+  article {
+    &::before {
+      background: rgba(0, 0, 0, .4);
+    }
+
+    &::after {
+      // display: none;
+      // content: '';
+      // position: fixed;
+      // top: 0;
+      // left: 0;
+      // right: 0;
+      // bottom: 0;
+      // background: url(../../images/bg_event.jpg) 0 0 no-repeat;
+      // opacity: .9;
+    }
+
+    &:first-child {
+      // position: fixed;
+      // top: 0;
+      // left: 0;
+      // right: 0;
+      // bottom: 0;
+      // height: 100vh;
+      // background: url(../../images/w01.jpg) 60% 0 no-repeat;
+      // background-size: cover;
+
+      // background-position: -310px 0;
+
+
+      strong {
+        display: none;
+      }
+    }
+
+    &:nth-child(n+2) {
+      //두번째 article 이후로 모두
+      display: none;
+    }
+  }
+}

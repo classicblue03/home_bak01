@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-image: url(art_img/bg_img.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+#header,
+#wrap01 {
+    background: white;
+}
+
+/*-------------- log_popup -------------*/
+#log_popup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    opacity: 0;
+    z-index: 9999;
+}
+
+#log_popup .log_body {
+    width: 440px;
+    height: 520px;
+    position: fixed;
+    left: 50%;
+    top: 20%;
+    margin-left: -220px;
+    background: white;
+    opacity: 0;
+}
+
+#log_popup.on {
+    display: block;
+    opacity: 1;
+}
+
+#log_popup.on .log_body {
+    opacity: 1;
+}
+
+#log_popup .log_body img {
+    display: block;
+}
+
+#log_popup .log_body #log_close {
+    width: 380px;
+    height: 35px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 35px;
+    margin: 0 auto;
+    font-weight: bold;
+    color: #666;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*-------------- header -------------*/
+#header {
+    position: relative;
+    z-index: 999;
+    background: white;
+}
+
+#header_top {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+#header_top li {
+    font-size: 12px;
+    display: inline-block;
+    padding: 10px 5px;
+}
+
+.header_top_left {}
+
+.header_top_left li:last-child {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+
+}
+
+.header_top_right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#header_bottom {
+    height: 100px;
+    border-bottom: 1px solid #ccc;
+    background: pink;
+}
+
+.header_bottom_inner {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    background: #111;
+}
+
+.header_menu {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    background: coral;
+}
+/* =========================== */
+#all_menu {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 25px;
+    left: 0;
+
+    width: 1200px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background: green;
+}
+
+#all_menu dl {
+    float: left;
+    width: 120px;
+    padding: 0 20px;
+    /* margin-right: 20px; */
+    background: blue;
+}
+
+#all_menu dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: red;
+}
+
+#all_menu dl dd a {
+    padding: 8px 0;
+    display: block;
+}
+
+#all_menu dl dd a:hover,
+#all_menu dl dd a:focus {
+    background: #f00;
+    color: white;
+}
+/* =================================== */
+#close_bt {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.logo {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.widget {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    overflow: hidden;
+}
+
+.widget p {
+    width: 45px;
+    height: 45px;
+    float: left;
+    text-indent: -9999px;
+}
+
+.widget .search {
+    background: url(art_img/search_off.jpg);
+    background-size: 100% 100%;
+}
+
+.widget .search:hover {
+    background: url(art_img/search_on.jpg);
+}
+
+.widget .calendar {
+    background: url(art_img/calendar_off.jpg);
+    background-size: 100% 100%;
+}
+
+.widget .calendar:hover {
+    background: url(art_img/calendar_on.jpg);
+}
+
+/*------------------ visual_main ----------------*/
+.visual {
+    background: white;
+    height: 465px;
+    min-width: 960px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.slides .slide {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.slides .slide img {
+    left: 50%;
+    margin-left: -800px;
+    position: absolute;
+}
+
+.slide_nav a,
+.slide_indicator a {
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+.slide_nav a::before,
+.slide_indicator a::before {
+    content: url(art_img/btns.png);
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+.slide_nav a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 72px;
+    height: 72px;
+    margin-top: -36px;
+}
+
+.slide_nav a.prev {
+    margin-left: -480px;
+}
+
+.slide_nav a.prev::before {
+    margin-top: -20px;
+}
+
+.slide_nav a.next {
+    margin-left: 408px;
+}
+
+.slide_nav a.next::before {
+    margin-left: -80px;
+    margin-top: -20px;
+}
+
+.slide_nav a.disabled {
+    display: none;
+}
+
+.slide_indicator {
+    bottom: 30px;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+
+.slide_indicator a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.slide_indicator a:active {
+    cursor: default;
+}
+
+.slide_indicator a::before {
+    margin-left: -110px;
+}
+
+.slide_indicator a.active::before {
+    margin-left: -130px;
+}
+
+/*-------------- container_what -------------*/

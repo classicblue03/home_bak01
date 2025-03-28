@@ -1,0 +1,96 @@
+* {margin:0; padding:0;}
+li {list-style: none;}
+body {margin: 0 auto; width: 782px; height: 4000px;}
+
+/*-----------popup------------*/
+#pop_btn,
+#pop_btn:checked~.popup {
+  display: none;
+}
+
+#pop_btn~.popup {display: block;}
+.popup {z-index: 9999;position: absolute;top: 100px;left: 100px;width: 320px;height: 340px;border: 1px solid black;}
+.pop_img img {width: 300px;height: 300px;margin: 10px;}
+
+/*-----------header------------*/
+#header {height: 200px;background-color: #666;}
+.gnb_menu {overflow: hidden;}
+.gnb_menu ul {float: right;}
+.gnb_menu li {display: inline-block;padding: 0 10px;font-size: 11px;cursor: pointer;}
+.gnb_menu li:hover {color: blue;}
+.logo {margin: 0 auto;width: 150px;height: 150px;line-height: 150px;text-align: center;}
+
+/*----------- wrap ------------*/
+#wrap #wrap_menu {position: relative;}
+#wrap #wrap_menu .lnb_menu li {float: left;width: 150px;height: 32px;line-height: 32px;text-align: center;background-color: black;color: white;cursor: pointer;}
+
+#wrap #wrap_menu .lnb_menu li:hover {background-color: #666;color: black;}
+#wrap #wrap_menu .lnb_menu .ham_btn {float: left;width: 32px;height: 32px;cursor: pointer;}
+#wrap #wrap_menu .lnb_menu .ham_btn img {width: 100%;height: auto;}
+
+/* ============================================ 
+  fullDown menu
+ ============================================ */
+.ham_menu {overflow: hidden;position: absolute;top: 32px;width: 100%;height: auto;background: blue; /* height 100% 안됨 */}
+.ham_menu ul {float: left;background: coral;/* margin-left: 32px; */}
+.ham_menu li {width: 150px;height: 30px;text-align: center;line-height: 30px;color: white;font-size: 14px;}
+.ham_menu li:hover {background-color: #666;color: black;}
+
+/* mainSlide */
+.visual_main {margin: 0 auto; width: 782px; height: 300px; line-height: 300px; text-align: center; background-color: yellow;}
+
+/* container */
+.best_top {position: relative; margin-top: 30px;}
+.pro_title {width: 500px;font-size: 20px;font-weight: bold;}
+
+.pro {overflow: hidden;}
+.pro div {width: 180px;height: 180px;float: left;margin: 5px;border: 1px solid black;box-sizing: border-box;}
+.product02 {height: 0;transition-property: height;transition-duration: 0.5s;}
+
+/* label */
+.chk_btn {position: absolute;top: 0;right: 3px; width: 20px;height: 20px;background-image: url(img/plus_btn.jpg);cursor: pointer;transition-property: background-image;transition-duration: 0.5s;}
+
+/* input */
+#chk_btn~.best_top .chk_btn {background-image: url(img/plus_btn.jpg);}
+#chk_btn:checked~.best_top .chk_btn {background-image: url(img/minus_btn.jpg);}
+#chk_btn {display: none;}
+#chk_btn~.product02 {height: 0px;}
+#chk_btn:checked~.product02 {height: 190px;}
+
+#tab01,
+#tab02,
+#tab03,
+#tab01~.sheet01,
+#tab02~.sheet02,
+#tab03~.sheet03 {
+  display: none;
+}
+
+#tab01:checked~.sheet01,
+#tab02:checked~.sheet02,
+#tab03:checked~.sheet03 {
+  display: block;
+}
+
+#tab01:checked~.label .tab01,
+#tab02:checked~.label .tab02,
+#tab03:checked~.label .tab03 {
+  color: white; background-color: black;
+}
+
+.label {overflow: hidden;}
+.label label {
+  display: block; float: left; width: 100px; height: 30px; line-height: 30px;
+  text-align: center;border-radius: 10px 10px 0 0;background-color: #666;color: black;
+}
+
+.sheet {
+  width: 782px;
+  height: 300px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 300px;
+  border-radius: 0 10px 0 0;
+  color: white;
+  background-color: black;
+}

@@ -1,0 +1,73 @@
+
+
+-플렉스 개구리[Flexbox Froggy] https://flexboxfroggy.com/#ko
+
+-공백이 너무 많다.
+-시멘틱 태그 공부
+-id를 남발하지 않는다. (저는 주로 wrap, header, main, footer)
+
+-부모부터 본인까지의 class들을 다 적어주세요. (10년차 퍼블리셔도 이렇게씀)
+-css를 중괄호에 적을때 중요한 애들을 우선으로 넣어주세요.
+-버튼은 widht, height을 지정해주지 않아요. 그 대신 padding을 넣어서 자동으로 늘어나고 줄어들도록 합니다.
+-퍼블리싱을 시작할 때 그려가면서 하세요.
+
+wrap,컨테이너 질문했을때
+2. 네 저는 reset.css를 common.css로 reset과 공통적인 부분을 같이 적어두는 편이에요~
+이 부분에 대해서 방법은 다양하지만 저는 wrap은 어떠한 묶음을 정의하는 용도로 사용하고 있고 container를 딱 컨텐츠의 가운데 정렬 용도로 사용하고 있어요.
+
+
+
+
+@import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+/*===========================================================================
+ 공지
+ 
+ 수정해야할 기본 값
+ font-size : 
+ font-common-color : 
+ font-family : 
+ line-height : 1 / 1.5
+ main-color : 
+ sub-color : 
+ image-size : initial / auto 
+ input-border-color : 
+ input-normal-color : 
+ input-font-size : 
+ textarea-border-color : 
+============================================================================*/
+
+/*===========================================================================
+   RESET
+============================================================================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button, input, br {margin:0;padding:0;border:0;box-sizing:border-box;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+a {display: inline-block;text-decoration:none;color:inherit;}
+a:link, a:visited {text-decoration:none;}
+a:hover, a:active {text-decoration:none;}
+img {border:none;vertical-align:middle;}
+ol, ul, li {list-style:none;}
+i, em {font-style: normal;}
+legend{width:1px;height:1px;overflow:hidden;visibility:hidden;line-height:0;font-size:0;position:absolute; left:-999px;}
+
+.clear::after {
+  display:block; 
+  content:""; 
+  clear:both;
+}
+
+

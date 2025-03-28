@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>0529-2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <link rel="stylesheet" href="./css/auto.css">
+    <script src="jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="img_wrap">
+            <img src="img/1.jpg" alt="">
+            <img src="img/2.jpg" alt="">
+            <img src="img/3.jpg" alt="">
+            <img src="img/4.jpg" alt="">
+            <img src="img/5.jpg" alt="">
+        </div>
+        <ul id="btn_wrap">
+            <li class="btn on">1</li>
+            <li class="btn">2</li>
+            <li class="btn">3</li>
+            <li class="btn">4</li>
+            <li class="btn">5</li>
+        </ul>
+        <ul id="text_wrap">
+            <li class="text">첫번째</li>
+            <li class="text">두번째</li>
+            <li class="text">세번째</li>
+            <li class="text">네번째</li>
+            <li class="text">다섯번째</li>
+        </ul>
+    </div>
+    <script>
+        /*
+            텍스트,버튼 순서값 세우기
+
+            버튼클릭시
+            클릭한버튼 순서값,이미지 애니메이트
+
+            클린한버튼 색상addClass
+            다른버튼 removeClass
+
+            순서값아닌 객체는 밖으로
+            클린한버튼 순서값에 맞게 텍스트들어오고(제자리로)
+        */
+
+
+        $(document).ready(function () { //텍스트 순서값
+
+            $('.text').each(function (index) {
+                $(this).attr('data-index', index);
+            });
+
+
+            $('.btn').each(function (index) { //버튼 순서값
+                $(this).attr('data-index', index);
+
+            }).click(function () {
+
+                var i = $(this).attr('data-index'); //클릭한버튼을 변수로지정
+
+
+                $('#img_wrap').animate({
+                    left: -600 * i
+                });
+
+
+                $('.btn[data-index!=' + i + ']').removeClass('on'); //매개변수
+                $('.btn[data-index=' + i + ']').addClass('on');
+
+                $('.text[data-index!=' + i + ']').animate({
+                    left: -250
+                });
+
+                $('.text[data-index=' + i + ']').animate({
+                    left: 0
+                });
+
+            }); //click(function)
+
+
+            /*
+                $('선택자[data-index!='+변수+']').명령어();       
+                선택자의 데이터인덱스와 비교해서 틀렸을때
+
+                $('선택자[data-index='+변수+']').명령어();    
+                선택자의 데이터인덱스와 비교해서 같을때
+            */
+
+            //1초마다 자동재생
+            function moving(elem) { //위 img_wrap의 변수 i를 elem 로 받음
+
+                $('#img_wrap').animate({
+                    left: -600 * elem //매개변수 elem=0,1,2,3,4가 된다
+                });
+
+
+                $('.btn[data-index!=' + elem + ']').removeClass('on');
+                $('.btn[data-index=' + elem + ']').addClass('on');
+                $('.text[data-index!=' + elem + ']').animate({
+                    left: -250
+                });
+
+                $('.text[data-index=' + elem + ']').animate({
+                    left: 0
+                });
+            }
+
+
+            var num = 0; //변수를 초기화시킴
+
+            setInterval(function () {
+                num++; //01234로 계속증가
+
+                if (num > 4) { //4보다크면 원래대로 되돌리기
+                    num = 0;
+                }
+
+                moving(num); // num=매개변수
+
+            }, 2000);
+
+        }); //end
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+        
+        <style>
+        
+            *{margin: 0; padding: 0;}
+            
+            /**포지션 가운데 정렬
+            =>left 기준으로 left:50%일때 margin-left로 객체의 가로값/2값을 넣어줌
+            =>ex)선택된 객체 가로값 500px 일때 left:50%; margin-left:-250px;*/
+            
+            /*#box{
+                width: 300px;
+                height: 300px;
+                background-color: tan;
+                
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -150px;
+                margin-left: -150px;
+            }*/
+            
+            #out_box{
+                width: 700px;
+                height: 500px;
+                background-color: tan;
+                margin: 0 auto;
+                
+                position: relative;
+                /*=>자식에게 position:absolute가 들어갔을시 기준점이 브라우저가 됨
+                =>부모를 기준으로 만들어주고 싶을 경우
+                부모에게 position값을 넣어주면 부모를 기준점으로 만들어줄 수 있음*/
+            }
+            
+            #in_box{
+                width: 200px;
+                height: 200px;
+                background-color: crimson;
+                
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -100px;
+                margin-left: -100px;
+            }
+            
+            
+            
+        
+        
+        
+        </style>
+        
+	</head>
+
+	<body>
+	
+	    <!--<div id="box"></div>-->
+	    
+	    
+	    <div id="out_box">
+	        <div id="in_box"></div>
+	    </div>
+	    
+	    
+
+	</body>
+</html>

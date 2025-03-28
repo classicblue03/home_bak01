@@ -1,0 +1,98 @@
+@charset "utf-8";
+.popUp{
+    width: 100%;
+    height: 106px;
+    background:#36373c;
+}
+
+.popUp .popUp_inner{
+    width: 1090px;
+    margin: auto;
+
+}
+
+.popUp label{
+    color: #fff;
+    font-size: 14px;
+    height: 106px;
+    line-height: 106px;
+    border:1px solid red;
+}
+
+/* .popUp img{
+    float: left;
+} */
+
+header{
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    border-bottom:1px solid #ccc;
+}
+header .header_inner{
+    width: 1090px;
+    height: 70px;
+    margin: auto;
+    position: relative;
+}
+
+header .header_inner h1{
+    position: absolute;
+    left: 0;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.main{
+    width: 100%;
+    position: relative;
+}
+.main .visual{
+    width: 100%;
+    height: 920px;
+    background: url('../imgs/main_01_01.jpg') no-repeat center top;
+}
+.main .main_inner{
+    width: 1200px;
+    border:1px solid red;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    text-align: center;
+}
+
+.main .main_inner .list{
+    width: 100%;
+}
+
+.main .main_inner .list li{
+    float: left;
+    margin-right: 75px;
+}
+.main .main_inner .list li:last-child{
+    margin-right: 0;
+}
+
+.main .main_inner .list li a{
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.main .main_inner .list li a p{
+    font-size: 16px;
+    top: 148px;
+    position: absolute;
+    width: 350px;
+    height: auto;
+    color: #fff;
+    text-align: center;
+}
+
+footer{
+    width: 100%;
+    height: 90px;
+    background: #e1e1e1;
+}
+

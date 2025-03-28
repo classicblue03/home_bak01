@@ -1,0 +1,108 @@
+@charset "utf-8";
+body{
+    font-family: "맑은 고딕";
+}
+
+#main{
+    width: 100%;
+
+}
+#main .visual{
+    width: 100%;
+    height: 573px;
+}
+
+#main .visual a{
+    display: block;
+    width: 100%;
+    height: 573px;
+}
+
+#main .visual .visual1 a{
+    background:#cffb7f url('../images/20210521164348728413.jpg') no-repeat center top;
+
+}
+#main .visual .visual2 a{
+    background:#ffcc93  url('../images/20191128093133036275.jpg') no-repeat center top;
+
+}
+#main .visual .visual3 a{
+    background:#fcab7b url('../images/20190618144917232036.jpg') no-repeat center top;
+
+}
+#main .visual .visual4 a{
+    background:#be96b1 url('../images/20190215173954811230.jpg') no-repeat center top;
+
+}
+#main .visual .visual5 a{
+    background:#a8b8ed url('../images/20210331133509516352.jpg') no-repeat center top;
+
+}
+#main .visual .visual6 a{
+    background:#c1f06f url('../images/20190503144600076049.jpg') no-repeat center top;
+
+}
+#main .visual .visual7 a{
+    background:#fe730c url('../images/20191128152135446279.jpg') no-repeat center top;
+
+}
+
+
+
+/* 좌우버튼 custom */
+#main .slick-prev{
+    background: url('../images/btn_slide_prev.png');
+    border:none;
+    text-indent: -99999px;
+    width: 78px;
+    height: 78px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+    cursor: pointer;
+    margin-left: -650px;
+}
+
+#main .slick-next{
+    background: url('../images/btn_slide_next.png');
+    border:none;
+    text-indent: -99999px;
+    width: 78px;
+    height: 78px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+    cursor: pointer;
+    margin-left: 650px;
+}
+
+/* dots custom */
+#main .slick-dots{
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom:80px;
+}
+#main .slick-dots li{
+    display: inline;
+
+}
+#main .slick-dots li button{
+    border:none;
+    text-indent: -99999px;
+    background: url('../images/ico_slide_control.png') no-repeat;
+    z-index: 10;
+    margin:1px;  
+    width: 12px;
+    cursor: pointer;
+}
+
+#main .slick-dots li.slick-active button{
+    background: url('../images/ico_slide_control2_on.png') no-repeat;
+    width: 26px;
+}

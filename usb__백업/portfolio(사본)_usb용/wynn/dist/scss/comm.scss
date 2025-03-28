@@ -1,0 +1,332 @@
+@charset "UTF-8";
+@import url(../css/reset.css);
+
+$black : #000;
+$white : #fff;
+
+// width 1599px 이상일 경우
+body {
+  height: auto;
+}
+
+.wrap {
+  padding-left: 300px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  background-size: cover;
+  background: $white;
+
+  .logo {
+    height: 200px;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 7rem;
+      margin: 3rem auto 0;
+      background: url(../../images/wynn-animated-logo.gif) 50% 50% no-repeat;
+      background-size: contain;
+      text-indent: -9999px;
+    }
+  }
+
+  #gnb {
+    margin-top: 50px;
+
+    ul {
+
+      li {
+        a {
+          text-transform: uppercase;
+          display: block;
+          padding: 10px 20px 10px 50px;
+          font-size: 1.614em;
+          font-weight: bold;
+        }
+
+        &:hover {
+          a {
+            color: #963f21;
+          }
+
+          .nav-depth2 {
+            max-height: 154px;
+          }
+        }
+
+        .nav-depth2 {
+          overflow: hidden;
+          max-height: 0;
+          transition: all .7s;
+
+          li {
+
+            a {
+              display: block;
+              font-size: 14px;
+              color: #000;
+              font-weight: normal;
+
+              &:hover {
+                background: #f2f2f2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav-goto {
+    margin: auto 0 100px;
+
+    ul {
+      display: flex;
+      justify-content: center;
+
+      &.link-goto {
+        li:first-child a::before {
+          display: none;
+        }
+
+        a {
+          display: block;
+          padding: 4px 5px;
+          font-size: 1.3em;
+          text-transform: uppercase;
+
+          &::before {
+            content: '';
+            display: inline-block;
+            width: 1px;
+            height: 19px;
+            margin: -4px 13px 0 5px;
+            vertical-align: middle;
+            background: #999;
+          }
+        }
+      }
+
+      &.link-sns {
+        a {
+          font-size: 3em;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  height: calc(100vh);
+  background-size: cover;
+  background: url(../../images/bg.jpg);
+}
+
+// pc 변수
+$w : 20%;
+$h : 25%;
+
+article {
+  overflow: hidden;
+  float: left;
+  position: relative;
+  width: 20%;
+  height: 25%;
+  transition: width .5s;
+
+  &:hover::before {
+    display: none;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($black, .1);
+  }
+
+  a {
+    display: block;
+    height: 100%;
+    padding: 2rem;
+  }
+
+  h2 {
+    margin-bottom: 15px;
+    font-size: 1.571em;
+    transform: translateY(60px);
+    opacity: 0;
+    animation: ani-txt 1s forwards;
+  }
+
+  p {
+    font-size: 1.3rem;
+    transform: translateY(60px);
+    opacity: 0;
+    animation: ani-txt 1s forwards;
+  }
+
+  @keyframes ani-txt {
+    0% {
+      transform: translateY(60px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .la-sync {
+    position: absolute;
+    bottom: -2vw;
+    right: -4vw;
+    color: #f2f2ea;
+    font-size: 15vw;
+    animation-name: ani-sync;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes ani-sync {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  &:first-child {
+    // w : 20% * 3, h : 25% * 2
+    width: $w * 3;
+    height: $h * 2;
+    background: url(../../images/photo01.jpg) 100% 25% no-repeat;
+    background-size: cover;
+
+    strong {
+      position: absolute;
+      bottom: 0;
+      right: 1rem;
+      font-weight: 700;
+      color: $white;
+      font-size: 3.7rem;
+    }
+  }
+
+  &:nth-child(2) {
+    width: $w * 2;
+    height: $h;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &:nth-child(3) {
+    background: url(../../images/reserv.jpg) no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    &::before {
+      display: none;
+    }
+
+    h2 {
+      animation-delay: .5s;
+    }
+  }
+
+  &:nth-child(4) {
+    background: url(../../images/photo02.jpg) 50% 50% no-repeat;
+    background-size: cover;
+  }
+
+  &:nth-child(5) {
+    background: url(../../images/photo03.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    background-position: left top;
+  }
+
+  &:nth-child(6) {
+    width: $w * 2;
+    height: $h;
+
+    &::before {
+      display: none;
+    }
+
+    h2 {
+      animation-delay: 1s;
+    }
+
+    p {
+      animation-delay: 1s;
+    }
+  }
+
+  &:nth-child(7) {
+    background: url(../../images/photo04.jpg) 50% 50% no-repeat;
+    background-size: cover;
+  }
+
+  &:nth-child(8) {
+
+    &::before {
+      display: none;
+    }
+
+    h2 {
+      animation-delay: 1.5s;
+    }
+
+    p {
+      animation-delay: 1.5s;
+    }
+  }
+
+  &:nth-child(9) {
+    width: $w * 2;
+    height: $h;
+    background: url(../../images/photo05.jpg) 50% 80% no-repeat;
+    background-size: cover;
+  }
+
+  &:nth-child(10) {
+    background: url(../../images/photo06.jpg) 50% 50% no-repeat;
+    background-size: cover;
+  }
+
+  &:nth-child(11) {
+
+    &::before {
+      display: none;
+    }
+
+    h2 {
+      animation-delay: 2s;
+    }
+
+    p {
+      animation-delay: 2s;
+    }
+  }
+
+  &:last-child {
+    background: url(../../images/photo07.jpg) 50% 50% no-repeat;
+    background-size: cover;
+  }
+}

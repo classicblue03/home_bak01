@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>세로형 아코디언1</title>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <style>
+        .accordion_wrap {
+            width: 400px;
+            margin: 0 auto;
+            background: lightblue;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .accordion_wrap>li>a {
+            display: block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-weight: 600;
+            color: #333;
+            background: #7fa6db;
+            font-size: 15px;
+        }
+
+        .accordion_wrap>li:hover>a {
+            background: royalblue;
+        }
+
+        .accordion_wrap>li>div {
+            background: lightgray;
+            padding: 0 10px;
+            box-sizing: border-box;
+            line-height: 1.3;
+            font-size: 14px;
+        }
+
+        .accordion_wrap>li>a.active {
+            background: royalblue;
+        }
+
+        .accordion_cnt {
+            max-height: 0;
+            overflow: hidden;
+            -webkit-transition: all 0.5s -0.3s;
+            -moz-transition: all 0.5s -0.3s;
+            -o-transition: all 0.5s -0.3s;
+            transition: all 0.5s -0.3s;
+        }
+
+        .accordion_cnt.accordion_on {
+            max-height: 100vh;
+            padding: 10px;
+            -webkit-transition: all 0.5s 0s;
+            -moz-transition: all 0.5s 0s;
+            -o-transition: all 0.5s 0s;
+            transition: all 0.5s 0s;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="accordion_wrap">
+        <li><a href="#" class="accordion_btn">Btn1</a>
+            <div class="accordion_cnt">
+                Wow<br>
+                Oh<br>
+                Oops<br>
+                Yeah<br>
+                Ho<br>
+                ooh
+            </div>
+        </li>
+        <li><a href="#" class="accordion_btn">Btn2</a>
+            <div class="accordion_cnt">
+                Wow<br>
+                Oh<br>
+                Oops<br>
+                Yeah<br>
+                Ho<br>
+                ooh
+            </div>
+        </li>
+        <li><a href="#" class="accordion_btn">Btn3</a>
+            <div class="accordion_cnt">
+                Wow<br>
+                Oh<br>
+                Oops<br>
+                Yeah<br>
+                Ho<br>
+                ooh
+            </div>
+        </li>
+    </ul>
+
+    <script>
+        var con_btn = document.getElementsByClassName('accordion_btn');
+
+        for (i = 0; i < con_btn.length; i++) {
+            con_btn[i].addEventListener('click', function () {
+                this.classList.toggle('active');
+                var con_text = this.nextElementSibling;
+                if (con_text.classList.contains('accordion_on')) {
+                    con_text.classList.remove('accordion_on');
+                } else {
+                    con_text.classList.add('accordion_on');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

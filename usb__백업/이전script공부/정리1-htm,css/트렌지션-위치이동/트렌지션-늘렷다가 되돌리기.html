@@ -1,0 +1,118 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>클릭하고 원점으로 되돌리기</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script src="jquery-3.4.1.js"></script>
+		
+	
+        
+		<script>
+        
+           $(document).ready(function(){
+               
+    
+                 $('#box').css({
+                     
+                    width:300,
+                    height:300,
+                    backgroundColor:'blue'
+                     
+                 });
+ 
+               
+               
+               
+        /*           
+            $('#box').click(function(){
+             $(this).css({
+                 backgroundColor:'salmon'
+
+             });
+         });           
+                    
+          */    
+                    
+              
+               
+               
+               
+           //클릭할때마다 배경색 계속변경
+               
+
+               var i=0;
+               
+               $('#box').click(function(){
+                   
+                   
+                  
+                       if(i==0){        //클릭햇을때 0
+                           $(this).css({
+                              backgroundColor:'blue' 
+                           });
+                           $(this).animate({
+                              width:'600px'
+                           });
+                           i++; //이 상태에서 i값 =1
+
+
+                       }else if(i==1){
+                           $(this).css({
+                              backgroundColor:'red' 
+                           });      //1이 된 상태
+                           $(this).animate({
+                              width:'300px'
+                           });
+
+                           i++;     //다시 0으로만들기
+
+
+
+                       }else if(i==2){
+                           $(this).css({
+                              backgroundColor:'green' 
+                           });
+                          i=0;  //i--;i--;   어떠한 수를 쓰든 i를 0으로 만들기
+                       }
+                   
+                   
+                   
+               });
+               
+               
+
+           
+                    
+                    
+                    
+        
+                  
+                
+        }); //end
+                
+                
+     
+                
+                
+                
+        
+        
+        
+        </script>
+        
+	</head>
+
+	<body>
+
+        <div id="box"></div>
+
+
+
+
+
+
+
+	</body>
+</html>

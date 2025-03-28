@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>float(인라인), 플로트클리어</title>
+    <style type="text/css">
+        .box1{
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: #fe8;
+        }
+        .box2{
+            float: left;
+            width: 150px;
+            height: 150px;
+            background-color: #f8e;
+        }
+        .box3{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+        .box4{
+            float: left;
+            width: 100px;
+            height: 100px;
+            clear: left;
+            background-color: aqua; /*클리어를 쓰면 밑으로 내려옴, 플로트를 초기화한것*/
+        }
+        .txt{
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+        }
+</style>
+</head>
+
+<body>
+    <div class="box1"><p class="txt">1번</p></div>
+    <div class="box2"><p class="txt">2번</p></div>
+    <div class="box3"><p class="txt">3번</p></div>
+    <div class="box4"><p class="txt">3-1번</p></div>
+    
+    
+    <!--https://blog.naver.com/brusher3063/221470216031 참고-->
+</body>
+</html>

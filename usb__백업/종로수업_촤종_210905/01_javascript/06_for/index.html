@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for반복문</title>
+</head>
+
+<body>
+    <pre>
+        반복문을 사용하는 이유 : 연속처리, 반복처리
+
+        for(시작갑; 최종값; 증감식){
+            실행문;
+        }
+
+        초기값 -> 시작값을 말하며 변수 i, j, k 많이 사용
+        최종값 -> 조건식(true/false) 관계연산자 사용하고 결과값은 true, false반환
+        증감식 -> ++, --
+    </pre>
+    <hr>
+
+    <script>
+        // document.write("웹디자인과 웹개발자입니다." + "<br>");
+        // document.write("웹디자인과 웹개발자입니다." + "<br>");
+        // document.write("웹디자인과 웹개발자입니다." + "<br>");
+        // document.write("웹디자인과 웹개발자입니다." + "<br>");
+        // document.write("웹디자인과 웹개발자입니다." + "<br>");
+        // document.write("웹디자인과 웹개발자입니다." + "<br>");
+        // document.write("웹디자인과 웹개발자입니다." + "<br>");
+        // document.write("웹디자인과 웹개발자입니다." + "<br>");
+        // document.write("웹디자인과 웹개발자입니다." + "<br>");
+        // document.write("웹디자인과 웹개발자입니다." + "<br>");
+        // document.write("<hr>");
+
+        let i;
+        for (i = 1; i <= 10; i++) {
+            document.write("반복문" + i + "<br>");
+        }
+        // document.write(i);
+
+        document.write("<hr>");
+        // 1부터 100까지 수 중에서 짝수만 출력하는 프로그램
+        // for(i =1; i <=100; i++){
+        //     if(i%2==0){
+        //         document.write( i +"&nbsp;&nbsp;&nbsp;");
+        //     }
+        // }
+        // document.write("<hr>");
+
+        // for(i =2; i <=100; i+=2){
+        //     document.write( i +"&nbsp;&nbsp;&nbsp;");
+        // }
+
+        document.write("<br>");
+        // for(i =100; i>=0; i--){
+        //     document.write(i+"&nbsp;&nbsp;&nbsp;")
+        // }
+
+        document.write("*********** 5단 **********" + "<br>");
+        for (i = 1; i <= 9; i++) {
+            document.write(5 + " x " + i + " = " + 5 * i + "<br>");
+        }
+    </script>
+
+</body>
+
+</html>

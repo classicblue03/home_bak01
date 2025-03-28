@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>박스이동</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        // after before 형제요소
+        //인서트는 기준이바뀜, 앞에 애가 뒤로, 뒤에 애가 앞으로
+        //('.boxlist .box:first-child'). after 기준
+        //('.boxlist .box:last') 인서트 기준
+
+        $(function () {
+            $('.next').click(function () {
+                $('.boxlist .box:first-child').insertAfter('.boxlist .box:last');
+                // $('.boxlist li:last').after('.boxlist .li:first');
+            })
+            $('.prev').click(function () {
+                $('.boxlist .box:last').insertBefore('.boxlist .box:first');
+                // $('.boxlist li:last').before('.boxlist .li:first');
+            })
+
+        }); //end
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+
+        .boxlist {
+            width: 1125px;
+            margin: 100px auto;
+            margin-bottom: 0;
+            /* display: flex; */
+            /* justify-content: space-around; */
+        }
+
+        .boxlist img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .boxlist li {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .btn {
+            position: absolute;
+            left: 50%;
+            margin-left: -65px;
+            /* div의 반만큼*/
+            margin-top: 20px;
+            /* btn길이 약130px */
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="boxlist">
+        <li class="box box1"><img src="images/bg1_500.jpg"></li> <!-- 그림사이즈 :200*200  -->
+        <li class="box box2"><img src="images/bg2_500.jpg"></li>
+        <li class="box box3"><img src="images/bg3_500.jpg"></li>
+        <li class="box box4"><img src="images/bg4_500.jpg"></li>
+        <li class="box box5"><img src="images/bg5_500.jpg"></li>
+    </ul>
+    <div class="btn">
+        <button class="prev">이전 요소</button>
+        <button class="next">다음 요소</button>
+    </div>
+</body>
+
+</html>

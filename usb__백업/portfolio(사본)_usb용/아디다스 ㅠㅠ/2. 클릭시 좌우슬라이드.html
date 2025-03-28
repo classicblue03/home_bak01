@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>modal</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0
+		}
+
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+		}
+
+		ul,
+		li {
+			list-style: none;
+		}
+
+		.movlist {
+			width: 800px;
+			margin: 20px auto;
+		}
+
+		.movlist li {
+			float: left;
+			width: 80px;
+			height: 80px;
+			margin: 5px;
+			overflow: hidden;
+		}
+
+		.bg {
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: none;
+			background-color: rgba(0, 0, 0, 0.6);
+			width: 100%;
+			height: 100%;
+		}
+
+		.modal {
+			width: 300px;
+			height: 350px;
+			position: absolute;
+			z-index: 1;
+			display: none;
+		}
+
+		.btn {
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 150px;
+			border: 2px solid #f0f;
+			background-color: #fff;
+			box-shadow: 2px 2px 3px #000;
+		}
+
+		.btn:focus {
+			outline: 0;
+		}
+
+		.prev {
+			left: 0px;
+			border-radius: 50% 0 0 50%;
+		}
+
+		.next {
+			right: 0px;
+			border-radius: 0 50% 50% 0;
+		}
+	</style>
+</head>
+
+<body>
+	<ul class="movlist">
+		<li><a href="img/mov1.jpg"><img src="img/mov1.jpg" alt=""></a></li>
+		<li><a href="img/mov2.jpg"><img src="img/mov2.jpg" alt=""></a></li>
+		<li><a href="img/mov3.jpg"><img src="img/mov3.jpg" alt=""></a></li>
+		<li><a href="img/mov4.jpg"><img src="img/mov4.jpg" alt=""></a></li>
+		<li><a href="img/mov5.jpg"><img src="img/mov5.jpg" alt=""></a></li>
+		<li><a href="img/mov6.jpg"><img src="img/mov6.jpg" alt=""></a></li>
+		<li><a href="img/mov7.jpg"><img src="img/mov7.jpg" alt=""></a></li>
+		<li><a href="img/mov8.jpg"><img src="img/mov8.jpg" alt=""></a></li>
+	</ul>
+	<div class="bg">
+		<div class="modal">
+			<button type="button" class="prev btn">prev</button>
+			<button type="button" class="next btn">next</button>
+			<img src="img/mov1.jpg" width="300" height="350" alt="">
+		</div>
+	</div>
+	<script>
+		$(function () {
+			$('.movlist a').click(function (e) {
+				e.preventDefault();
+				imgNum = $(this).parent().index() + 1; //인덱스 번호는 0번부터 시작하므로.. 여기에서 그림은 (mov1.jpg)인 1번부터 시작한다.
+
+				$('.modal, .bg').show();
+				$('.modal img').attr('src', $(this).attr('href'));
+			}); // $('.movlist a').click(function(e){ 끝
+
+			$('.next').click(function () {
+				imgNum++;
+				console.log(imgNum);
+				if (imgNum == 9) { // 총 그림이 8장(mov8.jpg)이 마지막이므로 번호 9번은 없다.
+					imgNum = 1;
+				};
+				$('.modal img').attr('src', 'img/mov' + imgNum + '.jpg');
+			});
+
+			$('.prev').click(function () {
+				imgNum--;
+				console.log(imgNum);
+				if (imgNum == 0) {
+					imgNum = 8;
+				};
+				$('.modal img').attr('src', 'img/mov' + imgNum + '.jpg');
+			});
+
+			$('.bg').click(function () {
+				$('.modal, .bg').hide();
+			});
+
+			$('.modal').click(function (e) {
+				e.stopPropagation(); // 이벤트 버블링제거 - 부모 이벤트 제거하는방법
+			}); // 이부분이 없으면 모달창 안의 버튼 클릭시 부모창(.bg)의 .hide()명령이 수행된다.     
+
+			$(window).resize(function () {
+				var win_w = $(window).width();
+				var win_h = $(window).height();
+				var modal_w = $('.modal img').width();
+				var modal_h = $('.modal img').height();
+				$('.modal').css({
+					left: (win_w - modal_w) / 2, //보이는 윈도우(브라우저)의 폭에서 모달창의 폭을 뺀 후 /2
+					top: (win_h - modal_h) / 2
+				});
+			}); //$(window).resize(function(){ 끝
+			$(window).trigger(
+			"resize"); //마지막에 이 부분이 없으면 처음에 실행되는 모달창은 화면 왼쪽 위에 붙어서 실행된다. 브라우저창의 크기를 조정하면 그 때서야 화면의  정가운데에 위치되므로 시작하자마자 resize()명령을 호출하여 현재 윈도우 창 중앙에 모달창을 배치시킨다.
+		});
+	</script>
+</body>
+
+</html>

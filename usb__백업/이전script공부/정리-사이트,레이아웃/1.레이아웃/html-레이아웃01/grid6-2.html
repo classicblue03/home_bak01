@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>grid2</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            height:3000px;
+        }
+        #wrap{}
+        #wrap #header{
+            width:980px;
+            height:185px;
+            background:blue;
+            margin:0 auto;
+        }
+        #wrap #mainslid{
+            height:480px;
+            background:purple;
+        }
+        #wrap .row1{
+            width:940px;
+            margin:20px auto;
+        }
+        #wrap .row1:after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        #wrap .row1 p{
+            width:300px;
+            height:200px;
+            background:hotpink;
+            float:left;
+            margin-right:20px;
+        }
+        #wrap .row1 p:last-child{
+            margin-right:0;
+        }
+        #wrap .row2{
+            width:940px;
+            margin:0 auto;
+        }
+        #wrap .row2:after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        #wrap .row2 p{
+            width:300px;
+            height:200px;
+            background:skyblue;
+            float:left;
+            margin-right:20px;
+        }
+        #wrap .row2 p:last-child{
+            margin-right:0;
+        }
+        #wrap #footer{
+            height:185px;
+            background:darkblue;
+            margin-top:20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        
+        <div id="mainslid"></div>
+        
+        <div class="row1">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        
+        <div class="row2">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
+
+
+
+

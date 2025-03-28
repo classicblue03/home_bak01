@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #wrap {
+            width: 600px;
+            height: 400px;
+            border: 10px solid black;
+            box-sizing: border-box;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #con_wrap {
+            width: 1800px;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 60px;
+            line-height: 400px;
+            text-align: center;
+            transition-duration: 1s;
+        }
+        
+        .con {
+            width: 600px;
+            height: 400px;
+            background-color: lightcoral;
+            border: 5px solid white;
+            box-sizing: border-box;
+            float: left;
+        }
+        
+        #label_wrap {
+            width: 150px;
+            height: 50px;
+            background-color: white;
+            position: absolute;
+            z-index: 999;
+            bottom: 30px;
+            left: 50%;
+            margin-left: -75px;
+        }
+        
+        input {
+            display: none;
+        }
+        
+        label {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: lightblue;
+            float: left;
+            font-size: 30px;
+            text-align: center;
+            line-height: 50px;
+        }
+        
+        #input_1:checked~#wrap>#con_wrap {
+            left: 0;
+        }
+        
+        #input_2:checked~#wrap>#con_wrap {
+            left: -600px;
+        }
+        
+        #input_3:checked~#wrap>#con_wrap {
+            left: -1200px;
+        }
+        
+        #input_1:checked~#wrap #btn_1 {
+            color: white;
+            background-color: darkgray;
+        }
+        
+        #input_2:checked~#wrap #btn_2 {
+            color: white;
+            background-color: darkgray;
+        }
+        
+        #input_3:checked~#wrap #btn_3 {
+            color: white;
+            background-color: darkgray;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="radio" name="tab" id="input_1" checked="checked" />
+    <input type="radio" name="tab" id="input_2" />
+    <input type="radio" name="tab" id="input_3" />
+    <div id="wrap">
+        <div id="label_wrap">
+            <label for="input_1" id="btn_1">1</label>
+            <label for="input_2" id="btn_2">2</label>
+            <label for="input_3" id="btn_3">3</label>
+        </div>
+        <div id="con_wrap">
+            <div class="con">1</div>
+            <div class="con">2</div>
+            <div class="con">3</div>
+        </div>
+    </div>
+</body>
+
+</html>

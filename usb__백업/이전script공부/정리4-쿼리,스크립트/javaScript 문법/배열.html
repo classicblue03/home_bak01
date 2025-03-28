@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0">
+</head>
+<body>
+  <script>
+    // 일반적인 출력
+    // var a = '9월';
+    // var b = '14일';
+    // var c = 6;
+    // var d = 15;
+
+    // document.write(a, '<br/>');
+    // document.write(b, '<br/>');
+    // document.write(c, '<br/>');
+    // document.write(d, '<br/>');
+
+
+
+
+
+    // *배열=하나의 변수에 여러개의 값을 저장,활용
+    // 순서값=index (0부터시작)
+    // var 변수명(배열명)=['문자','문자',숫자,변수,'문자'];
+
+    // 배열을 이용한 출력
+    var a = ['9월','14일',6,15];
+    // document.write(a[0],'<br/>');
+    // document.write(a[1],'<br/>');
+    // document.write(a[2],'<br/>');
+    // document.write(a[3],'<br/>');
+
+
+
+
+    // 배열 안에 있는값 출력시 a[사용하고싶은 index번호];	
+    // for(b=0; b<=3; b++){
+    // 	document.write(a[b],'<br/>');
+    // }
+
+
+    // 배열갯수값=>배열저장값의 갯수	
+    // =>length => index+1 갯수 (1부터 시작)
+    // =>배열.length => 괄호를 사용하지 않음 (배열의 갯수를 알려줌)
+    // =>마지막 index => 배열.length-1 (마지막 순서값)
+
+    // document.write(a.length);
+
+
+    // for(var i = 0; i <= a.length-1; i++){
+    // 	document.write(a[i],'<br/>');
+    // }
+
+
+    // 반복문을 활용 배열 뒤에서부터 차례대로 출력하기
+    for(var i = a.length-1; i >= 0; i--){
+    	document.write(a[i], '<br/>');
+    }
+
+
+
+
+
+    // 1.과일이름 5개로 배열하나 만들기	
+    // 2.동물이름 5개로 배열하나 만들기	
+    // 3.두개의 숫자를 입력 받기	
+    // 4.입력받은 두수를 비교하기	
+    // 5.첫번째 입력받은 수가 크면 과일이름 배열을 출력하고	
+    // 6.두번째 입력받은 수가 크면 동물이름 배열을 출력하고	
+    // 7.두수가 같을때
+    // 입력받은수가 홀수이면 과일이름 배열출력
+    // 입력받은수가 짝수이면 동물이름 배열출력
+
+    var a = ['딸기', '메론', '귤', '복숭아', '사과'];
+    var b = ['고양이', '강아지', '토끼', '원숭이', '돼지'];
+    var num1 = Number(prompt('첫번째 숫자', ''));
+    var num2 = Number(prompt('두번째 숫자', ''));
+
+    if (num1 > num2) {
+      document.write(a);
+    } else if (num1 < num2) {
+      document.write(b);
+    } else if (num1 == num2) {
+
+      if (num1 % 2 == 0) {
+        document.write('짝수입니다<br/>', b);
+      } else if (num1 % 2 == 1) {
+        document.write('홀수입니다<br/>', a);
+      }
+
+    } else {
+      document.write('숫자만 입력해주세요');
+    }
+  </script>
+
+</body>
+</html>

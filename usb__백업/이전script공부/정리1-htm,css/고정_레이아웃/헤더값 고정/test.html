@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>맨위로</title>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="test.css">
+</head>
+
+
+<!--
+    https://blog.naver.com/isaac7263/222055734885
+-->
+
+<body onload="chkSize(event)" onscroll="headerbarToggle()">
+    <div id="wrap">
+        <header id="headerbar">
+            <h1 id="my_nmae">
+                <a href="#">zzz</a>
+            </h1>
+        </header>
+    </div>
+
+
+
+    <script>
+        var prevScrollpos = window.pageXOffset;
+        console.log("first Y offset : " + prevScrollpos)
+        window.onscroll = headerbarToggle
+
+        function headerbarToggle() {
+            var headerbar = document.getElementById("headerbar");
+
+            var currentScrollpos = window.pageXOffset;
+            if (prevScrollpos < currentScrollpos) {
+                headerbar.style.opacity = 0.1;
+            } else {
+                headerbar.style.opacity = 1;
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

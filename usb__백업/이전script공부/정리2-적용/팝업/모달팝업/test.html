@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>모달팝업</title>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <!--<script src="test.js"></script>-->
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+    <a href="#void" class="pop_btn">button</a>
+    <div class="pop_opacity"></div>
+    <div class="pop">hi i am popup nice to meet you
+        <a href="#void" class="pop_close">×</a>
+    </div>
+
+
+
+
+
+    <script>
+        const popButton = document.querySelector('.pop_btn');
+        const popCont = document.querySelector('.pop');
+        const popClose = document.querySelector('.pop_close');
+        const popOpacity = document.querySelector('.pop_opacity');
+
+        function popEventOpen() {
+            popCont.classList.add('on');
+            popOpacity.classList.add('on');
+        }
+
+        function popEventClose() {
+            popCont.classList.remove('on');
+            popOpacity.classList.remove('on');
+        }
+
+        function init() {
+            popButton.addEventListener('click', popEventOpen);
+            popClose.addEventListener('click', popEventClose);
+            popOpacity.addEventListener('click', popEventClose);
+        }
+        init();
+        
+
+    </script>
+</body>
+
+</html>

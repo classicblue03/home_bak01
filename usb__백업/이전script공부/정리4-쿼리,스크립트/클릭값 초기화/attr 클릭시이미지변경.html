@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <script src="jquery-3.4.1.js"></script>
+</head>
+<body>
+  <div id="box">
+    <img src="img/1.jpg" alt="" />
+  </div>
+
+  <script>
+    // attr
+    // 태그의 옵션을 추가, 제거할때
+    // 각 태그에 지정되는 옵션만 사용 => 형태(css와 동일)
+    // $(선택자).attr('단일옵션', '옵션값');
+    // $(선택자).attr('단일옵션', function() {
+    //  ....
+    // });
+
+    // $(선택자).attr({
+    // 	 다중옵션: 옵션값,
+    // 	 ....
+    // });
+
+    // $(선택자).attr({
+    // 	 다중옵션: function () {},
+    // 	 ....
+    // });
+
+    // removeAttr
+    // $(선택자).removeAttr(삭제 옵션명); = 추가 또는 기존의 옵션을 삭제할때
+    // $('img:nth-child(2)').removeAttr('border');
+    // $('img:nth-child(2)').removeAttr('src');
+    
+    $(document).ready(function() {
+      $('#box').css({
+        width: 500,
+        height: 500,
+        border: '10px solid black',
+        margin: '100px auto'
+      });
+      $('#box>img').css({
+        width: 500,
+        height: 500,
+        display: 'block'
+      });
+
+      var i = 0;
+      $('#box').click(function() {
+        if (i == 0) {
+          $('img', this).attr({
+            src: 'img/2.jpg'
+          });
+          i++;
+        } else if (i == 1) {
+          $('img', this).attr({
+            src: 'img/1.jpg'
+          });
+          i--;
+        }
+      });
+    }); //end
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        span {
+            font-size: 20px;
+        }
+
+        div {
+            width: 300px;
+            height: 100px;
+            border: 1px solid red;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 20px;
+            line-height: 100px;
+        }
+    </style>
+    <title>내장객체(DATE)</title>
+</head>
+
+<body>
+    <div class="dayBox">
+        <span class="year">0000</span>년도
+        <span class="month">00</span>월
+        <span class="date">00</span>일
+        <span class="day">00</span>요일
+    </div>
+    <div class="time">
+        <!-- <span class="dayNight">오전</span> -->
+        <span class="hour">00</span> :
+        <span class="min">00</span> :
+        <span class="sec">00</span>
+    </div>
+
+    <script>
+        $(function () {
+            function time() {
+                var now = new Date();
+                console.log(now);
+                var year = now.getFullYear();
+                var month = now.getMonth() + 1;
+                var date = now.getDate();
+                var day = now.getDay();
+                var hour = now.getHours();
+                var min = now.getMinutes();
+                var sec = now.getSeconds();
+                var dd, tt, dayNight;
+
+                if (day == 0) {
+                    dd = '일';
+                } else if (day == 1) {
+                    dd = '월'
+                } else if (day == 2) {
+                    dd = '화'
+                } else if (day == 3) {
+                    dd = '수'
+                } else if (day == 4) {
+                    dd = '목'
+                } else if (day == 5) {
+                    dd = '금'
+                } else if (day == 6) {
+                    dd = '토'
+                }
+
+                if (hour > 12) {
+                    tt = hour - 12;
+                    dayNight = '오후';
+                }
+                $('.year').text(year);
+                $('.month').text(month);
+                $('.date').text(date);
+                $('.day').text(dd);
+                $('.dayNight').text(dayNight);
+                $('.hour').text(hour);
+                $('.sec').text(sec);
+                $('.min').text(min);
+            }
+
+            setInterval(function () {
+                time();
+            }, 1000)
+        })
+    </script>
+</body>
+
+</html>

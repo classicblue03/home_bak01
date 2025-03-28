@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>성적관리</title>
+  </head>
+  <body>
+    <script>
+    var kor = prompt("국어 점수를 입력해주세요");
+    var eng = prompt("영어 점수를 입력해주세요");
+    var math = prompt("수학 점수를 입력해주세요");
+    var com = prompt("전산 점수를 입력해주세요");
+
+    var total =
+        parseInt(kor) + parseInt(eng) + parseInt(math) + parseInt(com);
+    var avg = total / 4;
+    var level, grade;
+
+    if(avg >=95){
+        grade ="A+";
+        level = "수";
+    }else if(avg >= 90){
+        grade ="A";
+        level = "수";
+    }else if(avg >=85){
+        grade ="B+";
+        level = "우";
+    }else if(avg >= 80){
+        grade ="B";
+        level = "우";
+    }else if(avg >=75){
+        grade ="C+";
+        level = "미";
+    }else if(avg >= 70){
+        grade ="C";
+        level = "미";
+    }else if(avg >=65){
+        grade ="D+";
+        level = "양";
+    }else if(avg >= 60){
+        grade ="D";
+        level = "양";
+    }else{
+        grade ="F";
+        level = "가";
+    }
+
+    alert(
+        "국어점수 : " +kor +"\n" +
+        "영어점수 : " +eng +"\n" +
+        "수학점수 : " +math +"\n" +
+        "전산점수 : " + com +"\n" +
+        "총점 : " + total + "\n" +
+        "평균 : " +avg +"\n" +
+        "학점 : " + grade+"\n" +
+        "평점 : " + level+"\n"
+    );
+    </script>
+</body>
+</html>

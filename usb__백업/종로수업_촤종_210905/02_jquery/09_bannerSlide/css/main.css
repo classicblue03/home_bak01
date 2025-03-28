@@ -1,0 +1,350 @@
+@charset "utf-8";
+
+.section,
+.slide_section {
+    width: 1164px;
+    height: 346px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.main_visual_wrap{
+    width: 1164px;
+    margin: auto;
+    position: relative;
+}
+
+.main_visual_wrap .pause {
+    width: 13px;
+    height: 13px;
+    border: none;
+    background: url('../imgs/btn_rolling_s_stop.png') no-repeat;
+    position: absolute;
+    left: 50%;
+    margin-left: 52px;
+    bottom: -37px;
+    cursor: pointer;
+    text-indent: -99999px;
+    background-size: 13px 13px;
+}
+
+.main_visual_wrap .pause.on{
+    background: url('../imgs/btn_rolling_s_play.png') no-repeat;
+    background-size: 13px 13px;
+}
+
+.main_visual{
+    width: 1164px;
+    margin: 0 auto 60px;
+    position: relative;
+}
+
+/* dots custom */
+.main_visual .slick-dots {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_visual .slick-dots li {
+    float: left;
+    margin: 1px;
+}
+
+.main_visual .slick-dots li button{
+    text-indent: -99999px;
+    width: 15px;
+    height: 15px;
+    border: none;
+    background: url('../imgs/btn_rolling_s.png') no-repeat;
+    cursor: pointer;
+    background-size: 13px 13px;
+}
+
+.main_visual .slick-dots li.slick-active button {
+    background: url('../imgs/btn_rolling_s_on.png') no-repeat;
+    background-size: 13px 13px;
+}
+
+
+
+
+.sec1 .cam_list div,
+.sec2 .ad1 div,
+.sec2 .ad2 div {
+    position: relative;
+    height: 346px;
+}
+
+.sec1 .cam_list div .info_bg,
+.sec2 .ad1 div .info_bg,
+.sec2 .ad2 div .info_bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 135px;
+    background: url('../imgs/bg_info.png');
+}
+
+.section .gallery,
+.cam_list {
+    width: 574px;
+    height: 346px;
+    float: left;
+}
+.section .gallery{
+    position: relative;
+}
+
+.section .gallery .gallery_info{
+position: absolute;
+bottom:0;
+width: 100%;
+height: 46px;
+background: url('../imgs/bg_info.png') repeat;
+}
+
+.section .gallery .gallery_info ul li{
+    float: left;
+    line-height: 46px;
+}
+.section .gallery .gallery_info ul li:first-child{
+    font-size: 16px;
+    font-weight: bold;
+    color:#000;
+    margin-left: 20px;
+}
+
+.section .gallery .gallery_info ul li:first-child::after{
+    content: '|';
+    color:#f00;
+    font-weight: lighter;
+    margin: 0 10px 0 15px;
+}
+
+.section .gallery .gallery_info ul li:nth-child(2){
+    font-size: 12px;
+    color:#747474;
+}
+
+.section .gallery .gallery_info ul li:nth-child(2)::after{
+    content: '|';
+    font-size: 10px;
+    margin: 0 10px 0 15px;
+}
+
+
+.section .gallery .gallery_info ul li:last-child{
+    font-size: 12px;
+    color:#f00;
+}
+
+
+.sec1 {
+    width: 574px;
+    height: 346px;
+    float: left;
+    background: #f4f4f4;
+    position: relative;
+}
+
+
+.section .product {
+    width: 574px;
+    height: 346px;
+    float: right;
+    background: #f4f4f4;
+    position: relative;
+}
+
+.slide_section .sec2{
+    width: 574px;
+    height: 346px;
+    float: right;
+}
+
+
+.section .product h2,
+.sec1 .cam_list div .info_bg h3,
+.sec2 .ad1 .info_bg h3,
+.sec2 .ad2 .info_bg h3 {
+    padding-top: 30px;
+    padding-left: 16px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #000;
+    font-weight: bold;
+}
+
+.section .product .line,
+.sec1 .cam_list div .info_bg .line, 
+.sec2 .ad1 .info_bg .line,
+.sec2 .ad2 .info_bg .line {
+    background: #f00;
+    height: 1px;
+    width: 16px;
+    margin-left: 16px;
+}
+
+.sec2 .ad1 .info_bg p,
+.sec2 .ad2 .info_bg p{
+    font-size: 12px;
+    color: #747474;
+    margin-top: 15px;
+    margin-left: 16px;
+    line-height: 18px;
+}
+
+.sec1 .cam_list div .info_bg img {
+    float: left;
+    margin: 15px 15px 15px 5px;
+}
+
+.sec1 .cam_list div .info_bg p {
+    font-size: 24px;
+    color: #747474;
+    font-weight:lighter;
+    margin-top: 25px
+}
+
+.section .product .product_list {
+    padding-left: 20px;
+}
+
+.section .product .product_list h3 {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+
+.section .product .product_list p {
+    margin-top: 3px;
+    font-size: 12px;
+    color: #747474;
+}
+
+.section .product .product_list p.price {
+    margin-top: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #000;
+
+}
+
+
+.section .product .product_list>div {
+    margin: auto;
+    text-align: center;
+}
+
+.section .product .product_list>div img {
+    margin: auto;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+
+
+.section .product .pause {
+    width: 10px;
+    height: 10px;
+    border: none;
+    background: url('../imgs/btn_rolling_s_play.png') no-repeat;
+    position: absolute;
+    left: 50%;
+    margin-left: 12px;
+    bottom: 28px;
+    cursor: pointer;
+    text-indent: -99999px;
+}
+
+.sec1 .pause {
+    width: 10px;
+    height: 10px;
+    border: none;
+    background: url('../imgs/btn_rolling_s_play.png') no-repeat;
+    position: absolute;
+    right: 17px;
+    bottom: 17px;
+    cursor: pointer;
+    text-indent: -99999px;
+}
+
+
+.sec2 .sec2_left{
+    width: 280px;
+    height: 346px;
+    float: left;
+    position: relative;
+}
+
+.sec2 .sec2_right{
+    width: 280px;
+    height: 346px;
+    float: right;
+    position: relative;
+}
+
+.sec2 .sec2_left .pause,
+.sec2 .sec2_right .pause{
+    width: 10px;
+    height: 10px;
+    border: none;
+    background: url('../imgs/btn_rolling_s_play.png') no-repeat;
+    position: absolute;
+    right: 17px;
+    bottom: 17px;
+    text-indent: -99999px;
+    cursor: pointer;
+}
+
+.sec1 .pause.on,
+.sec2_left .pause.on, .sec2_right .pause.on{
+    background: url('../imgs/btn_rolling_s_stop.png') no-repeat;
+}
+
+.section .product .pause.on {
+    background: url('../imgs/btn_rolling_s_stop.png') no-repeat;
+}
+
+/* dots custom */
+.section .product .slick-dots {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sec1 .cam_list .slick-dots,
+.sec2 .ad1 .slick-dots,
+.sec2 .ad2 .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+
+}
+
+.section .product .product_list .slick-dots li,
+.sec1 .cam_list .slick-dots li,
+.sec2 .ad1 .slick-dots li,
+.sec2 .ad2 .slick-dots li {
+    float: left;
+}
+
+.section .product .product_list .slick-dots li button,
+.sec1 .cam_list .slick-dots li button,
+.sec2 .ad1 .slick-dots li button,
+.sec2 .ad2 .slick-dots li button{
+    text-indent: -99999px;
+    border: none;
+    background: url('../imgs/btn_rolling_s.png') no-repeat;
+    cursor: pointer;
+}
+
+.section .product .product_list .slick-dots li.slick-active button,
+.sec1 .cam_list .slick-dots li.slick-active button,
+.sec2 .ad1 .slick-dots li.slick-active button,
+.sec2 .ad2 .slick-dots li.slick-active button {
+    background: url('../imgs/btn_rolling_s_on.png') no-repeat;
+}

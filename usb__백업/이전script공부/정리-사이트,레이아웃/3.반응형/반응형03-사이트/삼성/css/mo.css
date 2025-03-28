@@ -1,0 +1,250 @@
+/**태블릿 사이즈
+1.헤더영역 메뉴 사라지고 버튼 메뉴 생성 클릭 이벤트 적용
+2.타이틀 글자크기 10px 줄어들고, 두번째 섹션 높이값 줄일것
+3.나머지 섹션은 비율에 맞춰서 작업*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    display: block;
+    border: 0;
+}
+
+@media all and (max-width:759px) {
+    #wrap {
+        width: 100%;
+    }
+    /*****************/
+    section,
+    header,
+    footer {
+        width: 100%;
+        float: left;
+    }
+    .in_wrap {
+        width: /*1200px*/
+        95%;
+        background-color: lightpink;
+        margin: 50px auto;
+    }
+    /*****************/
+    header {
+        height: 85px;
+        background-color: tan;
+        position: relative;
+    }
+    #in_header {
+        width: /*1200px*/
+        95%;
+        height: 85px;
+        background-color: thistle;
+        margin: 0 auto;
+    }
+    #logo {
+        width: auto;
+        height: auto;
+        font-size: 24px;
+        font-weight: 900;
+        float: left;
+        letter-spacing: -1px;
+        /*=>글자 자간 조절*/
+        margin-top: 50px;
+    }
+    #menu {
+        display: none;
+    }
+    #mo_input {
+        display: none;
+    }
+    #mo_label {
+        width: 50px;
+        height: 50px;
+        display: block;
+        position: absolute;
+        background-color: aquamarine;
+        top: 30px;
+        right: 30px;
+        font-size: 30px;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+    }
+    #mo_menu {
+        width: 95%;
+        height: 0;
+        background-color: beige;
+        position: absolute;
+        top: 80px;
+        z-index: 999;
+        transition-duration: 0.5s;
+        overflow: hidden;
+    }
+    #mo_menu>li {
+        width: 100%;
+        height: 100px;
+        border-bottom: 1px solid black;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 20px;
+        line-height: 100px;
+    }
+    #mo_input:checked~#mo_menu {
+        height: 400px;
+    }
+    /*header end*/
+    #section_1 {
+        height: 800px;
+        background-image: url(../img/main_1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    #section_1:after {
+        content: "";
+        width: 100%;
+        height: 300px;
+        background-color: salmon;
+        transform: skewY(-8deg);
+        display: block;
+        position: absolute;
+        bottom: -150px;
+    }
+    /**가상 선택자
+    =>원하는 태그 뒷쪽으로 :after 혹은 :before 적어서 사용
+    =>content:""는 객체 안쪽으로 들어갈 글자 작성 적을게 없으면 따옴표적고 비우면됨
+    =>요소를 반드시 적어줘야 객체형체를 띔 (block 혹은 inline)*/
+    /*header end*/
+    #section_2 {
+        background-color: lightgray;
+        position: relative;
+        z-index: 999;
+    }
+    /**********title_wrap*********/
+    .title_wrap {
+        width: /*100%*/
+        95%;
+        background-color: tan;
+        position: relative;
+        z-index: 1000;
+        margin: 0 auto;
+    }
+    .title_wrap>h1 {
+        width: 100%;
+        height: auto;
+        font-size: 20px;
+        text-align: center;
+        background-color: aqua;
+    }
+    .title_wrap>p {
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    /**********title_wrap*********/
+    .con_1 {
+        width: 100%;
+        height: 250px;
+        float: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
+        margin-bottom: 20px;
+    }
+    .con_1:nth-child(1) {
+        background-image: url(../img/se_2_con_1.jpg);
+    }
+    .con_1:nth-child(2) {
+        background-image: url(../img/se_2_con_2.jpg);
+    }
+    .con_1:nth-child(3) {
+        background-image: url(../img/se_2_con_3.jpg);
+    }
+    .con_1:nth-child(4) {
+        background-image: url(../img/se_2_con_4.jpg);
+    }
+    /*section_2 end*/
+    #section_3 {
+        height: 400px;
+        background-color: salmon;
+        margin: 300px 0;
+        position: relative;
+    }
+    #section_3:after {
+        content: "";
+        width: 100%;
+        height: 300px;
+        transform: skewY(-8deg);
+        background-color: black;
+        position: absolute;
+        top: -150px;
+        display: block;
+    }
+    #section_3:before {
+        content: "";
+        width: 100%;
+        height: 300px;
+        transform: skewY(-8deg);
+        background-color: black;
+        position: absolute;
+        bottom: -150px;
+        display: block;
+    }
+    /*section_3 end*/
+    #title_4 {
+        /*width: 950px;*/
+        margin: 0 auto;
+    }
+    /*section_4 end*/
+    #section_5 {
+        /*height: 600px;*/
+        background-image: url(../img/se_4_main.jpg);
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: cover;
+        margin: 100px 0;
+    }
+    /*section_5 end*/
+    .con_6 {
+        width: 100%;
+        height: 275px;
+        float: left;
+        margin-bottom: 20px;
+        /*margin-right: 2.5%*/
+        ;
+    }
+    .con_6>img {
+        width: 100%;
+        height: auto;
+    }
+    /*section_6 end*/
+    footer {
+        height: 200px;
+        background-color: #dbdbdb;
+        margin-top: 100px;
+    }
+    footer>p {
+        width: 600px;
+        font-size: 12px;
+        margin: 80px auto;
+        text-align: center;
+    }
+}
+
+
+/*end*/

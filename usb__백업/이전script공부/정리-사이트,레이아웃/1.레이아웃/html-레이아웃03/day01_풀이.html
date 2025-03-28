@@ -1,0 +1,220 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		
+		<style>
+            
+            *{margin: 0; padding: 0}
+            ul,li{list-style: none;}
+            a{text-decoration: none; color: black;}
+            
+            #wrap{
+                width: 100%;
+            }
+            
+            header{
+                width: 100%;
+                height: 100px;
+                background-color: lightblue;
+                float: left;
+            }
+            
+            #in_header{
+                width: 1200px;
+                height: 100%;
+                background-color: tan;
+                margin: 0 auto;
+            }
+            
+            #logo{
+                width: 200px;
+                height: 100%;
+                background-color: crimson;
+                float: left;
+                /**font축약형
+                font: 두께 크기/line-height '글자체';*/
+                font: 900 25px/100px '';
+                text-align: center;
+            }
+            
+            #menu_wrap{
+                width: 900px;
+                height: 100%;
+                background-color: pink;
+                float: right;
+            }
+            
+            #menu_wrap li{
+                width: 20%;
+                height: 100%;
+                float: left;
+                font: 18px/100px '';
+                text-align: center;
+            }
+            
+            /*header end*/
+            
+            #section_1{
+                width: 100%;
+                height: 400px;
+                background-color: sandybrown;
+                float: left;
+            }
+            
+            /*section_1 end*/
+            
+            #section_2{
+                width: 100%;
+                height: 262.5px;
+                background-color: lightgoldenrodyellow;
+                float: left;
+                margin: 100px 0;
+            }
+            
+            #section_2 .container{
+                width: 1200px;
+                height: 100%;
+                background-color: lightcyan;
+                margin: 0 auto;
+            }
+            
+            .circle{
+                width: 262.5px;
+                height: 100%;
+                border: 1px solid black;
+                box-sizing: border-box;
+                float: left;
+                margin-right: 50px;
+                border-radius: 50%;
+            }
+            
+            .circle:last-child{
+                margin-right: 0;
+            }
+            
+            /*section_2 end*/
+            
+            #section_3{
+                width: 100%;
+                height: 1700px;
+                background-color: lightgray;
+                float: left;
+            }
+            
+            #section_3 .container{
+                width: 1200px;
+                height: 100%;
+                background-color: lightcyan;
+                margin: 0 auto;
+            }
+            
+            .con_wrap{
+                width: 386.666px;
+                height: 100%;
+                background-color: tan;
+                float: left;
+                margin-right: 20px;
+            }
+            
+            .con_wrap:last-child{
+                margin-right: 0;
+            }
+            
+            .short_con{
+                width: 100%;
+                height: 500px;
+                background-color: salmon;
+            }
+            
+            .long_con{
+                width: 100%;
+                height: 600px;
+                background-color: skyblue;
+            }
+            
+            .margin_con{
+                margin: 50px 0;
+            }
+            
+            /*section_3 end*/
+            
+            #top_btn{
+                width: 50px;
+                height: 50px;
+                background-color: gold;
+                position: fixed;
+                bottom: 50px;
+                right: 50px;
+                font-size: 25px;
+                line-height: 50px;
+                text-align: center;
+            }
+            
+        </style>
+        
+	</head>
+
+	<body>
+	
+	    <div id="wrap">
+	        <header>
+	            <div id="in_header">
+	                <div id="logo"><a href="#">logo</a></div>
+	                <ul id="menu_wrap">
+	                    <li><a href="#">menu1</a></li>
+	                    <li><a href="#">menu2</a></li>
+	                    <li><a href="#">menu3</a></li>
+	                    <li><a href="#">menu4</a></li>
+	                    <li><a href="#">menu5</a></li>
+	                </ul>
+	            </div>
+	        </header>
+	        <!--header end-->
+	        <section id="section_1"></section>
+	        <!--section_1 end-->
+	        <section id="section_2">
+	            <div class="container">
+	                <div class="circle"></div>
+	                <div class="circle"></div>
+	                <div class="circle"></div>
+	                <div class="circle"></div>
+	            </div>
+	        </section>
+	        <!--section_2 end-->
+	        <section id="section_3">
+	            <div class="container">
+	                <div class="con_wrap">
+	                    <div class="short_con"></div>
+	                    <div class="long_con margin_con"></div>
+	                    <!--class="클래스명1 클래스명2 클래스명3..."
+	                    class명은 태그에 1개이상 띄어쓰기로 구분해서 추가 가능-->
+	                    <div class="short_con"></div>
+	                </div>
+	                <div class="con_wrap">
+	                    <div class="short_con"></div>
+	                    <div class="short_con margin_con"></div>
+	                    <div class="long_con"></div>
+	                </div>
+	                <div class="con_wrap">
+	                    <div class="short_con"></div>
+	                    <div class="long_con margin_con"></div>
+	                    <div class="short_con"></div>
+	                </div>
+	            </div>
+	        </section>
+	        <!--section_3 end-->
+	        <div id="top_btn">
+	            <a href="#">top</a>
+	        </div>
+	    </div>
+	    
+	    
+	    
+	    
+
+	</body>
+</html>

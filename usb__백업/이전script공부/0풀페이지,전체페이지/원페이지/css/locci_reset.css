@@ -1,0 +1,45 @@
+*{
+    margin: 0; padding: 0;
+}
+
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+img{
+    border: 0;
+    width: 100%;
+    display: block;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');/*Noto Sans KR bold*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');/*Noto Sans KR Regular*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');/*나눔고딕Regular*/
+
+
+/*해더 메뉴*/
+#main_banner header .header_menu .menu a{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/*매거진*/
+#sec_wrap .sec1 .left h3{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/*푸터 제목*/
+footer #foot_wrap .info h3,
+{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/*푸터 내용*/
+footer #foot_wrap .info p{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+/*reserved*/
+footer #foot_wrap .info .txt{
+    font-family: 'Nanum Gothic', sans-serif;
+}

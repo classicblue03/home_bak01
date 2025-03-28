@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타일관련 함수</title>
+    <script src="js/jquery-3.6.0.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <h1>[jQuery 스타일 변경(선택자대신 변수로)]</h1>
+    <ol>
+      <li>$('대상').css(); css 명령을 사용할때</li>
+      <li>$('대상').show(); 숨어있는 요소를 보이게 해주는 명령</li>
+      <li>$('대상').hide(); 보이는 요소를 숨기게 해주는 함수</li>
+      <li>
+        $('대상').toggle(); 한번클릭하면 요소가 보이고 또 한번 클릭하면 요소를
+        안보이게 해주는 함수
+      </li>
+      <li>$('대상').width(); 요소의 가로사이즈 조절할때</li>
+      <li>$('대상').height(); 요소의 세로사이즈 조절할때</li>
+    </ol>
+    <button id="hide" type="button">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <button id="big">Big</button>
+    <button id="small">Small</button>
+    <hr />
+    <div class="box1">Show/hide</div>
+    <div class="box2">Toggle</div>
+    <div class="box3">Width/Height</div>
+
+    <script>
+      $(function () {
+        var btn1 = $("#hide");
+        var btn2 = $("#show");
+        var btn3 = $("#toggle");
+        var btn4 = $("#big");
+        var btn5 = $("#small");
+
+        var box1 = $(".box1");
+        var box2 = $(".box2");
+        var box3 = $(".box3");
+
+        // $('#hide').click(function () {
+        btn1.click(function () {
+          //선택자가 아닌 변수로 처리할 경우 속도가 더 빨라진다
+          //   $('.box1').hide(1000);
+          box1.hide(1000);
+        });
+
+        // $("#show").click(function () {
+            btn2.click(function () {
+          box1.show(1000);
+        });
+
+        btn3.click(function () {
+          box2.toggle();
+        });
+
+        btn4.click(function () {
+          box3.width(400);
+          box3.height("400px");
+        });
+
+        btn5.click(function () {
+            box3.width(200);
+            box3.height("200px");
+        });
+      });
+    </script>
+  </body>
+</html>

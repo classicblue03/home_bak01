@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수(function)</title>
+  </head>
+  <body>
+    <h1>[함수 선언 방식과 함수 사용 이유]</h1>
+    <h2>1. 함수의 선언방식 4가지</h2>
+
+    <ol>
+      <li>'function' 키워드를 이용한 선언방법</li>
+      <li>함수 리터럴(이름이 없는 (익명)함수)을 이용한 선언 방법</li>
+      <li>'Function'객체를 이용한 선언 방법</li>
+      <li>'즉시실행'함수로 선언하는 방법</li>
+    </ol>
+    <hr />
+    <script>
+      //함수는 선언하고 실행시키려면 그 함수를 호출한다
+      //일반함수
+      function printTen() {
+        alert("10을 출력합니다");
+      }
+      //printTen();
+      //      이름이 없는 익명함수는 변수에 기억시킨다
+      let hi = function () {
+        document.write("환영합니다<br>");
+      };
+      hi();
+
+      //Function객체를 이용하는 함수
+      let hi2 = new Function('document.write("welcome<br>")');
+      hi2();
+
+      //즉시 실행 함수
+      (function (name) {
+        document.write(name + "함수 호출 없이 출력하는 방법");
+      })("ezen : ");
+    </script>
+    <hr />
+
+    <h2>2. 함수 사용의 이유</h2>
+    <ol>
+      <li>코드의 중복 제거 및 코드 재사용</li>
+      <li>유지 보수의 용이성</li>
+    </ol>
+
+    <script>
+      let name = "홍길동",
+        name1 = "김철수",
+        name2 = "오영희",
+        name3 = "박서준";
+
+        // document.write(name + "님 환영합니다!<br>");
+        // document.write(name1 + "님 환영합니다!<br>");
+        // document.write(name2 + "님 환영합니다!<br>");
+        // document.write(name3 + "님 환영합니다!<br>");
+
+        function hello(name){
+            document.write(name + "님 환영합니다!<br>");
+        }
+
+        hello(name);
+        hello(name1);
+        hello(name2);
+        hello(name3);
+
+
+        document.write('<hr>');
+
+        // for(let i =1; i<=5; i++){
+        //     document.write('여기는 서울입니다<br>');
+        // }
+        // for(let j =1; j<=5; j++){
+        //     document.write('여기는 부산입니다<br>');
+        // }
+        // for(let k =1; k<=5; k++){
+        //     document.write('여기는 제주입니다<br>');
+        // }
+        function city(name){
+            for(let i =1; i <=5; i++){
+                document.write(`여기는 ${name}입니다!<br>`);
+            }
+        }
+        city('서울');
+        city('부산');
+        city('제주');
+
+        document.write('<br>[문제] 매개변수가 2개일때<br>');
+
+        //[문제] 
+        //저의 직업은 웹디자이너입니다*5
+        //저의 직업은 웹퍼블리셔입니다*3
+        //저의 직업은 웹개발자입니다*2
+
+        function job(position, num){
+            for(let i =1; i<=num; i++){
+                document.write(`저의 직업은 ${position}입니다. ${i}<br>`)
+            }
+        }
+
+        job('웹디자이너', 5);
+        job('웹퍼블리셔', 3);
+        job('웹개발자', 2);
+
+
+    </script>
+  </body>
+</html>

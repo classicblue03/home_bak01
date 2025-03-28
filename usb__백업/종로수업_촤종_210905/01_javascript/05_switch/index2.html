@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>분기변 판단</title>
+  </head>
+  <body>
+    <script>
+      let mon = prompt("1-12(분기를 확인하세요)");
+      mon = Number(mon); //받은 값을 바로 숫자로 바꿔준다
+      switch (mon) {
+        case 1:
+        case 2:
+        case 3:
+          alert("1사분기 입니다");
+          break;
+        case 4:
+        case 5:
+        case 6:
+          alert("2사분기 입니다");
+          break;
+        case 7:
+        case 8:
+        case 9:
+          alert("3사분기 입니다");
+          break;
+
+        case 10:
+        case 11:
+        case 12:
+          alert("4사분기 입니다");
+          break;
+        default:
+          alert("1~12월까지 입력해주세요");
+      }
+    </script>
+  </body>
+</html>

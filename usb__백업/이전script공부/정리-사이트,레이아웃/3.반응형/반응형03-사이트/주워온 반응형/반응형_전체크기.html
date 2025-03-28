@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media all and (min-width:1200px) {
+            #wrap {
+                max-width: 1920px;/*width: 100%;*/
+            /*
+                wrap에 가로 100%는
+                해상도 크기가 1920을 초과하는 해상도로 표현시
+                그대로 100%가 들어감
+                ex
+                해상도가 2560일 때 width: 100% = 2560px과 같음.
+                그러므로 해상도1920 기준일때 1920을 넘으면 해상도에서 무너짐.
+                
+                제일 큰 객체에 max-width값을 넣게되면
+                1920 이상 해상도가 나타나도 지정한 크기만큼만 표현됨
+            */
+                height: 2000px;
+                background-color: darkolivegreen;
+                margin: 0 auto;
+            }
+
+            #item {
+                width: 1200px;
+                height: 500px;
+                background-color: cadetblue;
+                margin: 0 auto;
+                font-size: 30px;
+                text-align: center;
+                line-height: 500px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="item">just object</div>
+    </div>
+</body>
+
+</html>

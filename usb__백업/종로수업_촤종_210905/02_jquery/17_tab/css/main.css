@@ -1,0 +1,166 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+section{
+    width: 100%;
+    height: 600px;
+    background: #f3f3f3;
+}
+
+section .section_inner{
+    width: 1100px;
+    height: 260px;
+    margin: auto;
+    border:1px solid red;
+}
+
+section .section_inner .left{
+    width: 540px;
+    height: 260px;
+    float: left;
+    background: url('../imgs/bg_search2021_02.jpg') no-repeat;
+}
+
+section .section_inner .right{
+    width: 540px;
+    height: 260px;
+    float: right;
+    background: #fff;
+    padding: 25px 30px 30px;
+    box-sizing: border-box;
+}
+
+section .section_inner .right .btn_more{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border:1px solid #ccc;
+    color: transparent;
+    text-indent: -99999px;
+    float: right;
+    position: relative;
+}
+
+section .section_inner .right .btn_more::before{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background: url('../imgs/spr_common.png') no-repeat -147px -77px;
+}
+section .section_inner .right .tab{
+    float: left;
+    margin-bottom: 35px;
+}
+
+
+section .section_inner .right .tab li{
+    float: left;
+    padding : 0 14px;
+    position: relative;
+}
+section .section_inner .right .tab li::after{
+    content: '';
+    width: 1px;
+    height: 15px;
+    background: #ccc;
+    position: absolute;
+    left: 0;
+    top:60%;
+    transform: translateY(-50%);
+}
+
+section .section_inner .right .tab li:first-child{
+    padding-left: 0;
+}
+
+section .section_inner .right .tab li:first-child::after{
+    display: none;
+}
+section .section_inner .right .tab li:last-child{
+    padding-right: 0;
+}
+
+section .section_inner .right .tab li a{
+    display: block;
+    color: #888;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+section .section_inner .right .tab li.on a{
+    color: #000;
+}
+
+
+section .section_inner .right .tab_list{
+    clear: both;
+    width: 100%;
+}
+
+section .section_inner .right .tab_list .list{
+    margin-top: 15px;
+}
+
+section .section_inner .right .tab_list .list2{
+    display: none;
+}
+
+section .section_inner .right .tab_list .list li{
+    padding-left: 8px;
+    margin-bottom:25px;
+    position: relative;
+}
+
+section .section_inner .right .tab_list .list li .new{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-indent: -99999px;
+    position: relative;
+}
+
+section .section_inner .right .tab_list .list li .new::after{
+    content:'';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: -5px;
+    top:50%;
+    transform: translateY(-50%);
+    background: url('../imgs/spr_common.png') no-repeat -33px -125px;
+}
+
+section .section_inner .right .tab_list .list li::before{
+    content: '';
+    width: 3px;
+    height: 3px;
+    background: #888;
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section .section_inner .right .tab_list .list li a{
+    display: inline-block;
+    overflow: hidden;
+    max-width: 350px;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    white-space: nowrap;
+    font-size: 16px;
+    color: #000;
+}
+
+section .section_inner .right .tab_list .list li span{
+    color: #999;
+    float: right;
+}

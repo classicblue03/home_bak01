@@ -1,0 +1,117 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>Page Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<script src="jquery-3.5.1.js"></script>
+</head>
+
+<script>
+	// 		$(document).ready(function(){
+
+	// });
+
+	//		*제이쿼리는
+	//		
+
+	$(document).ready(function () {
+
+		// 제이쿼리 기본틀
+		// =>자바스크립트의 함수 형태를 간단한 명령으로 호출하여 사용
+		// =>자바스크립트에서 여러 명령을 함수화시켜 만들어진 함수의 라이브러리 형태의 언어
+
+
+		/**제이쿼리 표기
+		font-size => fontSize
+		
+		선택자
+		=>기본 css 선택자 모두 활용가능
+		=>따옴표 삽입하는 선택자 : 기존 css선택자(작업자 삽입한 선택자)
+		=>document / window / this (컴퓨터에서 지정한, 만들어져있는 선택자라 따옴표x)
+		
+		$('#box').css({
+			width:'300px',
+			height:300+'px',
+			backgroundColor: 'pink'
+		});
+		
+
+
+
+		/**문제2
+		div의 스타일 (3개)
+		=>가로 400px
+		=>세로 400px
+		=>텍스트 크기 100px
+		=>텍스트 가로세로 중앙정렬
+		=>배경색(빨강,초록,파랑 id값,class값은 지정안함)*/
+
+		/*풀이*/
+
+		$('div').css({
+
+			width: 400,
+			height: 400,
+			fontSize: 100,
+			textAlign: 'center',
+			lineHeight: 400 + 'px'
+		});
+
+		$('div:nth-child(1)').css({
+			backgroundColor: 'crimson'
+		});
+
+		$('div:nth-child(2)').css({
+			backgroundColor: 'darkgreen'
+		});
+
+		$('div:nth-child(3)').css({
+			backgroundColor: 'slateblue'
+		});
+
+
+
+		/**문제3
+		=>div 가로값,높이값 변수로 저장
+		=>h1태그에 css로 변수로 저장한 가로,높이값 지정
+		=>h1 총 가로길이 800, 세로길이 300
+		=>h1태그에 배경색 노랑*/
+
+
+		/**객체 크기 변수로 담을때
+		 =>var a=$("가로값으로가져올 선택자").width();
+		 =>var b=$("높이값으로가져올 선택자").height();*/
+
+
+		var div_w = $('div').width();
+		var div_h = $('div').height();
+
+		$('h1').css({
+			width: div_w + 400,
+			/* == div_w * 2*/
+			height: div_h - 100,
+
+			/*=>변수로 크기값을 담은 상태에서
+			연산식을 적어주면 연산된 상태에서 크기값을 출력해줌*/
+
+			backgroundColor: 'gold'
+		});
+
+	}); //end
+</script>
+
+
+
+<body>
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<h1>4</h1>
+
+
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+*{margin:0; padding: 0;}
+
+body{
+    width: 782px; height: 4000px;
+    margin: 0 auto; /*가운데정렬*/
+}
+
+li{
+    list-style: none;
+}
+
+
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡpopupㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+#pop_btn{
+    display: none;  /*처음에는 안보이게*/
+
+}
+#pop_btn ~ .popup {display: block;}
+#pop_btn:checked ~ .popup {display: none;}
+/*같은레벨 = ~ 아래쪽의 태그들 중에서 팝업을 블락orNone */
+
+
+
+.popup{
+    width: 320px; height: 340px;
+    border: 1px solid #111;
+    position: absolute;
+    top: 100px; left: 100px;
+    z-index: 9999;  /*팝업을 홈페이지 창의 맨위로 보내기 */
+}
+
+.pop_img img{
+    width: 300px; height: 300px;
+    margin: 10px;
+}
+
+
+
+
+
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡheaderㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+#header{
+    height: 200px;
+    background-color: #ccc;
+
+}
+
+.gnb_menu{overflow: hidden;} /*남의자리로 오지못하게 (로그인보다 밑에있으라고)*/
+.gnb_menu ul{float: right;}/*오른쪽정렬*/
+.gnb_menu li{
+    display: inline-block;
+    padding: 0 10px; /*위아래 0 좌우10*/
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.gnb_menu li:hover{
+    color:darkred;
+}
+
+.logo{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;/*가운데정렬*/
+    margin: 0 auto; /*가운데정렬*/
+}
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡwrapㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+#wrap{}
+#wrap_menu{
+    position: relative;        /*부모*/
+}
+
+
+
+
+.ham_menu{
+    position: absolute;        /*자식*/
+    top: 32px;                 /*위에서 떨어지는 높이 = 높이*/
+}
+
+.lnb_fix{                      /*wrap fix시키려고*/
+    width: 782px;
+    position: fixed; top: 0;
+}
+
+
+.lnb_menu{overflow: hidden;}
+
+
+
+
+.ham_btn{
+    width: 32px; height: 32px;
+    float: left;
+    cursor: pointer;
+}
+.ham_btn img{
+    width: 100%; height: auto;/*햄버거 이미지가 꽉차게(위에 딱붙게)*/
+
+}
+
+.lnb_menu li{
+    width: 150px; height: 32px;
+   float: left;/*메뉴 일렬로 정렬함*/
+   text-align: center;
+   line-height: 32px;
+   background-color: darkred;
+   color: #fff;
+   cursor: pointer;
+}
+.lnb_menu li:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+
+.ham_menu{
+    overflow: hidden;
+}
+
+
+.ham_menu ul{
+    float: left;
+}
+
+.ham_menu ul li{
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #111;
+    color: #fff;
+    font-size: 14px;
+
+}
+
+.ham_menu ul li:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+
+.visual_menu {
+    width: 782px;
+    height: 300px;
+    background-color: #fe8;
+    margin: 0 auto;
+    line-height: 30px;
+
+}
+
+
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡcontainerㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+.best_top{
+    position: relative;
+    margin: 30px;
+
+}
+
+.pro_title{
+    width: 500px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.chk_btn{
+    width: 20px; height: 20px;
+    position: absolute;
+    top: 0; right: 3px;
+    background-image: url(plus_btn.jpg);
+    cursor: pointer;
+    transition-property: background-image;  /*트렌지션을 일으켜야할 대상*/
+    transition-duration: 0.2s;
+    /* transition-property:all 도 가능함*/
+}
+
+
+#chk_btn ~ .best_top .chk_btn {background-image: url(plus_btn.jpg);}
+#chk_btn:checked  ~ .best_top .chk_btn {background-image: url(minus_btn.jpg);}
+/**/
+
+
+
+
+.pro {overflow: hidden;}
+
+.pro div{
+    width:180px; height: 180px;
+    float:left;
+    margin: 5px;
+    border: 1px solid #111; box-sizing: border-box;
+    
+}
+
+/*
+.product02{
+    display: none;
+}
+
+
+
+
+#chk_btn { display: none;}                  1번은 항상 보여져야하고 2번은 숨겨져있다 나옴
+#chk_btn ~  .product02 {display: none;}
+#chk_btn:checked ~ .product02 {display: block;}
+*/
+
+
+
+
+.product02 {
+    height: 0;
+    transition-property: height;
+    transition-duration: 0.5s; /*스르륵 효과*/
+}
+
+#chk_btn { display: none;}                
+#chk_btn ~  .product02 {height: 0;}
+#chk_btn:checked ~ .product02 {height: 190px;}
+
+
+
+
+
+
+
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ input태그의 radio버튼 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+
+#tab01, #tab02, #tab03 {display: none;}
+
+#tab01 ~ .sheet01 {display: none;}
+#tab01:checked ~ .sheet01 {display: block;}
+#tab02 ~ .sheet02 {display: none;}
+#tab02:checked ~ .sheet02 {display: block;}
+#tab03 ~ .sheet03 {display: none;}
+#tab03:checked ~ .sheet03 {display: block;}
+
+.label {overflow: hidden;}
+.label label {
+    width:100px; height: 30px;
+    background-color: #ccc; color: black;
+    display: block;
+    float: left;
+    text-align: center; line-height: 30px;
+    border-radius: 10px 10px 0 0;
+}
+
+#tab01:checked ~ .label .tab01 {background-color: black; color: white;}
+#tab02:checked ~ .label .tab02 {background-color: black; color: white;}
+#tab03:checked ~ .label .tab03 {background-color: black; color: white;}
+
+.sheet {
+    width:782px; height: 300px;
+    background-color: black; color: white;
+    font-size: 40px;
+    text-align: center; line-height: 300px;
+    border-radius: 0 10px 0 0;
+}
+
+
+
+
+

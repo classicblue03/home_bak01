@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>float 태그의 가로배열</title>
+    <style>
+        *{/*별주머니=문서전체, 문서전체에 margin:0과 padding:0을 주면 불필요한 여백은 모두 없애고 시작할 수 있음*/
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style:none; /*li에 붙는 기호를 삭제시킴*/
+        }
+        .float1{
+            width:448px;
+            background:#96f;
+        }
+        .float1:after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        .float1 li{
+            width:100px;
+            height:100px;
+            background:#fcf;
+            border:1px solid #000;
+            float:left;
+            margin-right:10px;
+        }
+        
+        .float2{
+            width:456px;
+            background:#ff9;
+        }
+        .float2:after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        .float2 .box{
+            width:100px;
+            height:100px;
+            background:#6cf;
+            border:2px solid #000;
+            float:right;
+            margin-left:10px;
+        }
+        
+        #d1{
+            width:340px;
+            background:#cff;
+        }
+        #d1:after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        #d1 .box{
+            width:100px;
+            height:100px;
+            background:#f90;
+            float:left;
+            margin-right:20px;
+        }
+        /*#d1 .last{}*/
+        #d1 .box.last{
+            margin-right:0;
+        }
+        
+        #d2{
+            width:320px;
+            background:#fcc;
+        }
+        #d2:after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        #d2 .box{
+            width:100px;
+            height:100px;
+            background:#6f3;
+            float:left;
+            margin-right:10px;
+        }
+        /*#d2 .box.mr0{
+            margin-right:0;
+        }*/
+        /*#d2 .box:nth-child(3){
+            margin-right:0;
+        }
+        #d2 .box:last-child{
+            margin-right:0;
+        }*/
+        #d2 .box:nth-child(3n){
+            margin-right:0;
+        }
+        
+        #d3{
+            width:850px;
+            background:#9ff;
+        }
+        #d3:after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        #d3 .box{
+            width:150px;
+            height:150px;
+            background:#99f;
+            float:left;
+            margin-right:25px;
+        }
+        #d3 .box:last-child{
+            margin-right:0;
+        }
+    </style>
+</head>
+<body>
+    <ul class="float1">
+        <li>왼쪽1</li>
+        <li>왼쪽2</li>
+        <li>왼쪽3</li>
+        <li>왼쪽4</li>
+    </ul>
+    
+    <div class="float2">
+        <div class="box">오른쪽1</div>
+        <div class="box">오른쪽2</div>
+        <div class="box">오른쪽3</div>
+        <div class="box">오른쪽4</div>
+    </div>
+    
+    <div id="d1">
+        <div class="box">d1_1</div>
+        <div class="box">d1_2</div>
+        <div class="box last">d1_3</div>
+    </div>
+    
+    <div id="d2">
+        <div class="box">d2_1</div>
+        <div class="box">d2_2</div>
+        <div class="box mr0">d2_3</div>
+        <div class="box">d2_4</div>
+        <div class="box">d2_5</div>
+        <div class="box mr0">d2_6</div>
+    </div>
+    
+    <div id="d3">
+        <div class="box">d3_1</div>
+        <div class="box">d3_2</div>
+        <div class="box">d3_3</div>
+        <div class="box">d3_4</div>
+        <div class="box">d3_5</div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

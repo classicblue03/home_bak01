@@ -1,0 +1,257 @@
+#wrap {
+    width: 1920px;
+    position: relative;
+}
+
+aside {
+    position: fixed;
+    /*background-color: coral;*/
+    top: 0;
+    left: 0;
+}
+
+aside img {
+    width: 50px;
+    height: 50px;
+    z-index: 9999;
+}
+
+#video {
+    width: 1870px;
+    height: 100%;
+    position: relative;
+    left: 50px;
+}
+
+/*main*/
+#main {
+    width: 1920px;
+    height: auto;
+    /*position: relative;*/
+    margin-bottom: 200px;
+    background-color: pink;
+    /*background-image: url(../img/main_bg.jpg);*/
+    /* background-attachment: fixed;
+    background-size: cover;
+    background-color: hsla(0.2);*/
+}
+
+#banner {
+    width: 1920px;
+    height: 2000px;
+    background-color: cornflowerblue;
+    margin-bottom: 200px;
+}
+
+#banner .logo {
+    width: 620px;
+    margin: 0 auto;
+    padding-top: 250px;
+    margin-bottom: 280px;
+}
+
+
+
+/*슬라이드*/
+.slide:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.slide {
+    width: 1500px;
+    /*height: auto;*/
+    background-color: aqua;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slide .slide_wrap {
+    width: 4500px;
+    height: 730px;
+    position: absolute;
+    /*relative!!!!*/
+    float: left;
+    top: 0;
+    left: 0;
+}
+
+.slide .ban {
+    width: 1500px;
+    height: 730px;
+    float: left;
+    background-color: blue;
+}
+
+.slide_wrap .slide_btn {
+    position: absolute;
+    right: 3%;
+    top: 45%;
+}
+
+.slide_wrap .slide_btn p {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #f1efef;
+    opacity: 0.5;
+    z-index: 9999;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.slide_wrap .slide_btn img {
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+}
+
+
+/*제목*/
+.ban_info:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.ban_info {
+    width: 1500px;
+    height: 200px;
+    float: right;
+    background-color: peachpuff;
+    /*position: relative;*/
+}
+
+.ban_info .tit {
+    width: 860px;
+    height: 150px;
+    /*position: relative;*/
+    background-color: olive;
+}
+
+.ban_info .slide_tit {
+    float: left;
+}
+
+.tit span {
+    display: block;
+    /*transform: translate(0%, -40%);*/
+    z-index: 9999px;
+    font-size: 80px;
+    color: #fff;
+}
+
+.tit p {
+    font-size: 30px;
+}
+
+
+
+/*내용*/
+.text {
+    width: 640px;
+    height: 200px;
+    background-color: chocolate;
+}
+
+.slide_txt {
+    /*float: right;*/
+}
+
+.slide_txt p {
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*line*/
+#line_col {
+    width: 1500px;
+    height: auto;
+    margin: 0 auto;
+    /*background-color: gainsboro;*/
+}
+
+#line_col h3 {
+    font-size: 30px;
+    margin-bottom: 90px;
+}
+
+.line_wrap:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.line_wrap {
+    width: 1500px;
+    height: auto;
+    /*background-color: aquamarine;*/
+}
+
+.line_wrap div {
+    float: left;
+    margin-right: 45px;
+}
+
+.line_wrap div:last-child {
+    margin-right: 0;
+}
+
+/*상단*/
+.line_top {
+    width: 1500px;
+    height: 470px;
+    /*background-color: coral;*/
+}
+
+.line_s {
+    width: 470px;
+    height: 400px;
+    /*background-color: skyblue;*/
+}
+
+.line_s img {
+    height: 280px;
+}
+
+.line_b {
+    width: 470px;
+    height: 590px;
+    position: relative;
+    /*background-color: pink;*/
+}
+
+.line_b img {
+    height: 470px;
+}
+
+.circle_btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ffcb00;
+    transform: translate(70%, -50%);
+}
+
+.line_txt {
+    font-size: 22px;
+    padding: 0 10px;
+    /*background-color: chocolate;*/
+}
+
+.line_txt span {
+    font-weight: bold;
+}

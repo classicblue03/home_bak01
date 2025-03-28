@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    height: 200px;
+    background-color: aquamarine;
+    position: fixed;
+    top: -150px;
+    left: 0;
+    transition-duration: 0.5s;
+    z-index: 9999;
+}
+
+header:hover {
+    top: 0;
+}
+
+#in_header {
+    width: 1200px;
+    height: 200px;
+    /*background-color: deepskyblue;*/
+    margin: 0 auto;
+    position: relative;
+}
+
+#but {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    bottom: 0;
+}
+
+#menu_box {
+    width: 1200px;
+    height: 200px;
+    background-color: skyblue;
+    margin: 0 auto;
+    display: none;
+}
+
+header:hover #but {
+    display: none;
+}
+
+header:hover #menu_box {
+    display: block;
+}
+
+.menu {
+    width: 300px;
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 200px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.menu:nth-child(1) {
+    background-color: yellowgreen;
+}
+
+section {
+    width: 1200px;
+    overflow: hidden;
+    /*->
+    ->본래의 속성은 객체 밖으로 넘쳐나는 영역 가려주기
+    자식한테 맞춰주기 위해 부모의 높이값을 뺏을때 부모의 높이값 상실하는 경우 overflow:hidden을 넣어주면 됨
+    ->단, 포지션 절대값이 들어갔을대는 인지하지 못하거나, 때에 따라서 포지션값을 넣으면 인지하지 못함*/
+    background-color: lightgray;
+    margin: 70px auto 30px auto;
+}
+
+.top_box {
+    width: 100%;
+    height: 50px;
+    background-color: lightcoral;
+}
+
+.box {
+    width: 240px;
+    height: 400px;
+    background-color: lightblue;
+    border: 1px solid black;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.hover_box>div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.left_box {
+    background-color: aqua;
+}
+
+.hover_box>.right_box {
+    position: absolute;
+    top: 0;
+    left: 240px;
+    background-color: violet;
+    transition-duration: 1s;
+}
+
+footer {
+    margin-top: 100px;
+    width: 100%;
+    height: 200px;
+    background-color: aquamarine;
+}
+
+.hover_box:hover>.right_box {
+    left: 0;
+}

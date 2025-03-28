@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title></title>
+	<meta charset="utf-8" /> <!-- HTML5 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no"/>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<h1>방법 1</h1>
+	<div class="secondBox">
+		<ul>
+			<li>
+				<a href="#" onMouseOver="mouse_Over()" onMouseOut="mouse_Out()" id="btnPopupCallControl">
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					<span> 전화제어</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+
+	
+	<script type="text/javascript">
+		function mouse_Over(){
+			$(".secondBox ul li a span").text('Call Control');
+		}
+		function mouse_Out(){
+			$(".secondBox ul li a span").text('전화제어');
+		}
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<h1>방법 2</h1>
+	<div class="secondBox2">
+		<ul>
+			<li>
+				<a href="#">
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					<span> 전화제어</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		$('.secondBox2 ul li a').on({
+			mouseenter : function(){
+				$(this).find('span').text('Call Control');
+			},
+			mouseleave : function(){
+				$(this).find('span').text('전화제어');
+			}
+		})
+	</script>
+
+</body>
+</html>

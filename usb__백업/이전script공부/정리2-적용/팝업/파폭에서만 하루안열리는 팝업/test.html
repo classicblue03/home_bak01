@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>팝업</title>
+  <script src="../js/jquery-3.5.1.js"></script>
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+  <div class="popup_wrap">
+    <div class="popup_contents_area">Popup Content</div>
+    <div class="layer_btns_area">
+      <div class="layer_">
+        <input type="checkbox" id="check" name="pop_today" class="check">
+        <label for="check">오늘 하루 이 창을 열지 않음</label>
+      </div>
+      <a href="#" class="close">닫기</a>
+    </div>
+  </div>
+
+  <script>
+    const closePop = document.querySelector('.close');
+    const popCont = document.querySelector('.popup_wrap');
+    const checkPop = document.querySelector('.check');
+
+    function setCookie(name, value, expirehours) {
+      var todayDate = new Date();
+      todayDate.setHours(todayDate.getHours() + expirehours);
+      document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+    }
+
+    cookiedata = document.cookie;
+    if (cookiedata.indexOf("ncookie=done") < 0) {
+      popCont.classList.remove('off');
+    } else {
+      popCont.classList.add('off');
+    }
+
+    function closeEventPop() {
+      if (checkPop.checked) {
+        setCookie("ncookie", "done", 24);
+      }
+      popCont.classList.add('off');
+    }
+
+    function init() {
+      closePop.addEventListener('click', closeEventPop)
+    }
+    init();
+  </script>
+</body>
+
+</html>

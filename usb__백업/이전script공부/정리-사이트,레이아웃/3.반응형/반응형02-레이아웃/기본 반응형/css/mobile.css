@@ -1,0 +1,95 @@
+@media all and (max-width:760px) {
+    #wrap {
+        width: 100%;
+        margin: 0 auto;
+        background-color: lightgray;
+    }
+    header {
+        width: 100%;
+        height: 80px;
+        background-color: lightcoral;
+        float: left;
+        text-align: center;
+        font-size: 25px;
+        position: relative;
+    }
+    #menu_box {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        background-color: darkred;
+        display: block;
+        text-align: center;
+        line-height: 50px;
+        color: white;
+    }
+    /*->로고가 margin값으로 auto가 들어가있을대는 전체적으로 여백값을 가지고 있으므로 메뉴가 블록요소 적용시 밑으로 떨어짐
+    곧, 포지션 값을 이용하여 위치 잡을 것*/
+    #logo {
+        margin: 15px auto;
+        width: 150px;
+        height: 50px;
+        background-color: red;
+        line-height: 50px;
+        /*float: left;*/
+    }
+    #menu {
+        display: none;
+    }
+    /*header end*/
+    #section_1 {
+        width: 100%;
+        height: 300px;
+        background-color: salmon;
+        float: left;
+        margin: 30px 0;
+    }
+    /*section_1 end*/
+    #section_2,
+    #section_3 {
+        width: 100%;
+        background-color: orange;
+        float: left;
+    }
+    #section_2 {
+        height: 330px;
+    }
+    .con_2 {
+        width: 100%;
+        height: 100px;
+        background-color: slateblue;
+        margin-bottom: 15px;
+    }
+    .con_2:last-child {
+        /*margin-right: 0;*/
+        margin-bottom: 0;
+    }
+    /*section_2 end*/
+    #section_3 {
+        height: 675px;
+        margin-top: 30px;
+    }
+    .con_3 {
+        width: 100%;
+        height: 100px;
+        background-color: slateblue;
+        float: left;
+        margin-top: 15px;
+    }
+    .con_3:first-child {
+        margin-top: 0;
+    }
+    /*section_3 end*/
+    footer {
+        width: 100%;
+        height: 80px;
+        background: salmon;
+        margin-top: 30px;
+        float: left;
+    }
+}
+
+
+/*end*/

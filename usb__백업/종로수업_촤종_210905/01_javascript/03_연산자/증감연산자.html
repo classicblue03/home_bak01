@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증감연산자</title>
+</head>
+<body>
+    <pre>
+        증감연산자
+        ++(+1) -> 1씩 더하는 연산자
+        --(-1) -> 1씩 빼는 연산자
+
+        변수++  a=a+1; a+=1; a++; ++a;
+        변수--  a=a-1; a-=1; a--; --a;
+    </pre>
+    <hr>
+    <script>
+
+        var num1 = 10;
+
+        document.write("<p>더하기</p>");
+        num1 = num1+1;
+        document.write("num1값1  >> "+ num1 + "<br>");  //11
+
+        num1+=1;
+        document.write("num1값2  >> "+ num1 + "<br>");  //12
+
+        num1++;
+        document.write("num1값3  >> "+ num1 + "<br>");  //13
+
+        ++num1;
+        document.write("num1값4  >> "+ num1 + "<br>");  //14
+
+
+
+        document.write("<br> <p>빼기</p>");
+
+        num1 = num1-1;
+        document.write("num1값1  >> "+ num1 + "<br>");
+
+        num1-=1;
+        document.write("num1값2  >> "+ num1 + "<br>");
+
+        num1--;
+        document.write("num1값3  >> "+ num1 + "<br>");
+
+        --num1;
+        document.write("num1값4  >> "+ num1 + "<br>");
+
+
+
+    </script>
+    
+</body>
+</html>

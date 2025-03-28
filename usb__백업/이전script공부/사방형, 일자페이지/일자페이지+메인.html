@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+	<title>Page Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		#wrap {
+			position: fixed;
+		}
+
+		section,
+		#left_wrap {
+			position: relative;
+			float: left;
+		}
+
+		.con,
+		.arrow {
+			position: absolute;
+			top: 50%;
+			right: 50%;
+		}
+	</style>
+
+	<script src="jquery-3.4.1.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			/**문제2
+			body
+			=>전체wrap로 감싸주고 부모 div 4개 생성
+			=>각div 안에 con 자식 하나씩 추가
+			css
+			=>부모div 에 위치값 상대값 지정
+			=>자식 con에 위치값 절대값, 위쪽,오른쪽 50%지정
+			script
+			=>윈도우 가로,세로값 변수로 받아오기
+			=>전체 wrap 가로 윈도우값, 세로 윈도우높이 4배값 지정
+			=>index값으로 색상 변수로 지정(빨강,초록,파랑,노랑) 
+			=>부모 div에 가로,세로 윈도우 값 지정
+			=>배경색 index값으로 순서대로 지정
+			=>con자식에게 가로,세로값 80%비율값(0.8) 지정
+			=>배경색 회색
+			=>박스 가운데 정렬*/
+
+			var ww = $(window).width();
+			var wh = $(window).height();
+			var bg = ['salmon', 'teal', 'gold', 'pink'];
+
+			$('#wrap').css({
+				width: ww,
+				height: wh * 4
+			});
+
+			$('section').css({
+				width: ww,
+				height: wh,
+				backgroundColor: function (index) {
+					return bg[index];
+				}
+			});
+
+			$('.con').css({
+				width: ww * 0.8,
+				height: wh * 0.8,
+				backgroundColor: 'gray',
+				marginTop: -(wh * 0.8) / 2,
+				marginRight: -(ww * 0.8) / 2
+			});
+
+
+			/**일자페이지 애니메이트 문제
+			=>wrap 위치값 고정
+			=>con안에 h1태그 박스만들기 (크기 윈도우 가로값 0.1) 
+			=>박스안에 각 화살표 만듬, 마지막엔 메인 글자 넣기, 
+			글자위아래 가운데정렬
+			=>화살표 클릭시 아랫쪽section 페이지 애니메이트 이동
+			=>마지막 메인 글자 클릭시 첫번째 메인으로 애니메이트 이동*/
+
+			$('.arrow').css({
+				width: ww * 0.1,
+				height: ww * 0.1,
+				backgroundColor: '#84b528',
+				marginTop: -(ww * 0.1) / 2,
+				marginRight: -(ww * 0.1) / 2,
+				textAlign: 'center',
+				lineHeight: ww * 0.1 + 'px'
+			});
+
+			$('#left_wrap').css({
+				width: ww * 3,
+				height: wh,
+				backgroundColor: 'lightgreen'
+			});
+
+
+			/**누구를/ 어떻게/ 무엇을/ 어떻게/ 행동할것인가*/
+
+			/*$('#btn_1').click(function(){
+				
+				$('#wrap').animate({
+					top:-wh
+				});
+				
+			});
+			
+			$('#btn_2').click(function(){
+				
+				$('#wrap').animate({
+					top:-wh*2
+				});
+				
+			});
+			
+			$('#btn_3').click(function(){
+				
+				$('#wrap').animate({
+					top:-wh*3
+				});
+				
+			});
+			
+			$('#btn_4').click(function(){
+				
+				$('#wrap').animate({
+					top:0
+				});
+				
+			});*/
+
+			function moving(elem, size, leftMove) {
+				$(elem).click(function () {
+					$('#wrap').animate({
+						top: size,
+						left: leftMove
+					});
+				});
+			}
+
+			moving('#btn_1', -wh);
+			moving('#btn_2', -wh * 2);
+			moving('#btn_3', -wh * 3);
+			moving('#btn_4', -wh * 3, -ww);
+			moving('#btn_5', -wh * 3, -ww * 2);
+			moving('#btn_6', 0, 0)
+
+		}); //end
+	</script>
+
+</head>
+
+<body>
+
+	<div id="wrap">
+		<section>
+			<div class="con">
+				<h1 class="arrow" id="btn_1">▼</h1>
+			</div>
+		</section>
+		<section>
+			<div class="con">
+				<h1 class="arrow" id="btn_2">▼</h1>
+			</div>
+		</section>
+		<section>
+			<div class="con">
+				<h1 class="arrow" id="btn_3">▼</h1>
+			</div>
+		</section>
+
+
+		<div id="left_wrap">
+			<section>
+				<div class="con">
+					<h1 class="arrow" id="btn_4">▶</h1>
+				</div>
+			</section>
+			<section>
+				<div class="con">
+					<h1 class="arrow" id="btn_5">▶</h1>
+				</div>
+			</section>
+			<section>
+				<div class="con">
+					<h1 class="arrow" id="btn_6">Main</h1>
+				</div>
+			</section>
+		</div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>현재 시간</title>
+    <!-- <script src="../js/jquery-3.5.1.js"></script> -->
+    <style>
+        .js-clock {
+            padding: 100px 0 0 100px;
+        }
+
+        .js-clock>h1 {
+            font-size: 50px;
+            color: royalblue;
+            font-family: 'Montserrat';
+            letter-spacing: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="js-clock">
+        <h1></h1>
+    </div>
+
+    <script>
+        const clockWrap = document.querySelector(".js-clock"),
+            clockName = clockWrap.querySelector("h1")
+
+        function getTime() {
+            const date = new Date();
+            const minutes = date.getMinutes();
+            const hours = date.getHours();
+            const seconds = date.getSeconds();
+            clockName.innerText =
+                `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds }`;
+            // 숫자가 10보다 작으면 0${seconds} 를 반환하고 그렇지 않으면 seconds만 반환
+        }
+
+        function init() {
+            getTime();
+            setInterval(getTime, 1000);
+        }
+        init();
+
+    </script>
+</body>
+
+</html>

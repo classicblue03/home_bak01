@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀페이지</title>
+    <link rel="stylesheet" href="./css/full-page-scroll.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/full-page-scroll.js"></script>
+</head>
+<body>
+  <ul class="menuWrap">
+    <li><a href="#0">Page #1</a></li>
+    <li><a href="#1">Page #2</a></li>
+    <li><a href="#2">Page #3</a></li>
+    <li><a href="#3">Page #4</a></li>
+    <li><a href="#4">Page #5</a></li>
+  </ul>
+
+  <!--main, 스크롤콘터이너-->
+  <div id="main" class="scroll-container">
+    <section class="section1">
+      <div>
+        <span>Page #1</span>
+      </div>
+    </section>
+    <section class="section2">
+      <div>
+        <span>Page #2</span>
+      </div>
+    </section>
+    <section class="section3">
+      <div>
+        <span>Page #3</span>
+      </div>
+    </section>
+    <section class="section4">
+      <div>
+        <span>Page #4</span>
+      </div>
+    </section>
+    <section class="section5">
+      <div>
+        <span>Page #5</span>
+      </div>
+    </section>
+  </div>
+
+  <script type="text/javascript">
+      new fullScroll({
+          displayDots: true,
+          dotsPosition: 'left',
+          animateTime: 0.7,
+          animateFunction: 'ease'
+      });
+  </script>
+
+</body>
+</html>

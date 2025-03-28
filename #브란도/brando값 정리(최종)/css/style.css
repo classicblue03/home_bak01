@@ -1,0 +1,1145 @@
+@charset "UTF-8";
+
+/* 모니터기준 사이즈 1903 */
+/* 그리드 방식,  백분율로 계산 */
+/* 패딩, 마진 상하좌우 비율계산 = 부모영역 너비에 대한 비율로 계산 */
+#wrap {z-index: 1;position: relative;width: 100%;}
+#wrap #main {z-index: 2;position: relative;width: 100%;}
+#wrap #main section {width: 100%;height: auto;padding: 6.831319% 0;/* 130/1903 */}
+
+/* common */
+/* wrap 1170px - gap 30px = 1140px */
+#wrap #main section .wrap .gap .container .title {text-align: center;padding-bottom: 7.0175439%; /* 80/1140 */}
+#wrap #main section .wrap .gap .container .title h2 {padding-bottom: 15px; font-size: 24px; font-weight: 700; font-family: 'Montserrat'; color: #614c45;}
+#wrap #main section .wrap .gap .container .title h3 {width: 100%;}
+#wrap #main section .wrap .gap .container .title h3 img {width: 178px;}
+
+
+/* header
+---------------------- */
+#wrap #header {z-index: 3;position: fixed;top: 0;left: 0;width: 100%;height: 75px;transition: all .3s; border-bottom: 1px solid rgba(0,0,0,.1);background: transparent;/* transparent -> 스크롤시 블랙으로 바뀜*/}
+/* #wrap #header:hover {height:60px; background:transparent; border-bottom:0;} */
+/* 상단에서 10px이상 스크롤시 header높이를 60px로 부드럽게 변경, 배경:black; boder:0; (addClass) */
+#wrap #header.addHeader {height: 60px; border-bottom: 0; background:#000;}
+#wrap #header.addHeader .wrap .gap .container .left-wrap {line-height: 60px;}
+#wrap #header.addHeader .wrap .gap .container .right-wrap .aside {line-height: 60px;}
+#wrap #header.addHeader .wrap .gap .container .mobilebtn-wrap {padding: 22px 0; /* 60-16=44 */}
+#wrap #header.addHeader .wrap .gap .container .mobile {top: 60px;}
+
+#wrap #header .wrap {width:100%; max-width:1170px; height:100%; margin: 0 auto;}
+#wrap #header .wrap .gap {width: auto;height: 100%;margin: 0 15px;}
+#wrap #header .wrap .gap .container {width: 100%; height: 100%; /* 임시너비1170 */}
+#wrap #header .wrap .gap .container .left-wrap {float: left;line-height: 75px;transition: all .3s;/* 임시너비1140 */}
+#wrap #header .wrap .gap .container .left-wrap .logo-wrap {display: inline-block; line-height: 100%; width: 156px; /* 로고이미지 w312/2 */}
+#wrap #header .wrap .gap .container .left-wrap .logo-wrap a {display: inline-block;}
+#wrap #header .wrap .gap .container .left-wrap .logo-wrap a img {width: 100%;}
+
+#wrap #header .wrap .gap .container .left-wrap #gnb {display: inline-block;line-height: 100%;margin-left: 20px;padding: 3px 0;font-family: 'Montserrat';border-left: 1px solid #dcdcdc;}
+#wrap #header .wrap .gap .container .left-wrap #gnb ul {width: 100%;}
+#wrap #header .wrap .gap .container .left-wrap #gnb ul li {display: inline-block;margin-left: 37px;}
+#wrap #header .wrap .gap .container .left-wrap #gnb ul li a {font-size: 12px;font-weight: 600;color: #dcdcdc;}
+
+#wrap #header .wrap .gap .container .right-wrap {float: right;}
+#wrap #header .wrap .gap .container .right-wrap .aside {line-height: 75px;transition: all .3s;}
+#wrap #header .wrap .gap .container .right-wrap .aside span {display: inline-block; line-height: 100%; margin-left: 10px;letter-spacing: .5px; font-family: 'Montserrat'; font-size: 10px; font-weight: 600; color: #dcdcdc;}
+#wrap #header .wrap .gap .container .right-wrap .aside span a {display: inline-block; /* 인라인블럭 = line-heigth 적용시키기 위함 */ padding: 5px 10px; transition: all .3s; background: transparent; border: 2px solid #dcdcdc; font-size: 11.5px; font-weight: 600; color: #dcdcdc;}
+#wrap #header .wrap .gap .container .right-wrap .aside span a:hover {color:#000; background:#dcdcdc;}
+
+#wrap #header .wrap .gap .container .mobilebtn-wrap {display: none;float: right;padding: 28px 0;width: 25px;height: 16px;transition: all .3s;}
+#wrap #header .wrap .gap .container .mobilebtn-wrap a {position: relative;display: block;width: 100%;height: 100%;}
+#wrap #header .wrap .gap .container .mobilebtn-wrap a .line {position: absolute;left: 0;width: 100%;height: 2px;background: #fff;}
+#wrap #header .wrap .gap .container .mobilebtn-wrap a .line1 {top: 0;}
+#wrap #header .wrap .gap .container .mobilebtn-wrap a .line2 {top: 50%;margin-top: -1px;}
+#wrap #header .wrap .gap .container .mobilebtn-wrap a .line3 {bottom: 0;}
+
+#wrap #header .wrap .gap .container .mobile {display: none;position: absolute;top: 75px;left: 0;width: 100%;transition: top .3s;}
+#wrap #header .wrap .gap .container .mobile ul {width: 100%;}
+#wrap #header .wrap .gap .container .mobile ul li {width: 100%;border-bottom: 1px solid rgba(30, 30, 30, 1);}
+#wrap #header .wrap .gap .container .mobile ul li a {display: block;width: 100%;background: rgba(0,0,0,.5);line-height: 40px;font-size: 15px; text-indent: 20px; color: #fff;}
+
+/* main */
+#wrap #main .section0234 {width: 100%; height: 969px; background: url(../img/restaurant-img1.jpg) no-repeat 50% 0 scroll; background-size: cover; /*script window.height*/}
+#wrap #main #section01 {position: relative; width: 100%; height: 969px; padding: 0; background: url(../img/slider-img0.jpg) no-repeat 50% 0 fixed; background-size: cover;}
+#wrap #main #section03 {width: 100%;height: 969px;background: url(../img/restaurant-img2.jpg) no-repeat 50% 0 scroll;background-size: cover;/*script window.height*/}
+#wrap #main #section04 {width: 100%;height: 969px;background: url(../img/restaurant-img3.jpg) no-repeat 50% 0 scroll;background-size: cover;/*script window.height*/}
+#wrap #main #section05 {width: 100%;height: auto;}
+#wrap #main #section06 { width: 100%; padding: 0; /* background: #99c; */}
+#wrap #main #section07 {padding: 6.831319% 0 0 0;/* ㅠㅠ */}
+#wrap #main #section08 {width: 100%;height: auto;padding: 130px 0;background: url(../img/restaurant-img24.jpg) no-repeat 50% 0 fixed;background-size: cover;}
+#wrap #main #section09 {width: 100%;height: auto;}
+#wrap #main #section10 {width: 100%;height: auto;overflow: hidden;}
+#wrap #main #section11 {z-index: 1;position: relative;width: 100%;height: auto;background: url(../img/slider-img00.jpg) no-repeat 50% 0 fixed;background-size: cover;}
+#wrap #main #section11::after {z-index: 2;position: absolute;left: 0;top: 0;content: '';display: block;width: 100%;height: 100%;opacity: .8;background: #252525;}
+#wrap #main #section12 {position: relative;width: 100%;height: auto;background: url(../img/restaurant-img40.jpg) no-repeat 50% 0;background-size: cover;}
+#wrap #main #section13 {position: relative;width: 100%;height: auto;}
+#wrap #main #section14 {position: relative;padding: 130px 0 0 0;width: 100%;height: auto;background: #bd9;}
+
+/* wrap */
+#wrap #main .section0234 .wrap {width: 100%;max-width: 1170px;height: 100%;margin: 0 auto;}
+#wrap #main #section01 .wrap {z-index: 3;position: relative;margin: 0 auto;width: 100%;max-width: 1170px;height: 100%;/* background: #c99; */}
+#wrap #main #section03 .wrap {width: 100%;max-width: 1170px;height: 100%;margin: 0 auto;}
+#wrap #main #section04 .wrap {width: 100%;max-width: 1170px;height: 100%;margin: 0 auto;}
+#wrap #main #section05 .wrap {width: 100%;max-width: 1170px;margin: 0 auto;}
+#wrap #main #section06 .wrap {width: 100%;}
+#wrap #main #section07 .wrap {width: 100%;height: auto; /* w445.75, h573.094 */}
+#wrap #main #section08 .wrap {width: 100%;max-width: 1170px;height: auto;margin: 0 auto;}
+#wrap #main #section09 .wrap {width: 100%;height: auto;}
+#wrap #main #section10 .wrap {width: 100%;max-width: 1170px;height: auto;margin: 0 auto;}
+#wrap #main #section11 .wrap {z-index: 3;position: relative;width: 100%;max-width: 1170px;height: auto;margin: 0 auto;}
+#wrap #main #section12 .wrap {width: 100%;max-width: 1170px;height: auto;margin: 0 auto;border: 2px solid #777;}
+#wrap #main #section13 .wrap {width: 100%;max-width: 1170px;height: auto;margin: 0 auto;border: 2px solid #777}
+#wrap #main #section14 .wrap {margin: 0 auto;width: 100%;max-width: 1170px;height: auto;}
+
+/* gap */
+#wrap #main .section0234 .wrap .gap {height: 100%;margin: 0 15px;}
+#wrap #main #section01 .wrap .gap {margin: 0 15px;width: auto;height: 100%;}
+#wrap #main #section03 .wrap .gap {height: 100%;margin: 0 15px;}
+#wrap #main #section04 .wrap .gap {height: 100%;margin: 0 15px;}
+#wrap #main #section05 .wrap .gap {width: 100%;/* 1170에서 마진값을 뺀 나머지값을 너비로 가져야함 (gap에 가로고정값 주지않기) */}
+#wrap #main #section06 .wrap .gap {width: 100%;}
+#wrap #main #section07 .wrap .gap {width: 100%;height: auto;}
+#wrap #main #section08 .wrap .gap {width: 100%;height: auto;margin: 0;}
+#wrap #main #section09 .wrap .gap {width: 100%;height: auto;}
+#wrap #main #section10 .wrap .gap {margin: 0 15px;}
+#wrap #main #section11 .wrap .gap {width: 100%;}
+#wrap #main #section12 .wrap .gap {margin: 0 15px;border: 2px solid #999;}
+#wrap #main #section13 .wrap .gap {width: 100%;}
+#wrap #main #section14 .wrap .gap {width: 100%;}
+
+/* container */
+#wrap #main .section0234 .wrap .gap .container {position: relative;width: 100%;height: 100%;}
+#wrap #main #section01 .wrap .gap .container {display: table;width: 100%;height: 100%;}
+#wrap #main #section03 .wrap .gap .container {width: 100%;height: 100%;}
+#wrap #main #section04 .wrap .gap .container {width: 100%;height: 100%;}
+#wrap #main #section05 .wrap .gap .container {width: 100%;height: auto;/*임시높이 860*/}
+#wrap #main #section06 .wrap .gap .container {width: 100%;}
+#wrap #main #section07 .wrap .gap .container {width: 100%;height: auto;/*임시높이 782;*/}
+#wrap #main #section08 .wrap .gap .container {width: 100%;height: auto;}
+#wrap #main #section09 .wrap .gap .container {width: 100%;height: auto;/*임시높이 932*/}
+#wrap #main #section10 .wrap .gap .container {width: 100%;height: auto;/*임시높이 268;*/}
+#wrap #main #section11 .wrap .gap .container {width: 100%;/*임시높이 625px;*/}
+#wrap #main #section12 .wrap .gap .container {width: 100%;height: auto;/*임시높이 187px*/text-align: center;font-family: 'Montserrat';}
+#wrap #main #section13 .wrap .gap .container {width: 100%;height: auto;/*임시높이200px;*/}
+#wrap #main #section14 .wrap .gap .container {width: 100%;height: 640px;/*임시높이*/}
+
+/* title */
+
+
+
+
+
+/* section0234 - 부모높이 기준으로 자식,자손의 높이가 결정됨
+--------------------------------------------------------------------------------- */
+#wrap #main .section0234 .wrap .gap .container .box {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 100%;
+  max-width: 450px;
+  height: 550px;
+  /* js너비 비율계산 h:550 / maxW:450 = 1.222222 */
+  margin-top: -275px;
+  /* margin-top = h:550/2 */
+  transition: all .3s ease-in-out;
+  background: #fff;
+}
+
+#wrap #main .section0234 .wrap .gap .container .box:after {
+  z-index: 2;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 4.444444%;
+  /* left = 20/450 */
+  width: 87.5555556%;
+  /*w = 394/450*/
+  height: 494px;
+  border: 8px solid #d8b75f;
+  /* 8/450 = 1.7777778 */
+  /*8+20+394+(8+20) = 450 */
+
+  /* border 8px(좌우, 즉16) */
+  /* left 20px(좌우, 즉40) */
+  /* width 394px  */
+}
+
+#wrap #main .section0234 .wrap .gap .container .box .box-gap {
+  z-index: 3;
+  position: relative;
+  margin: 17.7326667%;
+  /* 79.797/450 */
+  /* margin,padding 가능 */
+}
+
+#wrap #main .section0234 .wrap .gap .container .box .box-gap .content {width: 100%;text-align: center;}
+#wrap #main .section0234 .wrap .gap .container .box .box-gap .content h2 {padding-bottom: 15px;}
+#wrap #main .section0234 .wrap .gap .container .box .box-gap .content h2 img {width: 45px;}
+#wrap #main .section0234 .wrap .gap .container .box .box-gap .content h3 {padding-bottom: 10px;}
+#wrap #main .section0234 .wrap .gap .container .box .box-gap .content h3 span {font-family: 'Montserrat';text-transform: uppercase;font-size: 28px;font-weight: 600;color: #614c45;}
+#wrap #main .section0234 .wrap .gap .container .box .box-gap .content h4 {padding-bottom: 30px;}
+#wrap #main .section0234 .wrap .gap .container .box .box-gap .content h4 span {font-size: 12px;color: #626262;}
+#wrap #main .section0234 .wrap .gap .container .box .box-gap .content h5 {padding-bottom: 20px;}
+#wrap #main .section0234 .wrap .gap .container .box .box-gap .content h5 img {width: 178px;}
+#wrap #main .section0234 .wrap .gap .container .box .box-gap .content p {padding-bottom: 30px;}
+#wrap #main .section0234 .wrap .gap .container .box .box-gap .content p span {display: block;font-size: 14px;line-height: 171.4285714%;/* 줄간격 24px; *//* ㅠㅠ */color: #626262;}
+
+#wrap #main .section0234 .wrap .gap .container .box .box-gap .content span {display: block;}
+#wrap #main .section0234 .wrap .gap .container .box .box-gap .content span a {display: inline-block;}
+#wrap #main .section0234 .wrap .gap .container .box .box-gap .content span a img {width: 32px;}
+
+/* section01 - 부모높이 기준으로 자식,자손의 높이가 결정됨
+--------------------------------------------------------------------------------- */
+#wrap #main #section01::before {z-index: 2;content: '';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: #252525;opacity: .6;}
+#wrap #main #section01 .wrap .gap .container .title {display: table-cell;padding: 0 50px;text-align: center;vertical-align: middle;}
+#wrap #main #section01 .wrap .gap .container .title img {width: 100%;max-width: 542px;/* 542px = 이미지너비 */}
+#wrap #main #section01 .wrap .gap .container .next-move {display: inline-block;position: absolute;left: 50%;bottom: 6%;width: 100%;height: 32px;margin-left: -16px;/* 버튼이미지=32*32 *//* height = 버튼이미지h, margin-left = 버튼이미지w/2 */}
+#wrap #main #section01 .wrap .gap .container .next-move a {display: inline-block; /*블럭,인라인블럭 사용가능*/}
+#wrap #main #section01 .wrap .gap .container .next-move a img {width: 100%;}
+
+
+/* section03 - 부모높이 기준으로 자식,자손의 높이가 결정됨
+--------------------------------------------------------------------------------- */
+#wrap #main #section03 .wrap .gap .container .box {left: 0;}
+
+
+
+
+
+/* section04 - 부모높이 기준으로 자식,자손의 높이가 결정됨
+--------------------------------------------------------------------------------- */
+
+
+
+
+
+/* section05 - 조상영역들의 높이 = 마지막 자손영역의 content 높이에 따라서 결정됨
+--------------------------------------------------------------------------------- */
+/* 744-30=714 */
+#wrap #main #section05 .wrap .gap .container .title {text-align: center;padding-bottom: 6.8376068%;/* 80/1170 */}
+#wrap #main #section05 .wrap .gap .container .content {width: 100%;}
+#wrap #main #section05 .wrap .gap .container .content .left {float: left;width: 63.5897436%;/* 744px/1170; */}
+#wrap #main #section05 .wrap .gap .container .content .left .content-gap {margin: 0 15px;}
+#wrap #main #section05 .wrap .gap .container .content .left .content-gap img {width: 100%;/* 714px */}
+#wrap #main #section05 .wrap .gap .container .content .right {
+  width: 36.4102564%;
+  /* 1170-744 = 426 */
+  /* 426/1170 */
+  float: left;
+  /* 패딩을포함한 text전체너비=426 */
+}
+
+#wrap #main #section05 .wrap .gap .container .content .right .content-gap {margin: 0 15px;}
+#wrap #main #section05 .wrap .gap .container .content .right .content-gap .text-wrap {
+  padding-top: 32.8282828%;
+  /* 426-(15*2) = 396 */
+  /* 패딩130px/396 */
+  /* text너비 - 패딩값 */
+}
+
+#wrap #main #section05 .wrap .gap .container .content .right .content-gap .text-wrap h4 {
+  padding-bottom: 3.030303%;
+  /* 패딩12px/396 */
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Montserrat';
+  color: #626262;
+}
+
+#wrap #main #section05 .wrap .gap .container .content .right .content-gap .text-wrap h3 {
+  font-family: 'Montserrat';
+  padding-bottom: 5.0505051%;
+  /* 패딩20px/396; */
+  font-size: 35px;
+  font-weight: 700;
+  color: #ababab;
+}
+
+#wrap #main #section05 .wrap .gap .container .content .right .content-gap .text-wrap h5 {padding-bottom: 7.5757576%; /* 패딩30px/396 */}
+#wrap #main #section05 .wrap .gap .container .content .right .content-gap .text-wrap h5 i {
+  display: inline-block;
+  width: 30px;
+  height: 4px;
+  background: #c8a64b;
+}
+
+#wrap #main #section05 .wrap .gap .container .content .right .content-gap .text-wrap p {
+  padding-bottom: 10.1010101%;
+  /* 패딩40/396 */
+  line-height: 170%;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #626262;
+}
+
+#wrap #main #section05 .wrap .gap .container .content .right .content-gap .text-wrap span {
+  display: block;
+}
+
+#wrap #main #section05 .wrap .gap .container .content .right .content-gap .text-wrap span a {
+  display: inline-block;
+  padding: 7px 15px;
+  transition: all .3s;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 3px solid #000;
+  color: #777;
+  background-color: transparent;
+}
+
+#wrap #main #section05 .wrap .gap .container .content .right .content-gap .text-wrap span a:hover {
+  color: #fff;
+  background: #000;
+}
+
+/* section06 - 부모높이 기준으로 자식,자손의 높이가 결정됨
+--------------------------------------------------------------------------------- */
+#wrap #main #section06 .wrap .gap .container .content {width: 100%;height: 100%;}
+#wrap #main #section06 .wrap .gap .container .content .gallery {width: 100%;}
+/* col */
+#wrap #main #section06 .wrap .gap .container .content .gallery>.col {float: left;width: 33.333%;height: 750px;}
+#wrap #main #section06 .wrap .gap .container .content .gallery>.col .gallery-gap {margin: 0 15px;height: 100%;}
+#wrap #main #section06 .wrap .gap .container .content .gallery>.col .gallery-gap .bg-image {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../img/restaurant-img6.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#wrap #main #section06 .wrap .gap .container .content .gallery>.col2 .gallery-gap .bg-image {background-image: url(../img/restaurant-img17.jpg);}
+#wrap #main #section06 .wrap .gap .container .content .gallery>.col3 .gallery-gap .bg-image {background-image: url(../img/restaurant-img18.jpg);}
+/* col의 높이값 750px */
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .small-box {
+  z-index: 1;
+  position: absolute;
+  top: 23.3604%;
+  /* top 175.203px/750 */
+  left: 22.9860927%;
+  /* left 138.836px/604 */
+  width: 54.0278146%;
+  /* w 326.328px/604 */
+  height: 53.2792%;
+  /* h 399.594px/750 */
+  vertical-align: middle;
+  text-align: center;
+  background: #fff;
+}
+
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .small-box:after {
+  /* 기존의넓이보다 40px작게 만들어야함 */
+  z-index: 2;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 5.00508021%;
+  /* top 20/height: 399.594 = 0.050050801 */
+  left: 6.1288029%;
+  /* left 20/width:326.328 = 0.061288 */
+  width: 84.0651124%;
+  /* width: 326.328-40-12 = 274.328 */
+  /* 274.328/width: 326.328 = 0.840651 */
+  height: 86.9867916%;
+  /* height: 399.594-40-12 = 347.594 */
+  /* 347.594/height:399.594 = 0.8698679 */
+  border: 6px solid #eaeaea;
+  /* border값 좌우 = 12px */
+  /* 19.03/6 = 3.1716667 */
+
+  /* vw = 반응형,퍼센트 안됨!*/
+  /* background: #c99; */
+}
+
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .small-box .content-title {
+  text-align: center;
+  padding-top: 80px;
+  /* 80/274.328 = 0.291622 */
+}
+
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .small-box .content-title h2 {
+  padding-bottom: 10px;
+  /* 10/274.328 = 0.036453 */
+}
+
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .small-box .content-title h2 img {
+  width: auto;
+}
+
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .small-box .content-title h3 {
+  padding-bottom: 10px;
+  /* 10/274.328 = 0.036453 */
+  width: auto;
+  font-size: 19px;
+  font-weight: 600;
+  color: #d8b75f;
+}
+
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .small-box .content-title h4 {
+  padding-bottom: 20px;
+  /* 20/274.328 = 0.072905427 */
+  font-size: 11px;
+  font-weight: 600;
+  color: #626262;
+}
+
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .small-box .content-title h5 img {
+  width: auto;
+}
+
+/* 큰상자 */
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .content-box {
+  opacity: 0;
+  /* opacity: 1; */
+  z-index: 2;
+  position: absolute;
+  top: -7.0666667%;
+  left: 9.5963674%;
+  /* top:-53/부모height:750 = 0.070667 */
+  /* left:57.992/부모width:604.312 = 0.095964 */
+
+  max-width: 500px;
+  width: 80.8072651%;
+  height: 85.8666667%;
+  /* cont-boxWidth:488.328/부모width:604.312 = 0.808073 */
+  /* cont-boxHeight:644/부모height:750 = 0.858667 */
+
+  border: 8px solid #d8b75f;
+  /* cont-boxWidth:488.328 + border:16 = 504.328 */
+  /* cont-boxHeight:644 + border:16 = 660 */
+  background: url(../img/restaurant-img7.jpg);
+  transition: all .6s ease-in-out;
+  box-sizing: border-box;
+}
+
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image.addHover .content-box {
+  opacity: 1;
+  top: 7.0666667%;
+  /* ㅠㅠ */
+}
+
+/*------- ul 408.328 -------*/
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .content-box>ul {
+  padding: 6.774952%;
+  /* ul:408.328 + 패딩좌우(32*2) = 472.328 */
+  /* 32/472.328 = 6.774952 */
+}
+
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .content-box>ul>li {
+  border-bottom: 1px solid #ccc;
+}
+
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .content-box>ul>li:last-child {
+  border-bottom: 0;
+}
+
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .content-box>ul>li>div {
+  padding: 4.653122% 0;
+  /* 19/408.328 = 0.0465531 */
+}
+
+/* 이미지 */
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .content-box>ul>li>div .col {
+  float: left;
+}
+
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .content-box>ul>li>div .col1 {
+  width: 18.1226857%;
+  max-width: 74px;
+  /* img:74/408.328 = 0.181227 */
+}
+
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .content-box>ul>li>div .col1 img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* txt상자 (ul)*/
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .content-box>ul>li>div .col2 {
+  width: 65.6335103%;
+  /* w268/408.328 */
+  line-height: 160%;
+}
+
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .content-box>ul>li>div .col2 li {padding-left: 7.4626866%/* 20/268=0.074627 */}
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .content-box>ul>li>div .col2 li h4 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  font-weight: 600;
+  color: #614c45;
+}
+
+#wrap #main #section06 .wrap .gap .container .content .gallery .col .gallery-gap .bg-image .content-box>ul>li>div .col2 li p { font-size: 13px; color: #626262;}
+
+/* section07 - 조상영역들의 높이 = 마지막 자손영역의 content 높이에 따라서 결정됨
+--------------------------------------------------------------------------------- */
+#wrap #main #section07 .wrap .gap .container .content {width: 100%;}
+#wrap #main #section07 .wrap .gap .container .content .chef-profile {width: 100%;}
+#wrap #main #section07 .wrap .gap .container .content .chef-profile>li {float: left;width: 25%;}
+#wrap #main #section07 .wrap .gap .container .content .chef-profile>li .profile-gap {overflow: hidden;position: relative;margin: 0 15px;outline: 0;}
+#wrap #main #section07 .wrap .gap .container .content .chef-profile>li .profile-gap img {z-index: 1;position: relative;width: 100%;transition: all .4s ease-in-out;}
+#wrap #main #section07 .wrap .gap .container .content .chef-profile>li .profile-gap.addProfile img {transform: scale(1.15);filter: blur(3px);opacity: .6;}
+#wrap #main #section07 .wrap .gap .container .content .chef-profile>li .profile-gap .profile-box {
+  /* profile-gap의 부모 computed */
+  z-index: 2;
+  opacity: 0;
+  position: absolute;
+  bottom: -30%;
+  left: 50%;
+  width: 72.237801%;
+  /* content너비322 / 부모너비445.75 =  0.722378014 */
+
+  margin-left: -38.39362%;
+  /* content너비322 / 2 = -161px */
+  /* 1161 / 부모너비445.75 = -0.3839362 */
+  transition: all .4s ease-in-out;
+  background: #614c45;
+}
+
+#wrap #main #section07 .wrap .gap .container .content .chef-profile>li .profile-gap.addProfile .profile-box {opacity: 1;bottom: 8.7245722%;/*  50px;;;;;; */}
+#wrap #main #section07 .wrap .gap .container .content .chef-profile>li .profile-gap .profile-box .text-gap {padding: 12.4223602%;/* 40px;;;;; */}
+#wrap #main #section07 .wrap .gap .container .content .chef-profile>li .profile-gap .profile-box .text-gap .text-wrap {width: 100%;text-align: center;line-height: 200%;}
+#wrap #main #section07 .wrap .gap .container .content .chef-profile>li .profile-gap .profile-box .text-gap .text-wrap h5 {padding-bottom: 4.1322314%;/*  10px;;;;; */}
+#wrap #main #section07 .wrap .gap .container .content .chef-profile>li .profile-gap .profile-box .text-gap .text-wrap h5 i {display: inline-block;width: 30px;height: 4px;background: #d8b75f;}
+#wrap #main #section07 .wrap .gap .container .content .chef-profile>li .profile-gap .profile-box .text-gap .text-wrap h3 {font-size: 20px;color: #d8b75f;}
+#wrap #main #section07 .wrap .gap .container .content .chef-profile>li .profile-gap .profile-box .text-gap .text-wrap h4 {padding-bottom: 10px;font-size: 11px;color: #ababab;}
+#wrap #main #section07 .wrap .gap .container .content .chef-profile>li .profile-gap .profile-box .text-gap .text-wrap p {line-height: 170%;font-size: 14px;color: #ababab;}
+
+
+/* section08 - 조상영역들의 높이 = 마지막 자손영역의 content 높이에 따라서 결정됨
+--------------------------------------------------------------------------------- */
+#wrap #main #section08 .wrap .gap .container .title {width: 100%;}
+#wrap #main #section08 .wrap .gap .container .title h2 {text-align: center;}
+#wrap #main #section08 .wrap .gap .container .title h2 img {width: 100%;max-width: 488px;}
+#wrap #main #section08 .wrap .gap .container .content {width: 100%;}
+#wrap #main #section08 .wrap .gap .container .content ul {width: 100%;}
+#wrap #main #section08 .wrap .gap .container .content ul li {float: left;width: 33.333%;}
+#wrap #main #section08 .wrap .gap .container .content ul li .img-gap {margin: 0 15px;}
+#wrap #main #section08 .wrap .gap .container .content ul li .img-gap .box-wrap { position: relative; margin: 0 auto; width: 100%; max-width: 289px;}
+#wrap #main #section08 .wrap .gap .container .content ul li .img-gap .box-wrap .img-wrap {z-index: 1;position: relative;width: 100%;transition: all .3s;}
+#wrap #main #section08 .wrap .gap .container .content ul li .img-gap .box-wrap .img-wrap:hover {transform: scale(1.15);}
+#wrap #main #section08 .wrap .gap .container .content ul li .img-gap .box-wrap .img-wrap img {width: 100%;}
+#wrap #main #section08 .wrap .gap .container .content ul li .img-gap .box-wrap .price-wrap {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  border-radius: 50%;
+  background: #dc3535;
+}
+
+#wrap #main #section08 .wrap .gap .container .content ul li .img-gap .box-wrap .price-wrap div {
+  padding-top: 28px;
+  font-family: 'Montserrat';
+}
+
+#wrap #main #section08 .wrap .gap .container .content ul li .img-gap .box-wrap .price-wrap div h4 {
+  font-size: 11px;
+  padding-bottom: 5px;
+  font-weight: 600;
+  color: #fff;
+}
+
+#wrap #main #section08 .wrap .gap .container .content ul li .img-gap .box-wrap .price-wrap div h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+#wrap #main #section08 .wrap .gap .container .content ul li .img-gap .box-wrap .title-wrap {
+  text-align: center;
+  padding-top: 35px;
+  font-family: 'Montserrat';
+}
+
+#wrap #main #section08 .wrap .gap .container .content ul li .img-gap .box-wrap .title-wrap h3 {
+  font-size: 18px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  color: #fff;
+}
+
+#wrap #main #section08 .wrap .gap .container .content ul li .img-gap .box-wrap .title-wrap h4 {
+  font-size: 11px;
+  font-weight: 600;
+  color: #ababab;
+}
+
+/* section09 - 조상영역들의 높이 = 마지막 자손영역의 content 높이에 따라서 결정됨
+--------------------------------------------------------------------------------- */
+#wrap #main #section09 .wrap .gap .container .title {
+  padding-bottom: 4%;
+}
+
+#wrap #main #section09 .wrap .gap .container #nav {
+  width: 100%;
+  height: auto;
+  padding-bottom: 2.5%;
+}
+
+#wrap #main #section09 .wrap .gap .container #nav ul {
+  width: 100%;
+  text-align: center;
+}
+
+#wrap #main #section09 .wrap .gap .container #nav ul li {
+  display: inline-flex;
+  margin: 0 20px;
+}
+
+/* 칸으로 가로 배치 */
+#wrap #main #section09 .wrap .gap .container #nav ul li a {
+  display: block;
+  color: #9b9b9b;
+  font-size: 13px;
+  transition: color .3s;
+  font-family: 'Montserrat'
+}
+
+/* 버튼 */
+#wrap #main #section09 .wrap .gap .container #nav ul li a:hover,
+#wrap #main #section09 .wrap .gap .container #nav ul li a:focus,
+#wrap #main #section09 .wrap .gap .container #nav ul li a.addNav {color: #000}
+#wrap #main #section09 .wrap .gap .container #nav ul li a i {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #d8b75f;
+  margin-top: 6px;
+  transition: background-color .3s, transform .5s;
+  transform: scale(0, 1);
+}
+
+/*  밑줄 아이콘 이벤트 */
+#wrap #main #section09 .wrap .gap .container #nav ul li a:hover i {
+  transform: scale(1, 1)
+}
+
+/*  밑줄 아이콘 이벤트 */
+#wrap #main #section09 .wrap .gap .container #nav ul li a:focus i {
+  transform: scale(1, 1)
+}
+
+/*  밑줄 아이콘 이벤트 */
+#wrap #main #section09 .wrap .gap .container #nav ul li a.addNav i {
+  transform: scale(1, 1)
+}
+
+/*  밑줄 아이콘 이벤트 */
+#wrap #main #section09 .wrap .gap .container .content {
+  width: 100%;
+  height: auto;
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: calc(356.8125px*2);
+}
+
+/* 갤러리항목 박스(flex-container) */
+#wrap #main #section09 .wrap .gap .container .content ul li {
+  /* 8개 항목(플렉스 항목 item ) : 가로4개씩 2행으로 배치 */
+  /* script 너비=((1920-17)/4)*0.75 */
+  overflow: hidden;
+  position: absolute;
+  flex: 1 1 25%;
+  transition: all .3s;
+}
+
+/* 1.23 추가 */
+#wrap #main #section09 .wrap .gap .container .content ul li:nth-of-type(1) {
+  width: 475.75px;
+  height: 356.8125px;
+  left: calc(475.75px*0);
+  top: calc(356.8125px*0);
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li:nth-of-type(2) {
+  width: 475.75px;
+  height: 356.8125px;
+  left: calc(475.75px*1);
+  top: calc(356.8125px*0);
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li:nth-of-type(3) {
+  width: 475.75px;
+  height: 356.8125px;
+  left: calc(475.75px*2);
+  top: calc(356.8125px*0);
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li:nth-of-type(4) {
+  width: 475.75px;
+  height: 356.8125px;
+  left: calc(475.75px*3);
+  top: calc(356.8125px*0);
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li:nth-of-type(5) {
+  width: 475.75px;
+  height: 356.8125px;
+  left: calc(475.75px*0);
+  top: calc(356.8125px*1);
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li:nth-of-type(6) {
+  width: 475.75px;
+  height: 356.8125px;
+  left: calc(475.75px*1);
+  top: calc(356.8125px*1);
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li:nth-of-type(7) {
+  width: 475.75px;
+  height: 356.8125px;
+  left: calc(475.75px*2);
+  top: calc(356.8125px*1);
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li:nth-of-type(8) {
+  width: 475.75px;
+  height: 356.8125px;
+  left: calc(475.75px*3);
+  top: calc(356.8125px*1);
+}
+
+/* script높이 = 너비*0.75 */
+/* 8개항목(flex-item) = 가로4개씩 2행으로 배치 (item크기가커짐1 크게에맞춰줄어듦1 기본25%) */
+
+/* #wrap #main #section09 .wrap .gap .container .content ul li {overflow: hidden; flex: 1 1 25%; height: 356.8125px;} */
+/* #wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap{width:100%; transition: margin-top .3s;} */
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  transform: scale(0);
+}
+
+/* add클래스가 추가되면 0에서 바뀜 */
+#wrap #main #section09 .wrap .gap .container .content ul li.addScale .gallery-gap {
+  transform: scale(1);
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li:hover .gallery-gap {
+  margin-top: -106px;
+  height: 100%;
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box {
+  width: 100%;
+  height: 100%;
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box .img-box {
+  width: 100%;
+  height: 100%;
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box .img-box a {
+  display: block;
+  cursor: url(../img/icon-zoom.png), auto;
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box .img-box a img {
+  width: 100%;
+  transition: all .3s;
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box .img-box a:hover img {
+  width: 100%;
+  opacity: .6;
+}
+
+/* img-caption */
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box .img-caption {
+  position: relative;
+  width: 100%;
+  background: #fff;
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box .img-caption .caption-gap {
+  z-index: 1;
+  position: relative;
+  padding: 30px 20px 40px 20px;
+  text-align: center;
+  font-family: 'Montserrat';
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box .img-caption .caption-gap h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box .img-caption .caption-gap h4 {
+  font-size: 11px;
+  font-weight: 500;
+  color: #626262;
+}
+
+#wrap #main #section09 .wrap .gap .container .content ul li .gallery-gap .box .img-caption .caption-btn {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+/* section10 - 조상영역들의 높이 = 마지막 자손영역의 content 높이에 따라서 결정됨
+--------------------------------------------------------------------------------- */
+#wrap #main #section10 .wrap .gap .container .slide_container {
+  position: relative;
+  width: 100%;
+  max-width: 975px;
+  height: auto;
+  margin: 0 auto;
+  cursor: url(../img/icon-move.png), auto;
+  /*background: #99c;*/
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  margin: 0 auto;
+  overflow: hidden;
+  /* background: #c99; */
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view .slide_wrap {
+  position: relative;
+  width: calc(975px*3);
+  height: auto;
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view .slide_wrap .slide {
+  float: left;
+  width: 100%;
+  max-width: 975px;
+  height: auto;
+  /* background: #99c; */
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view .slide_wrap .slide .content_box {
+  width: 100%;
+  max-width: 731.25px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view .slide_wrap .slide .content_box .left_wrap {
+  position: relative;
+  float: left;
+  width: 31.453%;
+  /* 292px; */
+  height: auto;
+  margin: 0 15px;
+  /* background: #c00; */
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view .slide_wrap .slide .content_box .left_wrap div {
+  position: relative;
+  width: 216px;
+  height: 216px;
+  transition: all .3s;
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view .slide_wrap .slide .content_box .left_wrap div img {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  box-sizing: border-box;
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view .slide_wrap .slide .content_box .left_wrap div span {
+  z-index: 2;
+  position: absolute;
+  top: 30px;
+  right: -20px;
+  /* background: #99c; */
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view .slide_wrap .slide .content_box .left_wrap div span i {
+  color: #614c45;
+  font-size: 55px;
+}
+
+/* 텍스트영역 right */
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view .slide_wrap .slide .content_box .right_wrap {
+  float: right;
+  width: 53.333%;/*390px;*/
+  height: auto;
+  margin-right: 15px;
+  /*background: #00c;*/
+}
+
+/* 731.25/390px */
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view .slide_wrap .slide .content_box .right_wrap h2 {
+  padding-bottom: 20px;
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view .slide_wrap .slide .content_box .right_wrap h2 i {
+  margin-right: 8px;
+  font-size: 17px;
+  color: #c8a64b;
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view .slide_wrap .slide .content_box .right_wrap h2 i:last-child {
+  margin-right: 0;
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view .slide_wrap .slide .content_box .right_wrap h3 {
+  padding-bottom: 20px;
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view .slide_wrap .slide .content_box .right_wrap p {
+  padding-right: 25px;
+  line-height: 180%;
+  font-size: 14px;
+  color: #828282;
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view .slide_wrap .slide .content_box .right_wrap h5 {
+  padding-top: 30px;
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .slide_view .slide_wrap .slide .content_box .right_wrap h5 i {
+  display: inline-block;
+  width: 30px;
+  height: 4px;
+  background: #c8a64b;
+}
+
+/* angleBtn 15*30px */
+#wrap #main #section10 .wrap .gap .container .slide_container .prevBtn_wrap {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  margin-top: -50px;
+  width: 100px;
+  height: 100px;
+  /* 높이 반만큼 마진탑 */
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .prevBtn_wrap a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
+  text-align: center;
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .prevBtn_wrap a i {
+  display: inline-block;
+  font-size: 30px;
+  color: #222;
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .nextBtn_wrap {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  right: -50px;
+  margin-top: -50px;
+  width: 100px;
+  height: 100px;
+  /* border:1px solid #222; */
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .nextBtn_wrap a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
+  text-align: center;
+}
+
+#wrap #main #section10 .wrap .gap .container .slide_container .nextBtn_wrap a i {
+  display: inline-block;
+  font-size: 30px;
+  color: #222;
+}
+
+/* section11 - 조상영역들의 높이 = 마지막 자손영역의 content 높이에 따라서 결정됨
+--------------------------------------------------------------------------------- */
+#wrap #main #section11 .wrap .gap .container .title h2 {
+  color: #fff;
+}
+
+#wrap #main #section11 .wrap .gap .container .content,
+#wrap #main #section11 .wrap .gap .container .content ul {
+  width: 100%;
+}
+
+#wrap #main #section11 .wrap .gap .container .content ul li {
+  float: left;
+  width: 50%;
+  height: 307.5px;
+  font-family: 'Montserrat';
+  /* h 277.5 + 마진30 (15*2) */
+}
+
+#wrap #main #section11 .wrap .gap .container .content ul li .list_gap {
+  overflow: hidden;
+  margin: 15px;
+  background: #fff;
+}
+
+#wrap #main #section11 .wrap .gap .container .content ul li .list_gap .left_box {
+  float: left;
+  width: 50%;
+  height: 277.5px;
+}
+
+#wrap #main #section11 .wrap .gap .container .content ul li .list_gap .left_box .content_gap {
+  width: 100%;
+  overflow: hidden;
+}
+
+#wrap #main #section11 .wrap .gap .container .content ul li .list_gap .left_box .content_gap img {
+  width: 100%;
+  transition: all .3s;
+}
+
+#wrap #main #section11 .wrap .gap .container .content ul li:hover .list_gap .left_box .content_gap img {
+  transform: scale(1.15);
+}
+
+/* 오른쪽 박스 */
+#wrap #main #section11 .wrap .gap .container .content ul li .list_gap .right_box {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 277.5px;
+}
+
+/*자기자신에게 부모*/
+#wrap #main #section11 .wrap .gap .container .content ul li .list_gap .right_box::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -15px;
+  border: 15px solid #fff;
+  border-left: 15px solid transparent;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+#wrap #main #section11 .wrap .gap .container .content ul li .list_gap .right_box .content_gap {
+  padding: 23.4234234% 12.972973%;
+  /*65px 36px;*/
+}
+
+#wrap #main #section11 .wrap .gap .container .content ul li .list_gap .right_box .content_gap .text_box {
+  text-align: center;
+}
+
+#wrap #main #section11 .wrap .gap .container .content ul li .list_gap .right_box .content_gap .text_box h2 {
+  padding-bottom: 9.731413%; /* 20px */
+  font-size: 11px;
+  font-weight: 500;
+  color: #ababab;
+}
+
+#wrap #main #section11 .wrap .gap .container .content ul li .list_gap .right_box .content_gap .text_box p {
+  line-height: 150%;
+  font-size: 18px;
+  font-weight: 500;
+  color: #272727;
+}
+
+/* 반응형 폰트 18/1903 */
+#wrap #main #section11 .wrap .gap .container .content ul li .list_gap .right_box .content_gap .text_box h6 {padding-top: 9.731413%; /* 20px */}
+#wrap #main #section11 .wrap .gap .container .content ul li .list_gap .right_box .content_gap .text_box h6 i {display: inline-block;width: 30px;height: 4px;background: #c8a64b;}
+
+
+
+/* section12 - 조상영역들의 높이 = 마지막 자손영역의 content 높이에 따라서 결정됨
+--------------------------------------------------------------------------------- */
+#wrap #main #section12 .wrap .gap .container h3 {font-size: 40px;color: #626262;font-weight: 500;}
+#wrap #main #section12 .wrap .gap .container h2 {font-size: 20px;color: #614c45;padding: 12px 0 40px 0;font-weight: 700;}
+#wrap #main #section12 .wrap .gap .container div {width: 100%;}
+
+#wrap #main #section12 .wrap .gap .container div button {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 2px sold #000;
+  cursor: poiner;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  background: #000;
+  /* 1170-30 = 1140 (마진30)*/
+}
+
+#wrap #main #section12 .wrap .gap .container div button:hover {color: #000;background-color: transparent;}
+
+/* section13 - 조상영역들의 높이 = 마지막 자손영역의 content 높이에 따라서 결정됨
+--------------------------------------------------------------------------------- */
+#wrap #main #section13 .wrap .gap .container ul {width: 100%;}
+#wrap #main #section13 .wrap .gap .container ul li {float: left;width: 25%;}
+#wrap #main #section13 .wrap .gap .container ul li:last-child div {border-right: 0;}
+#wrap #main #section13 .wrap .gap .container ul li div {border-right: 1px solid rgba(0, 0, 0, .1);text-align: center;}
+#wrap #main #section13 .wrap .gap .container ul li div h2 {font-size: 35px;font-weight: 700;color: #614c45;}
+#wrap #main #section13 .wrap .gap .container ul li div h3 {padding: 20px 0;font-size: 11px;color: #626262;}
+#wrap #main #section13 .wrap .gap .container ul li div span {display: block;}
+#wrap #main #section13 .wrap .gap .container ul li div span i {font-size: 25px;color: #c8a64b;}
+
+
+/* section14 - 조상영역들의 높이 = 마지막 자손영역의 content 높이에 따라서 결정됨
+--------------------------------------------------------------------------------- */
+#wrap #main #section14 .wrap .gap .container .content {width: 100%;}
+#wrap #main #section14 .wrap .gap .container .content>ul>li:nth-child(1) {float: left;width: 487.5px;}
+#wrap #main #section14 .wrap .gap .container .content>ul>li:nth-child(2) {float: left;width: 682.5px;}
+#wrap #main #section14 .wrap .gap .container .content>ul>li .content_gap {margin: 0 15px;}
+
+
+/* footer - 조상영역들의 높이 = 마지막 자손영역의 content 높이에 따라서 결정됨
+--------------------------------------------------------------------------------- */
+#wrap #footer {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: url(../img/restaurant-img41.jpg) no-repeat 50% 0;
+  background-size: cover;
+}
+
+#wrap #footer::before {
+  z-index: 2;
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .7;
+  background: #252525;
+}
+
+#wrap #footer .wrap {z-index: 3;position: relative;margin: 0 auto;width: 100%;max-width: 1170px;height: auto;}
+#wrap #footer .wrap .gap {margin: 0 15px;}
+#wrap #footer .wrap .gap .container {width: 100%;height: 410px;/*임시높이*/}

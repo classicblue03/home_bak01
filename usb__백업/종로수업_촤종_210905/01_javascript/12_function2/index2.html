@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트 선택자</title>
+  </head>
+  <body>
+    <pre>
+        자바스크립트 선택자
+        1. 아이디 선택자
+        2. 클래스 선택자
+        3. 태그선택자
+        4. css선택자
+    </pre>
+    <hr>
+
+    <ul class="list">
+      <li class="li1">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+    <ul class="list">
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
+      <li>d</li>
+    </ul>
+    <ul class="list">
+      <li>가</li>
+      <li>나</li>
+      <li>다</li>
+    </ul>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos fuga
+      distinctio veritatis eum deserunt. Rem at mollitia eum quas in? Repellat
+      officiis ad, accusantium corporis tempore quis iusto nobis eligendi!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
+      dignissimos commodi rerum voluptatum eius omnis voluptatem quidem ipsa.
+      Sunt explicabo error, ducimus reiciendis earum alias cumque nobis soluta
+      incidunt cupiditate.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam alias,
+      repudiandae veritatis mollitia repellendus magni quod harum qui eaque ex,
+      debitis ipsam ut nobis porro dicta architecto et consequatur eligendi?
+    </p>
+
+    <h1 id="tit">[자바스크립트 선택자]</h1>
+    <script>
+        let title = document.getElementById('tit');
+        console.log(title);
+        //메모리 변수에 선언한 뒤 스타일줄때와 객체 자체에 스타일을 줄때의 차이점?
+        //객체 자체에 줄경우 document를 여러번 읽기때문에 속도가 느려진다
+        document.getElementById('tit').style.color="blue";
+        document.getElementById('tit').style.color="red";
+        document.getElementById('tit').style.color="#000";
+        title.style.color= "red";
+
+        let list = document.getElementsByClassName('list'); 
+        console.log(list); 
+        //같은 이름의 클래스가 여러개일경우 배열으로 들어온다
+        //그래서 스타일을 줄때도 선택을 잘해야함 
+        // list[0].style.color="red";
+        // list[1].style.color="red";
+        // list[2].style.color="red";
+
+        for(let i= 0; i <list.length; i++){
+            list[i].style.color= "red";
+        }
+
+        let p3 = document.getElementsByTagName('p');
+        console.log(p3);
+
+        p3[0].style.fontSize="24px";
+        p3[1].style.background="yellow";
+
+        let li1 = document.querySelector('.list .li1');
+        console.log(li1);
+        li1.style.color="purple";
+        
+    </script>
+  </body>
+</html>

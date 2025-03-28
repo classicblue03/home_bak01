@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산술연산자</title>
+</head>
+<body>
+    <pre>
+        1. 산술연산자 : + - * / %(나머지값),
+        서로 다른 성격의 데이터를 연결할때
+        +연산자
+        "문자열" + 숫자
+        "문자열" + 변수 + "문자열"
+        "문자열" + 숫자 + 변수 + "문자열"
+
+    </pre>
+    <hr>
+    <script>
+        // var num1 = 100;
+        // var num2 = 20;
+        // var num3 = 30;
+        var num1 = 100, num2 = 20, num3=30;
+        var num4 = num1 + num2 + num3;
+
+        document.write('합 : ' + num4 +'<br>');
+
+        num4 = num3 - num2;
+        document.write("차 : "+ num4+"<br>");
+
+        num4 = num1*num2*num3;
+        document.write("곱 : "+ num4+"<br>");
+
+        num4 = num1/num2;
+        document.write("몫 : "+ num4+"<br>");
+
+        num4 = num1%num2;
+        document.write("나머지 : "+ num4+"<br>");
+
+        num4 = num1%num3;
+        document.write("나머지 : "+ num4+"<br>");
+    </script>
+    
+</body>
+</html>

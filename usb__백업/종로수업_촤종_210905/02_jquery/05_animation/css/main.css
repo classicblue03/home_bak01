@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+
+.box, .box_second{
+    height: 200px;
+    width: 640px;
+    border: 5px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.fadeInOut{
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: #f00;
+    margin-right: 20px;
+}
+
+.fadeToggle{
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: #008001;
+}
+
+.slideUpDown{
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: #fc0;
+    margin-right: 20px;
+}
+
+.slideToggle{
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    background-color: #cf0;
+
+}
+
+.ani{
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: #0cf;
+
+}

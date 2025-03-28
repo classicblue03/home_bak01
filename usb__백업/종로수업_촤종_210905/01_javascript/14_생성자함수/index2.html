@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자함수 문제</title>
+</head>
+<body>
+    <pre>
+        var product1= {
+            품목 : '가방',
+            단가 : 25000,
+            수량 : 5
+        }
+        var product2= {
+            품목 : '모자',
+            단가 : 10000,
+            수량 : 10
+        }
+        var product3= {
+            품목 : '악세사리',
+            단가 : 5000,
+            수량 : 100
+        }
+    </pre>
+    <script>
+        function Product(category, price, count){
+            this.category = category;
+            this.price = price;
+            this.count = count;
+
+            this.productPrint = function(){
+                alert(`${this.category}의 품목의 \n가격은 ${this.price}이고 \n수량은 ${this.count}개 입니다`);
+            }
+        }
+
+        var bag = new Product('가방', 25000, 5);
+        bag.productPrint();
+
+        var hat = new Product('모자', 10000, 10);
+        hat.productPrint();
+
+        var acc = new Product('악세사리', 2000, 100);
+        acc.productPrint();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<!--CSS.JS 연결-->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+<style>
+    /*https://michalsnik.github.io/aos/*/
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #wrap{
+        width: 1000px;
+        height: 500px;
+        margin: 100px auto;
+    }
+    .box{
+        width: 500px;
+        height: 500px;
+        background-color: teal;
+        float: left;
+    }
+    .box:nth-child(2){
+        background-color: pink;
+        float: right;
+    }
+</style>
+</head>
+<body>
+<!--class값으로 사용하기-->
+<div id="wrap">
+    <div class="box" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">왼쪽박스
+    </div>    
+    <div class="box" data-aos="fade-left"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="500"
+        data-aos-duration="500">오른쪽박스
+    </div>
+</div><!-- wrap -->
+
+
+<!--INITIALIZE AOS는 바디에 작용-->
+<script>
+    AOS.init();
+    
+</script>
+</body>
+</html>

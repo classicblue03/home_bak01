@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>그리드연습3</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            height:3000px;
+        }
+        #wrap{
+            width:940px;
+            margin:0 auto;
+        }
+        #wrap #header{
+            height:140px;
+            background-color: darkgreen;
+        }
+        
+        
+        
+        
+        #wrap #mainslid{
+            height:540px;
+            background-color: cadetblue;
+        }
+        
+        #wrap .row1{
+            margin:20px 0;
+        }
+        #wrap .row1:after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        #wrap .row1 p{
+            width:450px;
+            height:230px;
+            background:coral;
+            float:left;
+        }
+        #wrap .row1 p:first-child{
+            margin-right:40px;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        #wrap #footer{
+           /* height:80px;
+            padding-top:20px;*/
+            height:100px;
+            background:cyan;
+            text-align:center;
+            position:relative;
+        }
+        #wrap #footer span{
+            display:block;
+            /*display:inline-block;*/
+            /*margin-top:20px;*/
+            width:120px;
+            height:30px;
+            background:#333;
+            /*margin:0 auto;*/
+            position:absolute;
+            top:20px;
+            left:50%;
+            margin-left:-60px;
+        }
+    </style>
+</head>
+
+        <body>
+
+            <div id="wrap">
+                <div id="header"></div>
+
+                <div id="mainslid"></div>
+
+                <div class="row1"><!--yellow-->
+                    <p></p>
+                    <p></p>
+                </div>
+
+                <div id="footer">
+                    <span></span>
+                </div>
+            </div>
+        </body>
+        
+        
+        
+        
+        
+</html>
+
+
+
+
+
+

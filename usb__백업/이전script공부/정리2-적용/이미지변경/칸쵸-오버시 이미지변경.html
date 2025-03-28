@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>^^</title>
+<style>
+li{width:150px;height:150px;margin:10px 0;border:1px solid red;}
+img{width:100%;height:100%;}
+</style>
+</head>
+<body>
+
+<ul>
+	<li><img src="img/1_off.png" alt=""></li>
+	<li><img src="img/2_off.png" alt=""></li>
+	<li><img src="img/3_off.png" alt=""></li>
+</ul>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+$("ul li").hover(function(){
+	$(this).find("img").attr("src",$(this).find("img").attr("src").replace("off.png","on.png"));
+}, function(){
+	$(this).find("img").attr("src",$(this).find("img").attr("src").replace("on.png","off.png"));
+});
+</script>
+
+
+</body>
+</html>

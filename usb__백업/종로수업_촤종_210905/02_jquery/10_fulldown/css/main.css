@@ -1,0 +1,149 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.header_wrap{
+    width: 100%;
+    height: 92px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.header {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.header .header_inner {
+    width: 1280px;
+    height: 92px;
+    margin: auto;
+}
+
+.header .header_inner h1 {
+    float: left;
+    padding-top: 52px;
+}
+
+.header .header_inner .gnb {
+    float: left;
+    padding-top: 55px;
+    padding-left: 19px;
+}
+
+.header .header_inner .gnb>li {
+    float: left;
+    position: relative;
+}
+
+.header .header_inner .gnb>li:hover>a {
+    color: #0d7ee2;
+}
+
+.header .header_inner .gnb>li>a {
+    display: block;
+    height: 38px;
+    padding: 0 35px;
+    font-size: 19px;
+    color: #0d0d0d;
+    font-weight: 500;
+    position: relative;
+}
+
+.header .header_inner .util_wrap {
+    float: right;
+    margin-top: 17px;
+}
+.header .header_inner .util_wrap .util{
+    float: right;
+    margin-bottom: 20px;
+}
+
+.header .header_inner .util_wrap .util li {
+    float: left;
+    padding-left: 14px;
+    margin-left: 13px;
+    font-weight: 500;
+    position: relative;
+}
+
+.header .header_inner .util_wrap .util li::before{
+    content: '';
+    width: 1px;
+    height: 12px;
+    background:#2b2b2b ;
+    position: absolute;
+    left: 0;
+    top:50%;
+    transform: translateY(-50%);
+}
+.header .header_inner .util_wrap .util li:first-child::before{
+    display: none;
+}
+
+.header .header_inner .util_wrap .util li a {
+    font-size: 14px;
+    color: #0d0d0d;
+}
+
+.header .header_inner .util_wrap .util_box {
+    clear: both;
+}
+
+.header .header_inner .util_wrap .util_box a{
+    display: inline-block;
+    height: 26px;
+    padding: 0 15px;
+    border: 1px solid #4d4d4d;
+    background-color: #fff;
+    font-size: 14px;
+    color: #4d4d4d;
+    line-height: 26px;
+}
+
+.header .header_inner .util_wrap .util_box a:first-child{
+    background:#156ad1;
+    color:#fff;
+    border: 1px solid #156ad1;
+}
+
+/* gnb영역 */
+
+.header .header_inner .gnb>li>.depth2{
+    width: 200px;
+    padding-top: 40px;
+    position: absolute;
+    left: 35px;
+    top:21px;
+    display: none;
+}
+.header .header_inner .gnb>li>.depth2 li a{
+    font-size: 16px;
+    color: #0d0d0d;
+    line-height: 2.3;
+    font-weight: 500;
+}
+
+.header .header_inner .gnb>li>.depth2 li a:hover{
+    color: #0d7ee2;
+}
+
+
+
+/* main영역 */
+.main{
+    width: 100%;
+
+}
+
+.main .visual{
+    height: 1080px;
+    background: url('../imgs/scroll_bg1.jpg') no-repeat center top;
+}

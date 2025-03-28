@@ -1,0 +1,116 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			
+			$(document).ready(function(){
+										
+				/**attr
+				=>태그의 옵션을 추가 제거 할때 사용
+				=>각 태그에 지정되는 옵션만 사용
+				=>형태(css와 동일)
+				$(선택자).attr('단일옵션','옵션값');
+				$(선택자).attr('단일옵션',function(){});
+				$(선택자).attr({
+					다중옵션:옵션값,
+					.....
+				});
+				
+				$(선택자).attr({
+					다중옵션:function(){},
+					.....
+				});*/
+				
+				
+				/*$('img:first-child').attr({
+					width:500,
+					height:500
+				});*/
+				
+				/*$('img:nth-child(2)').css({
+					width:300,
+					height:300
+				});*/
+				
+				
+				/**removeAttr
+				$(선택자).removeAttr(삭제 옵션명);
+				=>추가 또는 기존 있던 옵션을 삭제 할때 사용*/
+				
+				
+				$/*('img:nth-child(2)').removeAttr('border');
+				$('img:nth-child(2)').removeAttr('src');*/
+				
+				$('#box').css({
+					width:500,
+					height:500,
+					border:'10px solid black',
+					margin:'100px auto'
+				});
+				$('#box>img').css({
+					width:500,
+					height:500,
+					display:'block'
+				});
+				
+				
+				var i=0;
+
+				$('#box').click(function(){
+					if(i==0){
+						$('img',this).attr({
+							src:'img/2.jpg'
+						});
+						i++;
+					}else if(i==1){
+						$('img',this).attr({
+							src:'img/1.jpg'
+						});
+						i--;
+					}
+					
+				});
+				
+				/*$("선택자",this)
+					=>자기자신 안에서 자신을 다시 선택할때 사용
+					=>이벤트 발생시 이벤트 발생의 영역을 지정할때 사용*/
+			
+			});//end
+			
+		</script>
+	</head>
+
+	<body>
+
+		<!--<img src="img/1.jpg" alt="" />
+		<img src="img/2.jpg" width="400" height="200" border="10" alt="" />-->
+		
+
+			<div id="box">
+				<img src="img/1.jpg" alt=""/> 
+			</div>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

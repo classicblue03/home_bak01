@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		
+		<style>
+        
+            *{margin: 0; padding: 0;}
+            
+            /**position
+            =>좌표값으로 위치를 설정하기 위한 속성
+            =>left,top,bottom,right : x,y축
+            =>z-index : z축
+                객체의 순서를 바꿔줄때 사용
+                -9999~9999 (단위는 없음)
+                반드시 position이 들어갔을때만 사용가능*/
+            
+            /*1.absolute
+            =>브라우저의 왼쪽 상단점을 0,0으로 기준한다
+            =>절대값 위치*/
+            
+            /*2.relative
+            =>자기자신의 왼쪽 상단점을 0,0으로 기준한다
+            =>상대값 위치*/
+            
+            /*3.fixed
+            =>모니터의 왼쪽 상단점을 0,0
+            =>모니터의 항상 그위치에서 보여지는 위치값
+            =>퀵메뉴 효과*/
+            
+            body{
+                height: 2000px;
+            }
+            
+            .box{
+                width: 300px;
+                height: 300px;
+                font-size: 50px;
+                text-align: center;
+                line-height: 300px;
+               /* position: absolute;*/
+                /*position: relative;*/
+                
+            }
+            
+            #box_1{
+                background-color: lightblue;
+                
+                /*position: absolute;*/
+               /* top: 0;
+                left: 0;*/
+                /*→position: absolute; 사용할때 좌표값 필수
+                →좌표값을 정확히 넣어주면 가끔 어그러지는 현상을 막을 수 있음*/
+                /*bottom: 0;
+                right: 0;*/
+            }
+            
+            #box_2{
+                background-color: tan;
+                
+                /*position: absolute;*/
+                top: 150px;
+                left: 150px;
+                /*z-index: -1;*/
+                position: fixed;
+            }
+            
+            #box_3{
+                background-color: salmon;
+                
+                /*position: absolute;*/
+                /*top: 300px;
+                left: 300px;*/
+            }
+            
+        
+        
+        
+        
+        </style>
+		
+	</head>
+
+	<body>
+	
+	    <div class="box" id="box_1">1</div>
+	    <div class="box" id="box_2">2</div>
+	    <div class="box" id="box_3">3</div>
+	    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	</body>
+</html>

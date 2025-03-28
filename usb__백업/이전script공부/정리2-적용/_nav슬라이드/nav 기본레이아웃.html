@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+        
+        <style>
+            
+            /*문제.
+            1. 부모값 가로 540px 높이 100px 가운데정렬
+            2. 자식들 크기 구하고 3px 두께의 검은색 실선테두리, 오른쪽으로 10px 간격두기
+            3. 글자크기 20px 두께 제일두껍게 글자 가운데정렬주고 글자흰색*/
+            
+            *{margin: 0; padding: 0;}
+            ul,li{list-style: none;}
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            
+            #menu_wrap{
+                width: 540px;
+                height: 100px;
+                background-color: lightblue;
+                margin: 0 auto;
+            }
+            
+            #menu_wrap li{
+                width: 100px;
+                height: 100px;
+                background-color: coral;
+                float: left;
+                border: 3px solid black;
+                box-sizing: border-box;
+                margin-right: 10px;
+                font-weight: 900;
+                font-size: 20px;
+                line-height: 100px;
+                text-align: center;
+            }
+            
+            #menu_wrap li:nth-child(5){
+                margin-right: 0;
+            }
+            
+            #menu_wrap a{
+                color: white;
+            }
+            
+            
+            
+        
+        
+        </style>
+        
+        
+	</head>
+
+	<body>
+	    
+	    <ul id="menu_wrap">
+	        <li>
+	            <a href="#">menu1</a>
+	        </li>
+	        <li>
+	            <a href="#">menu2</a>
+	        </li>
+	        <li>
+	            <a href="#">menu3</a>
+	        </li>
+	        <li>
+	            <a href="#">menu4</a>
+	        </li>
+	        <li>
+	            <a href="#">menu5</a>
+	        </li>
+	    </ul>
+	    
+	    
+	    
+	    
+
+	</body>
+</html>

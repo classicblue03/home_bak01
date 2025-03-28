@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>세로형 아코디언</title>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .acc_wrap {
+            padding: 20px;
+            background: #ccc;
+        }
+
+        .acc_title {
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            background: #666;
+            color: #fff;
+            font-size: 14px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .acc_cnt {
+            background: #999;
+            padding: 10px;
+            box-sizing: border-box;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .open .acc_cnt {
+            max-height: 100vh;
+        }
+
+        .open .acc_title {
+            background: #222;
+        }
+
+        .close .acc_cnt {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="acc_wrap">
+        <div class="acc_tab open">
+            <p class="acc_title">Accordion Title1</p>
+            <div class="acc_cnt">
+                This is Accordion contents
+            </div>
+        </div>
+        <div class="acc_tab close">
+            <p class="acc_title">Accordion Title2</p>
+            <div class="acc_cnt">
+                This is Accordion contents<br>
+                This is Accordion contents<br>
+                This is Accordion contents
+            </div>
+        </div>
+        <div class="acc_tab close">
+            <p class="acc_title">Accordion Title3</p>
+            <div class="acc_cnt">
+                This is Accordion contents<br>
+                This is Accordion contents
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tab = document.getElementsByClassName('acc_tab');
+        var tit = document.getElementsByClassName('acc_title');
+
+        for (i = 0; i < tit.length; i++) {
+            tit[i].addEventListener('click', toggleItem, false);
+        }
+
+        function toggleItem() {
+            var itemClass = this.parentNode.className;
+            for (i = 0; i < tab.length; i++) {
+                tab[i].className = 'acc_tab close';
+            }
+            if (itemClass == 'acc_tab close') {
+                this.parentNode.className = 'acc_tab open';
+            }
+        }
+    </script>
+</body>
+
+</html>

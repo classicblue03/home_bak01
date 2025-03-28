@@ -1,0 +1,148 @@
+
+
+
+/*
+
+
+    반응형 작업시 순서
+        1.html 기본틀 작성
+        2.css폴더 만든후 css파일 폴더내에 저장(경로 잘확인할것)
+        3.html넘어가서 link로 외부스타일 걸어줄것 
+
+
+        4.각 기기마다 css외부스타일로 만들어줌으로 link경로 확인할것.
+        5.css외부 작성할때 미디어쿼리 작업시에 크기값 반드시!!!확인!!
+
+*/
+
+
+
+
+*{margin:0; padding:0;}
+ul,li{ list-style: none;}
+a{ 
+    text-decoration: none; 
+    color: black;
+}
+
+
+/*
+미디어쿼리 안쪽에 작성하면
+모든 기기 css마다 추가해줘야되기때문에
+전체적으로 들어가는 리셋css는 미디어쿼리 안쪽에 작성하지않음 */
+
+
+@media all and (min-width:1200px){
+    
+    
+    
+    #wrap{
+        width:1200px;
+        margin: 0 auto;
+        background-color: lightgray;
+    } 
+    
+    header{
+        width:100%;
+        height: 80px;
+        background-color: lightcoral;
+        float: left;
+        text-align: center;
+        font-size:25px;
+    }
+    #logo{
+        width: 150px;
+        height: 50px;
+        background-color: red;
+        line-height:50px;
+        float: left;
+        margin:15px 15px 15px 20px;
+    }
+    #menu{
+        width: 900px;
+        height:50px;
+        background-color: orange;
+        float: right;
+        margin:15px 20px;
+    }
+    #menu>li{
+        width:20%;
+        height:100%;
+        float: left;
+        line-height:50px;
+    }
+    /*header end*/
+    
+    
+    #section_1{
+        width:100%;
+        height: 300px;
+        background-color: salmon;
+        float: left;
+        margin:30px 0;
+    }
+    /*section_1 end*/
+    
+    
+    #section_2,#section_3{
+        width:100%; 
+        height:100px;
+        background-color: orange;
+        float: left;
+    }
+    .con_2{
+        width:390px;
+        height:100%;
+        float: left;
+        background-color: slateblue;
+        margin-right:15px;
+    }
+    .con_2:last-child{
+        margin-right: 0;
+    }
+    /*section_2 end*/
+    
+    #section_3{
+        margin-top:30px;
+    }
+    .con_3{
+        width:187.5px;
+        height:100%;
+        background-color: slateblue;
+        float: left;
+        margin-right:15px;
+    }
+    .con_3:last-child{
+        margin-right: 0;
+    }
+    /*section_3 end*/
+    
+    
+    footer{
+        width: 100%;
+        height:80px;
+        background: salmon;
+        margin-top:30px;
+        float: left;
+    }
+    
+    
+    
+    
+    
+    
+}/*end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

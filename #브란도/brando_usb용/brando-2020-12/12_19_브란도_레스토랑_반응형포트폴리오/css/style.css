@@ -1,0 +1,145 @@
+@charset "UTF-8";
+#wrap {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+#wrap #header {
+    z-index: 3;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 75px;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    background: transparent;
+}
+/*
+    상단에서 10px이상 아래로 스크롤 할때
+    header높이60px으로 부드럽게 변경,
+    배경은:black; boder:0; (addClass)
+ */
+#wrap #header.addHeader {
+    height: 60px;
+    background: #000;
+    border-bottom: 0;
+}
+#wrap #header .wrap {
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+}
+#wrap #header .wrap .gap {
+    width: auto;
+    height: 100%;
+    margin: 0 15px;
+}
+#wrap #header .wrap .gap .container {
+    width: 100%;
+    height: 100%;
+    /* 임시배경 1140*/
+}
+#wrap #main {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+}
+/*===========================================================================
+    #section01
+============================================================================*/
+#wrap #section01 {
+    z-index: 1;
+    position: relative;
+    width: 100%; height: 969px;
+    background: url(../img/slider-img4.jpg) no-repeat 50% 0 fixed;
+    background-size: cover;
+    /*script window.height*/
+}
+/* background: url() no-repeat 50% 0 (0=top값) */
+#wrap #section01::before {
+    z-index: 2;
+    position: absolute;
+    top: 0; left: 0;
+    content: '';
+    width: 100%; height: 100%;
+    background: #252525;
+    opacity: .7;
+}
+#wrap #section01 .wrap {
+    z-index: 3;
+    position: relative;
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+    /* background: #c99; */
+}
+#wrap #section01 .wrap .gap {
+    margin: 0 15px;
+    height: 100%;
+}
+#wrap #section01 .wrap .gap .container {
+    width: 100%;
+    height: 100%;
+}
+/*===========================================================================
+    #section02
+============================================================================*/
+#wrap #section02 {
+    width: 100%;
+    height: 969px;
+    background: url(../img/restaurant-img1.jpg) no-repeat 50% 0 scroll;
+    background-size: cover;
+    /*script window.height*/
+}
+#wrap #section02 .wrap {
+    width: 1170px; height: 100%;
+    margin: 0 auto;
+}
+#wrap #section02 .wrap .gap {
+    margin: 0 15px;
+    height: 100%;
+}
+#wrap #section02 .wrap .gap .container {
+    width: 100%; height: 100%;
+}
+/*===========================================================================
+    #section03
+============================================================================*/
+#section03 {
+    width: 100%; height: 969px;
+    background: url(../img/restaurant-img2.jpg) no-repeat 50% 0 scroll;
+    background-size: cover;
+    /*script window.height*/
+}
+#section03 .wrap {
+    width: 1170px; height: 100%;
+    margin: 0 auto;
+}
+#section03 .wrap .gap {
+    height: 100%;
+    margin: 0 15px;
+}
+#section03 .wrap .gap .container {
+    width: 100%; height: 100%;
+}
+/*===========================================================================
+    #section04
+============================================================================*/
+#section04 {
+    width: 100%; height: 969px;
+    background: url(../img/restaurant-img3.jpg) no-repeat 50% 0 scroll;
+    background-size: cover;
+    /*script window.height*/
+}
+
+#section04 .wrap {
+    width: 1170px; height: 100%;
+    margin: 0 auto;
+}
+
+#section04 .wrap .gap {
+    margin: 0 15px;
+    height: 100%;
+}
+
+#section04 .wrap .gap .container {
+    width: 100%; height: 100%;
+}

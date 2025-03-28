@@ -1,0 +1,91 @@
+@media all and (max-width:1199px) and (min-width:960px) {
+    #wrap {
+        width: 960px;
+        margin: 0 auto;
+        background-color: lightgray;
+    }
+    header {
+        width: 100%;
+        height: 150px;
+        background-color: lightcoral;
+        float: left;
+        text-align: center;
+        font-size: 25px;
+    }
+    #logo {
+        width: 150px;
+        height: 50px;
+        background-color: red;
+        line-height: 50px;
+        /*float: left;*/
+        margin: 15px auto;
+    }
+    #menu {
+        width: 100%;
+        height: 50px;
+        background-color: orange;
+        float: right;
+        /*margin: 15px 20px;*/
+        margin-top: 15px;
+    }
+    #menu_box {
+        display: none;
+    }
+    #menu>li {
+        width: 20%;
+        height: 100%;
+        float: left;
+        line-height: 50px;
+    }
+    /*header end*/
+    #section_1 {
+        width: 100%;
+        height: 300px;
+        background-color: salmon;
+        float: left;
+        margin: 30px 0;
+    }
+    /*section_1 end*/
+    #section_2,
+    #section_3 {
+        width: 100%;
+        height: 100px;
+        background-color: orange;
+        float: left;
+    }
+    .con_2 {
+        width: 310px;
+        height: 100%;
+        float: left;
+        background-color: slateblue;
+        margin-right: 15px;
+    }
+    .con_2:last-child {
+        margin-right: 0;
+    }
+    /*section_2 end*/
+    #section_3 {
+        margin-top: 30px;
+    }
+    .con_3 {
+        width: 147.5px;
+        height: 100%;
+        background-color: slateblue;
+        float: left;
+        margin-right: 15px;
+    }
+    .con_3:last-child {
+        margin-right: 0;
+    }
+    /*section_3 end*/
+    footer {
+        width: 100%;
+        height: 80px;
+        background: salmon;
+        margin-top: 30px;
+        float: left;
+    }
+}
+
+
+/*end*/

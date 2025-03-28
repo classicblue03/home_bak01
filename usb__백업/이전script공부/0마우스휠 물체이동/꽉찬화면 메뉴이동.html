@@ -1,0 +1,152 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <script src="jquery-3.4.1.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        #menu_wrap {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            background-color: rgba(255, 255, 0, 0.5);
+            top: 0;
+            left: 0;
+        }
+
+        .memu {
+            width: 25%;
+            height: 100px;
+            float: left;
+            font: 30px/100px '';
+            text-align: center;
+        }
+
+        .on {
+            background-color: black;
+            color: #fff;
+        }
+
+        .con_wrap {
+            position: absolute;
+            font: 100px/800px '';
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <ul id="menu_wrap">
+        <li class="menu on">menu1</li>
+        <li class="menu">menu2</li>
+        <li class="menu">menu3</li>
+        <li class="menu">menu4</li>
+    </ul>
+    
+    <ul id="con_wrap">
+        <li class="con">content1</li>
+        <li class="con">content2</li>
+        <li class="con">content3</li>
+        <li class="con">content4</li>
+    </ul>
+    
+    
+    
+    <!--
+        header 100px 100px 위치값 고정, 폰트30px
+        각 섹션 색상넣고 글자크기100px
+
+        메뉴,각 섹션 색상삽입
+        각각의 메뉴클릭시 지정된 섹션에 페이지가 애니메이트로 움직임
+        각 섹션에 위치시 지정된 메뉴색상,글자색 변경(addClass)
+        스크롤시 움직일때도 동일하게
+    -->
+    <script>
+        
+        $(document).ready(function() {
+
+            var ww = $(window).width();
+            var wh = $(window).height();
+            var bg = ['aquamarine', 'pink', 'gold', 'yellow'];
+
+
+            $('#con_wrap').css({
+                width: ww,
+                height: wh * 4
+            });
+
+
+            $('.con').css({
+                width: ww,
+                height: wh,
+                backgroundColor: function(index) {
+                    return bg[index];
+                }
+
+            });
+
+
+
+
+            $('.menu').each(function(index) {
+                $(this).attr('data-index', index);
+
+            }).click(function() {
+
+                var i = $(this).attr('data-index');
+                $('html,body').animate({
+                    scrollTop: wh * i /*변수, 높이값 넣기*/
+
+                });
+
+            });
+
+
+
+            $(window).scroll(function() {
+
+                sct = $(window).scrollTop(); /*현재 sct=0*/
+
+                if (sct > 0 && sct < wh) {
+                    /*맨처음의 섹션높이값(wh)까지*/
+                    $('.menu').removeClass('on');
+                    $('.menu').eq(0).addClass('on');
+
+                } else if (sct >= wh && sct < wh * 2) {
+                    $('.menu').removeClass('on');
+                    $('.menu').eq(1).addClass('on');
+                } else if (sct >= wh * 2 && sct < wh * 3) {
+                    $('.menu').removeClass('on');
+                    $('.menu').eq(2).addClass('on');
+                } else if (sct >= wh * 3) {
+                    $('.menu').removeClass('on');
+                    $('.menu').eq(3).addClass('on');
+                }
+            });
+
+
+        }); //end
+
+</script>
+
+
+</body>
+
+</html

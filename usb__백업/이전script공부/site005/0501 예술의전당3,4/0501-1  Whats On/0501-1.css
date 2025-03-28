@@ -1,0 +1,107 @@
+
+
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {color: #111; text-decoration: none;}
+img{ display: block; } /* 여백을 없애려고 */
+
+
+
+
+
+/*  container_what */
+
+#wrap01{
+    background: #fff;
+}
+
+
+#container_what{
+    width: 1350px; height: 800px;
+    border: 1px solid darkblue;
+    margin: 0 auto;
+    position: relative; /* 나머지를 앱솔로 잡으려고 */
+}
+
+
+
+
+
+
+
+
+.what_frame{
+    width: 1150px; height: 600px;
+    margin: 0 auto;         /* container안에서 가운데정렬하기*/
+}
+
+.what_frame li{
+    width: 1150px; /* 꽉찰예정*/
+}
+
+
+
+
+
+
+
+.what_btn a{
+    background:rgba(0,0,0,0);
+    overflow: hidden;
+}
+
+.what_btn a::before{         /*비포쓸때는 콘텐트 필수*/
+    content: url(art_img/btns.png);
+    line-height: 0;
+    font-size: 0;
+    display: inline-block;
+}
+
+.what_btn a {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 72px; height: 72px;
+    margin-top: -36px;
+}
+
+.what_btn a.what_left{
+    margin-left: -655px;
+}
+
+.what_btn a.what_left::before{
+    margin-top: -20px;
+}
+
+.what_btn a.what_right{
+    margin-left: 590px; 
+}
+
+.what_btn a.what_right::before{
+    margin-left: -80px;
+    margin-top: -20px;
+}
+
+
+
+
+
+
+
+
+
+.what_indi{
+    width: 60px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.what_indi a{
+    display: block;
+    float: left;
+    width: 15px; height: 15px;
+    border: 1px solid aquamarine;
+    border-radius: 20px; 
+    margin: 5px; /*사이사이 띄우기*/
+
+    /*인디케이터를 스타일시트로 만들려고*/
+}

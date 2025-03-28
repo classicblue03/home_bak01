@@ -1,0 +1,163 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		
+		<style>
+            /**문제
+            1.wrap의 전체 크기는 1200*2000
+            2.헤더 높이값 100
+            3.로고 가로크기 200 높이는 헤더에 맞춰서
+            4.메뉴 가로크기 800 높이는 헤더에 맞춰서
+            5.첫번째 섹션 가로300 간격높이 50
+            6.하단에 두번째 섹션 세로300 간격높이 100
+            7.가운데 떠 있는 섹션 가로값 800 높이 200
+            각 컨텐츠 간격 10px
+            컨텐츠1사각형 안쪽 4개 박스
+            컨텐츠3 마우스올렸을때 배경색 변화
+            8.고정 버튼 100*100 하단에 고정으로 배치 클릭시 제일위로 올라가게 작업*/
+            
+            *{margin: 0; padding: 0;}
+            a{text-decoration: none; color: black;}
+            
+            #wrap{
+                width: 1200px;
+                height: 2000px;
+                background-color: gray;
+                margin: 0 auto;
+                font-size: 30px;
+                text-align: center;
+            }
+            
+            #header{
+                width: 1200px;
+                height: 100px;
+                background-color: lightblue;
+                line-height: 100px;
+                float: left;
+                /*section에서 float:left 사용하여 안정적이기 위해 사용*/
+            }
+            
+            #logo{
+                width: 200px;
+                height: 100px;
+                background-color: crimson;
+                float: left;
+            }
+            
+            #menu{
+                width: 800px;
+                height: 100px;
+                background-color: pink;
+                float: right;
+            }
+            
+            /*header end*/
+            
+            #section_1, #section_2{
+                width: 1200px;
+                height: 300px;
+                background-color: lightgreen;
+                margin: 50px 0;
+                float: left;
+                /*세로간격 겹치는 경우 float:left 사용.
+                큰영역 간격 띄울때_형제관계인 경우 float 전부 사용해야 안정적*/
+                position: relative;
+            }
+            
+            #container{
+                width: 800px;
+                height: 200px;
+                background-color: cadetblue;
+                position: absolute;
+                top: 250px;
+                left: 50%;
+                margin-left: -400px;
+                z-index: 99;
+            }
+            
+            .con{
+                width: 260px;
+                height: 200px;
+                background-color: seagreen;
+                float: left;
+                margin-right: 10px;
+                line-height: 200px;
+            }
+            
+            .con:last-child{
+                margin-right: 0;
+            }
+            
+            .box{
+                width: 50%; /*=130px*/
+                height: 50%; /*=100px*/
+                background-color: salmon;
+                line-height: 100px;
+                float: left;
+            }
+            
+            .box:nth-child(2), .box:nth-child(3){
+                background-color: slateblue;
+            }
+            
+            .con:nth-child(3):hover{
+                background-color: tan;
+            }
+            
+            /*section ent*/
+            
+            #top_btn{
+                width: 100px;
+                height: 100px;
+                background-color: gold;
+                position: fixed;
+                right: 50px;
+                bottom: 50px;
+                line-height: 100px;
+            }
+            
+            #top_btn a{
+                display: block;
+            }
+        
+        </style>
+		
+	</head>
+
+	<body>
+	    <div id="wrap">
+	        <div id="header">
+	            <div id="logo">로고</div>
+	            <div id="menu">메뉴</div>
+	        </div>
+	        <!--header end-->
+	        <div id="section_1">
+	            <div id="container">
+	                <div class="con">
+	                    <div class="box">1</div>
+	                    <div class="box">2</div>
+	                    <div class="box">3</div>
+	                    <div class="box">4</div>
+	                </div>
+	                <div class="con">컨텐츠2</div>
+	                <div class="con">컨텐츠3</div>
+	            </div>
+	        </div>
+	        <!--section_1 end-->
+	        <div id="section_2"></div>
+	        <!--section_2 end-->
+	        <div id="top_btn">
+	            <a href="#">top</a>
+	        </div>
+	        <!--top_btn end-->
+	    </div>
+	    
+	    
+	    
+
+	</body>
+</html>

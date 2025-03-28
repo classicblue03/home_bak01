@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>논리연산자</title>
+  </head>
+  <body>
+    <pre>
+        1. &&(그리고, and) : 범위설정시 많이 사용
+            예)  a>=10 && a<=20   // a가 10에서 20사이의 값이어야 참
+        2. ||(또는, or) : 둘중에 하나만 참이면 값이 참true
+        3. ! (not, 반대) ex) !true = false, !false = true;
+    </pre>
+    <hr />
+    <script>
+        var a = true;
+        var b = !a;
+
+        document.write("결과 1 : "+ b + "<br>");
+        b = !false;
+        document.write("결과 2 : "+ b + "<br>");
+
+        var num1 = 10, num2 = 100;
+        var num4 = num1 >= 10 && num2<=100;
+        document.write("결과 3 : "+ num4 + "<br>");
+
+        num4 = num1>= 11 || num2 <= 100;
+        document.write("결과 4 : "+ num4 + "<br>");
+
+
+        
+    </script>
+  </body>
+</html>

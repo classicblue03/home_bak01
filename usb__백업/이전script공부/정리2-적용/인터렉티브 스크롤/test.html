@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>스크롤 이벤트</title>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+    <section class="scroll_section">
+        <div class="scroll_area">Scroll Me
+            <div class="scroll_box">Box</div>
+        </div>
+        <div class="scroll_area">Scroll Me</div>
+        <div class="scroll_area">Scroll Me</div>
+        <div class="scroll_area">Scroll Me</div>
+        <div class="scroll_area">Scroll Me</div>
+        <div class="scroll_area">Scroll Me</div>
+    </section>
+
+
+
+    <script>
+        var box = document.querySelector(".scroll_box");
+
+        function scrolling() {
+            var y_pos = window.pageYOffset;
+            if (y_pos > 100) {
+                box.classList.add('on');
+            } else {
+                box.classList.remove('on')
+            }
+        }
+        window.addEventListener('scroll', scrolling)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+
+
+
+* {margin: 0; padding: 0;}
+/*a { color:#111; text-decoration: none; }*/
+
+
+
+
+.visual{
+    background: #fff;
+    height: 465px;
+    min-width: 960px;   /*960보다는 작아서는 안된다~*/
+    overflow: hidden;
+    position: relative; /*부모*/
+}
+
+
+.slides{
+    width: 100%; height: 100%;
+    position: absolute; /*  left =js구현    */
+}
+
+.slides .slide {
+    width: 100%; height: 100%;
+    overflow: hidden;
+    position: absolute; /*  left =js구현    */
+}
+
+
+.slides .slide img{
+    position: absolute;
+    left: 50%;
+    margin-left: -800px;    /*사진크기 = 1600 , 사진을 가운데 오게하려고*/
+}
+
+
+
+.slide_nav a, .slide_indicator a{
+    background: rgba(0,0,0,0);
+    overflow: hidden;
+}
+
+.slide_nav a::before, .slide_indicator a::before{
+    content: url(art_img/btns,png);
+    display: inline-block;
+    font-size: 0;   /*처음에는 안보여야해서*/
+    line-height: 0;
+}
+
+.slide_nav a{
+    position: absolute;
+    left: 50%; top: 50%;    /*위로부터 50%만큼*/
+    width: 72px; height: 72px;
+    margin-top: -36px;
+}
+
+.slide_nav a.prev{
+    margin-left: -480px;     /*겹쳐진 상태를 왼쪽으로 보내주는거*/
+}
+
+.slide_nav a.prev::before{
+    margin-top: -20px;
+}
+
+.slide_nav a.next::before{
+    margin-left: 400px;
+}
+
+.slide_nav a.next::before{
+        margin-left: -80px;
+        margin-top: -20px;
+}
+
+
+
+.slide_nav a.disabled{
+    display: none;
+}
+
+.slide_indicator {
+    bottom: 30px;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+
+.slide_indicator a{
+    display: inline-block;
+    width:16px; height: 16px;
+    margin-left: 3px;
+    margin-right: 3px;
+
+}
+
+
+
+.slide_indicator a.active{          /*active = 페이저가 보일때*/
+    cursor: default;    /*일반 제공되는 커서*/
+
+}
+
+/*하나의 이미지 중  각각띄워서 써야해서*/
+.slide_indicator a::before{
+    margin-left: -110px;
+}
+
+.slide_indicator a.active::before{
+    margin-left: -130px;
+}

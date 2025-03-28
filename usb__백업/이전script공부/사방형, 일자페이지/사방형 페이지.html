@@ -1,0 +1,235 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>플러스페이지</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		
+		<style>
+			
+			*{margin: 0; padding: 0;}
+			
+			#wrap{
+				position: fixed;
+				top: 0;
+				left: 0;
+			}
+			
+			section{
+				position: relative;
+			}
+			
+			.btn{
+				position: absolute;
+			}
+			
+			#top_center,#center_top,#center_bottom,#bottom_center{
+				left: 50%;
+			}
+			
+			#top_center,#center_bottom{
+				bottom: 0;
+			}
+			
+			#center_top,#bottom_center{
+				top: 0;
+			}
+			
+			#left_center,#center_right,#center_left,#right_center{
+				top: 50%;
+			}
+			
+			#left_center,#center_right{
+				right: 0;
+			}
+			
+			#center_left,#right_center{
+				left: 0;
+			}
+		
+		</style>
+		
+		<script src="jquery-3.5.1.js"></script>
+		
+		
+		<script>
+		
+			 $(document).ready(function(){
+				 
+				var ww = $(window).width();
+				var wh = $(window).height(); 
+				var bg = ['crimson','orange','gold','darkgreen','darkblue']; 
+				 
+				$('#wrap').css({
+					width: ww*3,
+					height: wh*3,
+					backgroundColor: 'lightgray',
+					top: -wh,
+					left: -ww
+				}); 
+				 
+				$('section').css({
+					width: ww,
+					height: wh,
+					backgroundColor: function(index){
+						return bg[index];
+					}
+				}); 
+				 
+				$('#middle_wrap').css({
+					width: ww*3,
+					height: wh	
+				}); 
+				 
+				$('#middle_wrap section').css({
+					float: 'left'
+				}); 
+				 
+				$('#top_wrap, #bottom_wrap').css({
+					left: ww
+				}); 
+				 
+				$('.btn').css({
+					width: ww*0.1,
+					height: ww*0.1,
+					backgroundColor:'white',
+					textAlign: 'center',
+					lineHeight: ww*0.1 + 'px'
+				}); 
+				 
+				$('#top_center,#center_top,#center_bottom,#bottom_center').css({
+					marginLeft: -(ww*0.1)/2
+				}); 
+				 
+				$('#left_center,#center_right,#center_left,#right_center').css({
+					marginTop: -(ww*0.1)/2
+				}); 
+				
+				//이벤트 
+				 
+				/*$('#center_top').click(function(){
+					$('#wrap').animate({
+						top: 0
+					});
+				}); 
+				 
+				$('#top_center').click(function(){
+					$('#wrap').animate({
+						top: -wh
+					});
+				}); 
+				 
+				$('#center_right').click(function(){
+					$('#wrap').animate({
+						left: -ww*2
+					});
+				}); 
+				 
+				$('#right_center').click(function(){
+					$('#wrap').animate({
+						left: -ww
+					});
+				}); 
+				 
+				$('#center_bottom').click(function(){
+					$('#wrap').animate({
+						top: -wh*2
+					});
+				}); 
+				 
+				$('#bottom_center').click(function(){
+					$('#wrap').animate({
+						top: -wh
+					});
+				});
+				 
+				$('#center_left').click(function(){
+					$('#wrap').animate({
+						left: 0
+					});
+				}); 
+				 
+				$('#left_center').click(function(){
+					$('#wrap').animate({
+						left: -ww
+					});
+				}); */
+				 
+				function wrapMove(elem, tMove, Lmove){
+					
+					$(elem).click(function(){
+						$('#wrap').animate({
+							top: tMove,
+							left: Lmove
+						});
+					});
+					
+				} 
+				 
+				wrapMove('#center_top',0,-ww); 
+				wrapMove('#top_center',-wh,-ww); 
+				wrapMove('#center_right',-wh,-ww*2); 
+				wrapMove('#right_center',-wh,-ww); 
+				wrapMove('#center_bottom',-wh*2,-ww); 
+				wrapMove('#bottom_center',-wh,-ww);
+				wrapMove('#center_left',-wh,0);
+				wrapMove('#left_center',-wh,-ww); 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+			 });//end
+		
+		</script>
+		
+	</head>
+
+	<body>
+		
+		<div id="wrap">
+		
+			<section id="top_wrap">
+				<h1 class="btn" id="top_center">아래</h1>
+			</section>
+			
+			<div id="middle_wrap">
+				<section>
+					<h1 class="btn" id="left_center">오른</h1>
+				</section>
+				<section>
+					<h1 class="btn" id="center_top">위로</h1>
+					<h1 class="btn" id="center_right">오른</h1>
+					<h1 class="btn" id="center_bottom">아래</h1>
+					<h1 class="btn" id="center_left">왼쪽</h1>
+				</section>
+				<section>
+					<h1 class="btn" id="right_center">왼쪽</h1>
+				</section>
+			</div>
+			
+			<section id="bottom_wrap">
+				<h1 class="btn" id="bottom_center">위로</h1>
+			</section>
+			
+		</div>
+
+	</body>
+</html>

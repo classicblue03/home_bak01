@@ -1,0 +1,28 @@
+* {margin: 0; padding:0;}
+li {list-style: none;}
+a {text-decoration: none; color: #555;}
+body {font:12px/1.6 arial; color: #555;}
+
+/*-------- logo, sns ----------*/
+.logo {
+    position: fixed;
+    top: 50px; left: 50px;
+    z-index: 10;
+}
+.logo img {width:200px; height: auto;}
+
+.sns {position: fixed; top: 40px; right: 50px; z-index: 14;}
+.sns li {
+    float: left;
+    margin-left: 20px;
+}
+.sns li i {
+    font-size: 25px; 
+    color: #111;
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+.sns li i:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="vieport" content="width=device-width, initial-scale=1,  minimum-scale=1, maximum-scale=1, user-scaleble=no">
+  <title>모바일</title>
+  <style>
+    /* 모바일,반응형웹 작업시 필수
+    width=devive-width width = 디바이스width
+    initial-scale=1 기본크기
+    minimum-scale=1 최소크기
+    maximum-scale=1 최대크기
+    user-scaleble=no 확대축소 가능 */
+
+    body {margin: 0; height: 2000px;}
+    #header {position: fixed;top: 0; right: 0;left: 0;height: 50px;background-color: #ccc;}
+    #header:after {content: '';display: block;clear: both;}
+    #header .logo {float: left;height: 50px;line-height: 50px;margin: 0;background-color: #00f;font-size: 20px;color: #fff;}
+    #header .logo a {color: inherit;text-decoration: none;}
+    #header .toggle_menu {position: relative;float: right;width: 50px;height: 50px;background-color: #000;color: #fff;text-indent: -9999px;}
+    #header .toggle_menu span {position: absolute;top: 0;right: 0;bottom: 0;left: 0;width: 30px;height: 2px;margin: auto;background-color: #fff;}
+    #header .toggle_menu span:before {content: '';position: absolute;top: 0;right: 0;bottom: 20px;left: 0;width: 30px;height: 2px;margin: auto;background-color: #fff;transition: bottom .2s .1s ease, transform .1s 0s ease;}
+    #header .toggle_menu span:after {content: '';position: absolute;top: 20px;right: 0;bottom: 0;left: 0;width: 30px;height: 2px;margin: auto;background-color: #fff;transition: top .2s .1s ease, transform .1s 0s ease;}
+    #header .toggle_menu.on span {background-color: transparent;}
+    #header .toggle_menu.on span:before {bottom: 0;transform: rotate(45deg);transition: bottom .1s 0s ease, transform .2s .1s ease; /* 대상속성 동작시간 지연시간 효과 */}
+    #header .toggle_menu.on span:after {top: 0;transform: rotate(-45deg);transition: top .1s 0s ease, transform .2s .1s ease;}
+    #nav {overflow: hidden;position: fixed;top: 50px;right: 100%;bottom: 0;left: 0;background-color: rgba(0,0,0,0);transition: background-color .3s ease;}
+    #nav.on {right: 0;background-color: rgba(0,0,0,.8);}
+    #nav .dep1 {position: absolute;top: 0;right: -240px;width: 240px;border-left: 1px solid #ccc;background-color: #fff;margin: 0;padding: 0;list-style: none;transition: right .3s ease;}
+    #nav.on .dep1 {right: 0;}
+    #nav .dep1>li {display: block;border-bottom: 1px solid #ccc;}
+    #nav .dep1>li>a {display: block;padding: 10px;font-size: 14px;color: #000;text-decoration: none;}
+    #nav .dep2 {display: none;margin: 0;padding: 0;list-style: none;}
+    #nav .dep2>li {display: block;}
+    #nav .dep2>li>a {display: block;padding: 5px 10px 5px 20px;font-size: 12px;color: #000;text-decoration: none;}
+    #topBtn {position: fixed;bottom: 10px;right: -80px;width: 60px;height: 60px;line-height: 60px;border: none;border-radius: 50%;background-color: black;color:#fff;text-align: center;opacity: 0;transition: all .3s ease;}
+    #topBtn.on {right: 10px;opacity: 1;}
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <h1 class="logo"><a href="#">LOGO</a></h1>
+    <a href="#" class="toggle_menu">Toggle Menu<span></span></a>
+  </header>
+  <nav id="nav">
+    <ul class="dep1">
+      <li>
+        <a href="http://www.naver.com">메뉴1</a>
+        <ul class="dep2">
+          <li><a href="http://www.naver.com">서브메뉴11</a></li>
+          <li><a href="http://www.daum.net">서브메뉴12</a></li>
+          <li><a href="http://www.google.com">서브메뉴13</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">메뉴2</a>
+        <ul class="dep2">
+          <li><a href="#">서브메뉴21</a></li>
+          <li><a href="#">서브메뉴22</a></li>
+          <li><a href="#">서브메뉴23</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">메뉴3</a>
+        <ul class="dep2">
+          <li><a href="#">서브메뉴31</a></li>
+          <li><a href="#">서브메뉴32</a></li>
+          <li><a href="#">서브메뉴33</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div id="container">
+    aaa<br>aaa<br>aaa<br>aaa<br>aaa<br>aaa<br>
+    bbb<br>bbb<br>bbb<br>bbb<br>bbb<br>bbb<br>
+  </div>
+  <button id="topBtn">TOP</button>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    // #nav클릭시 자신의 onClass 제거
+    // .toggle_menu의 onClass 제거
+    // #nav클릭시 메뉴닫기
+    // #topBtn클릭시 최상단으로
+
+    // 스크롤시 특정위치보다 이하일때 (특정위치=200)
+    // #topBtn에 onClass 추가
+    // 아닐경우, #topBtn에 onClass 제거
+
+
+    // 햄버거 클릭시 메뉴오픈
+    $(document).ready(function() {
+      $('.toggle_menu').click(function() {
+        $('#nav').toggleClass('on');
+      })
+
+      // 메뉴1~3 클릭시
+      $('.dep1 > li > a').click(function(e) { 
+        $(this).parent().find('.dep2').slideToggle();
+        $(this).parent().siblings().find('.dep2').slideUp();
+
+        e.preventDefault();  // 기본동작 방지-자식에게주기
+        e.stopPropagation(); // 자식에게주기
+        //return false;
+      })
+
+      $('#nav').click(function () {
+        $(this).removeClass('on');
+        $('.toggle_menu').removeClass('on');
+      })
+
+      // 맨위로
+      $('#topBtn').click(function () {
+        $('html').animate({
+          'scrollTop': 0
+        }, 1000);
+      })
+
+      $(window).scroll(function() {
+        var windowTop = $(window).scrollTop();
+        console.log(windowTop);
+
+        if (windowTop > 200) {
+          $('#topBtn').addClass('on')
+        } else {
+          $('#topBtn').removeClass('on')
+        }
+      });
+    }) //end
+  </script>
+
+</body>
+</html>

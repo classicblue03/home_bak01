@@ -1,0 +1,39 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+
+#wrap {
+    width:600px;
+    position: relative;
+    margin: 0 auto;
+}
+#banner {
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 15px 35px;
+    margin-bottom: 10px;
+}
+.frame {
+    width:550px; height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+.frame ul {width:550px;}
+.frame li {
+    width:500px;
+    padding: 0 8px;
+}
+.frame li.on {display: block;}
+#ctr_btn {
+    position: absolute;
+    top:5px; right: 0;
+}
+#btn .left {
+    position: absolute;
+    top:50%; left: 5px;
+}
+
+#btn .right {
+    position: absolute;
+    top:50%; right: 5px;
+}
+#indicator {text-align: center;}

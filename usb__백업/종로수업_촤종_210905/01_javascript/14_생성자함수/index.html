@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자함수</title>
+</head>
+<body>
+    <pre>
+        1. 생성자함수 만드는 방법
+            new 키워드를 이용하여 만든다
+
+        2. 일반 함수와 구별하기 위해서 함수명 첫글자를 대문자로 쓴다
+    </pre>
+    <hr>
+    <script>
+        let jumsu1 = {
+            이름 : '홍길동',
+            국어 : 100,
+            영어 : 90,
+            수학 : 80,
+        }
+        let jumsu2 = {
+            이름 : '김흥부',
+            국어 : 90,
+            영어 : 80,
+            수학 : 70,
+        }
+        let jumsu3 = {
+            이름 : '김놀부',
+            국어 : 80,
+            영어 : 70,
+            수학 : 60,
+        }
+
+        //생성자 함수를 만들어서 작업
+        function Jumsu(name, kor, eng, mat){
+            //this{} //객체가 생략되어있음
+            this.name = name;
+            this.kor = kor;
+            this.eng = eng;
+            this.mat = mat;
+
+            this.printJumsu = function(){
+                alert(`성명 : ${this.name} \n국어 : ${this.kor} \n영어 : ${this.eng} \n수학 : ${this.mat}`);
+            }
+        }
+        let person1 = new Jumsu('홍길동', 100, 100, 100);
+        person1.printJumsu();
+
+        let person2 = new Jumsu('김흥부', 90, 90, 90);
+        person2.printJumsu();
+        
+        let person3 = new Jumsu('김놀부', 80, 80, 80);
+        person3.printJumsu();
+
+    </script>
+
+
+    
+</body>
+</html>

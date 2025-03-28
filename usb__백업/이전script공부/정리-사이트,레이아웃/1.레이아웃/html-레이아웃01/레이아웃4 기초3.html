@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>레이아웃4 기초3</title>
+    <style>
+        *{margin:0; padding:0;}
+        
+        
+       
+        .header{
+            width:940px;
+            height:185px;
+            background:blue;
+            margin:0 auto;
+        }
+        .mainslide{
+            height:480px;
+            background:purple;
+        }
+        .con1{
+            width:940px;
+            margin:20px auto;
+        }
+        .con1:after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        
+        .con1 p{
+            width:300px;
+            height:200px;
+            background:hotpink;
+            float:left;
+            margin-right:20px;
+        }
+        
+        .con1 p:last-child{
+            margin-right:0;
+        }
+        
+        
+        /*con2*/
+        .con2{
+            width:940px;
+            margin:0 auto;
+        }
+        .con2:after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        .con2 p{
+            width:300px;
+            height:200px;
+            background:skyblue;
+            float:left;
+            margin-right:20px;
+        }
+        .con2 p:last-child{
+            margin-right:0;
+        }
+        
+        /*푸터*/
+        .footer{
+            height:185px;
+            background:darkblue;
+            margin-top:20px;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <div class="header"></div>
+
+    <div class="mainslide"></div>
+
+    <div class="con1">
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+
+    <div class="con2">
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+
+    <div class="footer"></div>
+</body>
+</html>
+
+
+
+

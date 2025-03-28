@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+    
+        *{margin:0; padding: 0;}
+        
+        
+        #wrap{
+            width: 1200px;
+            height: 800px;/*레이아웃 전체높이*/
+            background-color: gray;
+            margin: 0 auto;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        
+        /*메뉴*/
+        #header{
+             width: 1200px;
+             height: 100px;
+             line-height: 100px;
+             background-color: yellow;
+             margin-bottom: 50px;
+            /*메뉴섹션을 벗어난 하위쪽을 띄움*/
+        
+           
+        }
+        
+        
+        
+        /*첫번째 섹션*/
+        #section{
+            
+             width: 1200px;
+             height: 250px;
+             line-height: 250px;/*라인헤이트=글자를 가운데로 갖다놓음*/
+             background-color: greenyellow;
+             margin-bottom: 50px;
+            
+        }
+        
+        
+        #con_wrap{
+            width: 1200px;
+            height: 350px;/*레이아웃 전체높이*/
+            line-height: 350px;
+            background-color: pink;
+        }
+        
+        
+        .con{
+            width: 380px;
+            height: 350px;
+            background-color: purple;
+            float: left;/*세로나열된 것들을 가로배치*/
+            margin-right: 30px;
+            
+        }
+        
+         .con:last-child{
+            margin: 0px;
+             
+        /*마지막박스 마진을 0으로 줌으로써
+          가로배치 안되고 떨어진것을을 다시 제자리로 배치
+        */
+        
+        }
+        
+        
+       
+        
+    
+    </style>
+</head>
+
+
+
+
+<body>
+    
+    <div id="wrap"> <!--그레이로 전체를 묶음-->
+       
+        <div id="header">메뉴</div>
+        <div id="section">첫번째 섹션</div>
+         <!---->
+
+        <div id="con_wrap">
+            <div class="con">1</div>
+            <div class="con">2</div>
+            <div class="con">3</div>
+        </div>
+        <!--콘텐츠를 하나로 묶고 하위는 이름 다같게-->
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

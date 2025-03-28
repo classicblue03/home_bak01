@@ -1,0 +1,41 @@
+https://rougeonblue.ca/
+https://www.lescapehotel.com/main
+
+브란도->자동차,가구,시계
+
+
+
+ctrl shift r 쿠키삭제새로고침
+
+파폭 shift alt b
+
+hcode
+
+
+백틱
+git config user .email
+git add .
+git commit
+git push origin master
+
+
+수정후
+git add .
+git commit 'update 2021'
+git push origin master
+
+
+count
+ul>li*4>div>h2>{780}^h3>{CLIENTS SERVED}^span>i.fas-fa
+
+
+연락, 푸터숙제
+
+
+
+
+
+
+
+
+

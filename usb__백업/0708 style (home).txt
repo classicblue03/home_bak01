@@ -1,0 +1,208 @@
+<?php
+include_once('./_common.php');
+define('_INDEX_', true);
+if (!defined('_GNUBOARD_')) exit;
+include_once(G5_PATH.'/head.php');
+?>
+
+<div id="contents">
+  <div class="index-slider">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- RTX A5000-->
+        <div class="swiper-slide">
+          <section class="section section-index-01 section-index-bg">
+            <div class="row flex-just-center a5000">
+              <div class="section-text fc-white origin-left">
+                <h2 class="title-lg text-ani-01">NVIDIA RTX A5000</h2>
+                <h2 class="title-lg text-ani-02">모든 수준에서 뛰어난 성능</h2>
+              </div>
+              <div class="architecture-img">
+                <img src="../img/rtx-a5000.png" alt="RTX A5000 이미지" class="full-img">
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- RTX A4000 -->
+        <div class="swiper-slide">
+          <section class="section section-index-01 section-index-bg">
+            <div class="row flex-just-center a4000">
+              <div class="section-text fc-white origin-right">
+                <h2 class="title-lg text-ani-01">NVIDIA RTX A4000</h2>
+                <h2 class="title-lg text-ani-02">세련된 디자인, 강력한 성능</h2>
+              </div>
+              <div class="architecture-img-a4000">
+                <!-- <img src="../img/main-rtx-a4000.png" alt=""> -->
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- T1000, T600, T400 -->
+        <div class="swiper-slide">
+          <section class="section section-index-01">
+            <div class="row flex-just-center t1000">
+              <div class="section-text fc-white tC">
+                <h2 class="title-lg text-ani-01">NVIDIA T1000, T600, T400</h2>
+              </div>
+              <div class="architecture-img-t1000">
+                <img src="" alt="">
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- RTX A6000 -->
+        <div class="swiper-slide">
+          <section class="section section-index-01 section-index-bg">
+            <div class="row flex-just-center">
+              <div class="section-text fc-white tC">
+                <!-- <p class="text-xs f_green">Coming Soon</p> -->
+                <h2 class="title-lg text-ani-01">NVIDIA RTX A6000</h2>
+                <div class="subtext">
+                  <p class="more">
+                    <a href="<?php echo G5_URL ?>/html/product/product_rtx_a6000.php">더 알아보기<i class="fas fa-angle-right"></i></a>
+                  </p>
+                </div>
+              </div>
+              <div class="architecture-img">
+                <img src="../img/main-img-a6000.png" alt="RTX A6000 이미지" class="full-img">
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- video -->
+        <div class="swiper-slide">
+          <section class="section section-index-01">
+            <div class="movie">
+              <div class="videoPlayer">
+                <video loop="true" muted="" width="100%" height="100%" preload="none" autoplay playsinline>
+                  <source src="../video/mov-main.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="row flex-align-center">
+              <div class="section-text fc-white origin-left">
+                <h2 class="title-lg mT10 text-ani-01">RTX, IT’S ON</h2>
+                <h3 class="title-md text-ani-01" style="margin-top: -5px">데이터 사이언스 워크스테이션</h3>
+                <div class="subtext">
+                  <p class="summery">놀라운 산업 디자인에서 첨단 특수 효과와 복잡한 과학적 시각화에<br>이르기까지 Quadro®는 세계에서 가장 뛰어난 시각적 컴퓨팅 플랫폼입니다.</p>
+                  <p class="more">
+                    <a href="<?php echo G5_URL ?>/html/explore/">더 알아보기 <i class="fas fa-angle-right"></i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        speed: 1000,
+        autoHeight: true,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        autoplay: {
+          delay: 4000,
+        },
+      });
+    </script>
+  </div>
+  <!-- //index-slider -->
+
+  <section class="section section-index-02">
+    <div class="parrax-bg">
+      <div class="parrax-con">
+        <img src="../img/bg_quatro.png" alt="" class="이미지">
+      </div>
+    </div>
+    <div class="row flex-align-center">
+      <div class="section-text fc-white origin-left">
+        <h3 class="title-md" style="padding-bottom: 12px; padding-top:5px;">엔비디아 코리아 정품<br>Quadro를 사용하세요</h3>
+        <p class="summery">엔비디아 코리아 정품 쿼드로는 전문 엔지니어의 기술 및 3년 무상보증을 제공합니다.</p>
+        <p class="more">
+          <a href="<?php echo G5_URL ?>/html/intro/">더 알아보기 <i class="fas fa-angle-right"></i></a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="section section-index-03">
+    <div class="row">
+      <div class="section-text">
+        <h3 class="title-md" style="padding-bottom: 5px;">암페어부터 파스칼까지 모든 제품을 한곳에</h3>
+        <p class="summery">엔비디아 코리아 정품 Quadro를 한눈에 확인하세요</p>
+        <p class="more">
+          <a href="<?php echo G5_URL ?>/html/product/">쿼드로 전 제품 보러가기 <i class="fas fa-angle-right"></i></a>
+        </p>
+      </div>
+      <ul class="product-list stagger flex">
+        <li>
+          <a href="<?php echo G5_URL ?>/html/product/product_rtx_a6000.php">
+            <img src="../img/index_product5.png" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo G5_URL ?>/html/product/product_rtx_8000_passive.php">
+            <img src="../img/index_product1.png" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo G5_URL ?>/html/product/product_rtx_8000.php">
+            <img src="../img/index_product2.png" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo G5_URL ?>/html/product/product_volta_gv100.php">
+            <img src="../img/index_product3.png" alt="">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <?php include_once(G5_PATH.'/html/include/inquire.php'); ?>
+</div>
+<!-- popupWrap -->
+<div class="popupWrap">
+  <div class="popup-con">
+    <div class="popup">
+      <div class="popup-block">
+        <img src="../img/popup/img-event-202011.jpg" alt="팝업이미지">
+        <p class="btn-go">
+          <a href="#" onclick="gtag_report_conversion('https://blog.naver.com/PostList.nhn?blogId=leaderssystem&from=postList&categoryNo=7&parentCategoryNo=7')">
+            <img src="../img/popup/btn_go.png" alt="더 알아보기">
+          </a>
+        </p>
+      </div>
+      <p class="close">
+        <button type="button" class="btnClose">
+          <img src="../img/popup/btn_close.png" alt="닫기">
+        </button>
+      </p>
+    </div>
+    <div class="popup-footer">
+      <button type="button" class="btnTodayHide">오늘하루 보지않기</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.open(url, '_blank');
+    }
+    };
+    gtag('event', 'conversion', {
+      'send_to': 'AW-479939818/TY_FCL_csbACEOqZ7eQB',
+      'event_callback': callback
+    });
+    return false;
+  }
+</script>
+
+<?php
+include_once(G5_PATH.'/tail.php');
+?>

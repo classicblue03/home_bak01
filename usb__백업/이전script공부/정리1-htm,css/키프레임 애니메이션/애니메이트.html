@@ -1,0 +1,147 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>Page Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<script src="jquery-3.5.1.js"></script>
+</head>
+
+<script>
+	$(document).ready(function () {
+		$('#box').css({
+			width: 300,
+			height: 300,
+			backgroundColor: 'lightblue',
+
+		}).click(function () {
+
+			$(this).animate({
+				marginLeft: 100
+			}, 1000)
+
+		});
+	}); //end
+
+
+
+	/*$('#box').css({
+		width:300,
+		height:300,
+		backgroundColor: 'orange',
+		position: 'relative'
+	});*/
+
+	//				*애니메이트
+	//				=>시간에 따른 움직임 또는 애니메이션 작업시사용
+	//				=>애니메이트 적용 속성
+	//				- 크기값 width, height
+	//				- 여백값 margin, padding
+	//				- 위치값 left,right,top,bottom(position필수)
+	//				- 투명도 opacity(0~1값까지)
+	//				- 스크롤영역값
+
+	//				=>형태
+	//				$(선택자).animate({속성:속성값, ....});
+	//				
+	//				$(선택자).animate({속성:속성값, ....},시간);
+	//				=>시간표현 1/1000 =>1초 = 1000
+	//				
+	//				$(선택자).animate({속성:속성값, ....},시간,가속도형태);
+	//				=>가속도는 플러그인 사용
+	//				
+	//				$(선택자).animate({속성:속성값, ....},시간,가속도형태,콜백함수);
+	//				=>animate는 시작하면 움직임이 완료된 다음
+	//				콜백함수로 다음 움직임을 실행시켜줌
+
+	/*$('#box').animate({
+		width: 500,
+		height: 500
+	},1000,function(){
+		$(this).animate({
+			marginLeft: 300,
+			padding: 100
+		},2000,function(){
+			$(this).animate({
+				top: 300,
+				opacity: 0.5
+			},1500,function(){
+				$(this).animate({
+					width:300,
+					height:300,
+					marginLeft:0,
+					padding:0,
+					top:0,
+					opacity:1
+				},500);
+			});
+		});
+	});*/
+
+
+	// *문제1
+	// box를 클릭하면 1초동안 가로세로 크기가 1000만큼 커지고
+	// 위치가 top, left, 500만큼 이동할 수 있도록 하기
+
+	/*$('#box').css({
+		
+		width:300,
+		height:300,
+		backgroundColor:'steelblue',
+		position:'relative'
+	
+	}).click(function(){
+		
+		$(this).animate({
+			width:1000,
+			height:1000
+		},1000,function(){
+			
+			$(this).animate({
+				top:500,
+				left:500
+			});
+
+		});
+		
+	});*/
+
+	/**풀이
+	
+	$('#box').css({
+		width: 300,
+		height: 300,
+		backgroundColor: 'crimson',
+		position:'absolute',
+		top:0,
+		left:0
+	}).click(function(){
+		
+		$(this).animate({
+			width: 1000,
+			height: 1000
+		},1000,function(){
+			
+			$(this).animate({
+				top: 500,
+				left: 500
+			});
+			
+		});
+		
+	});*/
+
+	/**문제2
+	=>box를 클릭하면 왼쪽에서 오른쪽으로 1초동안 1000만큼 이동시킴
+	=>box의 색상을 다른색으로 변경하기*/
+</script>
+
+
+
+<body>
+	<div id="box"></div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>오늘의 책</title>
+    <style>
+        
+        *{margin:0;padding:0; list-style:none;}
+        
+        
+        .container{
+            width:940px;
+            background:#ccc;
+            margin:0 auto;
+        }
+        .container:after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        .container li{
+            width:300px;
+            height:400px;
+            background:cyan;
+            float:left;
+            text-align:center;
+        }
+        .container li:nth-child(2){
+            margin:0 20px;
+        }
+        .container li .thum{
+            width:220px;
+            height:110px;
+            background:gold;
+            margin:20px auto 0 auto;
+        }
+        .container li h1{
+            margin:20px 0;
+        }
+    </style>
+</head>
+<body>
+    <ul class="container">
+        <li>
+            <div class="thum"></div>
+            <h1>오늘의 책</h1>
+            <p>2019-02-22</p>
+        </li>
+        
+        <li>
+            <div class="thum"></div>
+            <h1>오늘의 영화</h1>
+            <p>2019-02-22</p>
+        </li>
+        
+        <li>
+            <div class="thum"></div>
+            <h1>오늘의 음반</h1>
+            <p>2019-02-22</p>
+        </li>
+    </ul>
+</body>
+</html>
+
+
+
+

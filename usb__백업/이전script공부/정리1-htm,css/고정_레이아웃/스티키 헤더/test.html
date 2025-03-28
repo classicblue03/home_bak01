@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>스티키 헤더</title>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <!--<script src="test.js"></script>-->
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+    <header>
+        <div class="sticky_logo">
+            <h1>logo</h1>
+        </div>
+        <div class="sticky_head">
+            <h2>Sticky Head</h2>
+        </div>
+    </header>
+    <div class="sticky_cont">
+        <p>1234567</p>
+    </div>
+
+
+
+
+
+    <script>
+        window.onscroll = function() {
+            myFunction();
+        };
+
+        var header = document.querySelector('.sticky_head');
+        var cont = document.querySelector('.sticky_cont');
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add('sticky');
+                cont.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+                cont.classList.remove('sticky');
+            }
+        }
+        /*
+        1. offsetTop은 부모 엘리먼트 상단으로부터의 픽셀값입니다.
+        2. pageYOffset 은 scrollY 의 다른 이름으로, 문서가 수직으로 얼마나 스크롤 됐는지
+        픽셀 단위로 반환합니다.
+        */
+
+    </script>
+</body>
+
+</html>

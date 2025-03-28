@@ -1,0 +1,198 @@
+*{
+    margin: 0; padding: 0;
+}
+li {list-style: none;}
+
+body {
+    width:782px;
+    height: 4000px;
+    margin: 0 auto;
+}
+/*-----------popup------------*/
+#pop_btn {display: none;}
+#pop_btn ~ .popup {display: block;}
+#pop_btn:checked ~ .popup {display: none;}
+
+.popup {
+    width:320px; height: 340px;
+    border: 1px solid black;
+    position:absolute;
+    top:100px; left: 100px;
+    z-index: 9999;
+}
+.pop_img img {
+    width:300px; height: 300px;
+    margin: 10px;
+}
+
+/*-----------header------------*/
+#header {
+    height: 200px;
+    background-color: #666;
+}
+
+.gnb_menu {overflow: hidden;}
+.gnb_menu ul {float: right;}
+.gnb_menu li {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.gnb_menu li:hover {
+    color: blue;
+}
+.logo {
+    margin: 0 auto;
+    width:150px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+}
+
+/*----------- wrap ------------*/
+#wrap {}
+#wrap_menu {
+    position: relative;
+}
+.ham_menu {
+    position: absolute;
+    top:32px;
+}
+
+.lnb_fix {
+    width:782px;
+    position: fixed; top:0;
+}
+
+.lnb_menu {overflow: hidden;}
+.ham_btn {
+    width:32px; height: 32px;
+    float: left;
+    cursor: pointer;
+}
+.ham_btn img {
+    width:100%; height: auto;
+}
+.lnb_menu li {
+    width:150px; height: 32px;
+    float: left;
+    text-align: center; line-height: 32px;
+    background-color: black; color:white;
+    cursor: pointer;
+}
+.lnb_menu li:hover {
+    background-color: #666; color:black;
+}
+
+.ham_menu{
+    overflow: hidden;
+}
+.ham_menu ul {float: left;}
+.ham_menu li {
+    width:150px; height: 30px;
+    text-align: center; line-height: 30px;
+    background-color: black; color:white;
+    font-size: 14px;
+}
+.ham_menu li:hover {
+    background-color: #666; color:black;
+}
+
+.visual_main {
+    width:782px; height: 300px;
+    background-color: yellow;
+    margin: 0 auto;
+    text-align: center; line-height: 300px;
+}
+
+
+
+/* 2.19 여기봐주세요~ */
+/*----------- container ------------*/
+.best_top {
+    position: relative;
+    margin-top: 30px;
+}
+.best_top .pro_title {
+    width:500px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.best_top .chk_btn {
+    position: absolute; 
+    top:0; right: 3px;
+    width:20px; height: 20px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    transition-property: background-image;
+    background-image: url(img/plus_btn.jpg);
+}
+
+#chk_btn ~ .best_top .chk_btn {background-image: url(img/plus_btn.jpg);}
+#chk_btn:checked ~ .best_top .chk_btn {background-image: url(img/minus_btn.jpg);}
+
+/* pro = row1, row2 공통 */
+#container .pro {overflow: hidden;}
+
+/* 각각의 box */
+#container .pro div {
+    float: left;
+    margin: 5px;
+    width:180px; height: 180px;
+    border: 1px solid black; box-sizing: border-box;
+}
+
+/* row2 box영역 */
+#container .product02 {height: 0px; transition-property: height;transition-duration: 0.5s;}
+
+#chk_btn {display: none;}
+#chk_btn ~ .product02 {height: 0;}
+#chk_btn:checked ~ .product02 {height: 190px; background: gold;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------- input > radio ------------*/
+#tab01, #tab02, #tab03 {display: none;}
+
+#tab01 ~ .sheet01 {display: none;}
+#tab01:checked ~ .sheet01 {display: block;}
+#tab02 ~ .sheet02 {display: none;}
+#tab02:checked ~ .sheet02 {display: block;}
+#tab03 ~ .sheet03 {display: none;}
+#tab03:checked ~ .sheet03 {display: block;}
+
+.label {overflow: hidden;}
+.label label {
+    width:100px; height: 30px;
+    background-color: #666; color: black;
+    display: block;
+    float: left;
+    text-align: center; line-height: 30px;
+    border-radius: 10px 10px 0 0;
+}
+
+#tab01:checked ~ .label .tab01 {background-color: black; color: white;}
+#tab02:checked ~ .label .tab02 {background-color: black; color: white;}
+#tab03:checked ~ .label .tab03 {background-color: black; color: white;}
+
+.sheet {
+    width:782px; height: 300px;
+    background-color: black; color: white;
+    font-size: 40px;
+    text-align: center; line-height: 300px;
+    border-radius: 0 10px 0 0;
+}
+

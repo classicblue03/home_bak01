@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체지향형프로그래밍</title>
+</head>
+<body>
+    <pre>
+        객체 ->여러개의 data를 한꺼번에 저장하는 자료형
+        변수를 한꺼번에 모아 다루는 기법
+
+        1. 객체를 선언하는 방법
+            1. var 객체 타입의 변수명 = {
+                속성(key) : 값(data),
+                속성(key) : 값(data),
+                속성(key) : 값(data),
+                속성(key) : 값(data),
+                매소드 : function{
+
+                }
+            } 
+            2. var 객체 타입의 변수명 ={}
+            3. var 객체 타입의 변수명 = new Object()
+
+        2. 객체안에 data를 접근할때 방법
+
+            1. 객체명.key
+            2. 객체명[key]
+    </pre>
+
+    <hr>
+
+
+    <script>
+        //객체 선언 1
+        let score = {
+            국어 : 100,
+            영어 : 90,
+            수학 : 80,
+            전산 : 70
+        };
+
+        document.write("국어 = "+score.국어+"<br>");
+        document.write("영어 = "+score.영어+"<br>");
+        document.write("수학 = "+score['수학']+"<br>"); //string은 ''안에!
+        document.write("전산 = "+score['전산']+"<br>");
+
+        //객체 선언 방법2
+        let car = {};
+        car['색상'] = "검정";
+        car['배기량'] = 3000;
+        car['제조사'] = "현대자동차";
+
+        document.write(car.색상+"<br>");
+        document.write(car.배기량+"<br>");
+        document.write(car.제조사+"<br>");
+        document.write("<br>");
+        document.write(car['색상']+"<br>");
+        document.write(car['배기량']+"<br>");
+        document.write(car['제조사']+"<br>");
+
+        //객체선언 3
+        var grade = new Object;
+        grade['kor'] = 100;
+        grade['eng'] = 70;
+        grade['mat'] = 60;
+        grade['com'] = 50;
+
+        //객체를 반복문을 사용하여 출력하기
+        for(key in grade){
+            console.log(key, grade[key]);
+        }
+
+
+        console.log(score);
+
+
+
+
+
+        //배열선언
+        let jumsu = [100, 90, 80, 70];
+        //배열 데이터에 접근
+        // document.write("국어 = " + jumsu[0] +"<br>");
+        // document.write("영어 = " + jumsu[1] +"<br>");
+        // document.write("수학 = " + jumsu[2] +"<br>");
+        // document.write("전산 = " + jumsu[3] +"<br>");
+
+        // for(let i = 0; i< jumsu.length; i++){
+        //     document.write("점수 : "+ jumsu[i]+"<br>");
+        // }
+
+
+
+    </script>
+    
+</body>
+</html>

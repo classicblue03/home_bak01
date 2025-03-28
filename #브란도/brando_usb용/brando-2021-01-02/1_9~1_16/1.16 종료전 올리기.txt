@@ -1,0 +1,77 @@
+1.16 종료전 올리기
+
+TJ@1304-04 MINGW64 ~
+$ cd D:/주말과정_강민채/훈련생_산출물/1_16_브란도_레스토랑_반응형포트폴리오
+
+TJ@1304-04 MINGW64 /d/주말과정_강민채/훈련생_산출물/1_16_브란도_레스토랑_반응형포트폴리오 (master)
+$ ls -la
+total 68
+drwxr-xr-x 1 TJ 197121     0 Jan 16 12:42 ./
+drwxr-xr-x 1 TJ 197121     0 Jan 16 15:11 ../
+drwxr-xr-x 1 TJ 197121     0 Jan 16 12:42 .git/
+drwxr-xr-x 1 TJ 197121     0 Jan 16 12:42 css/
+drwxr-xr-x 1 TJ 197121     0 Jan 16 12:42 fonts/
+drwxr-xr-x 1 TJ 197121     0 Jan 16 12:42 img/
+-rw-r--r-- 1 TJ 197121 43702 Jan 16 14:23 index.html
+drwxr-xr-x 1 TJ 197121     0 Jan 16 12:42 js/
+
+TJ@1304-04 MINGW64 /d/주말과정_강민채/훈련생_산출물/1_16_브란도_레스토랑_반응형포트폴리오 (master)
+$ git config --global user.email 'engl1994@naver.com'
+
+TJ@1304-04 MINGW64 /d/주말과정_강민채/훈련생_산출물/1_16_브란도_레스토랑_반응형포트폴리오 (master)
+$ git config --global user.name 'classicblue03'
+
+TJ@1304-04 MINGW64 /d/주말과정_강민채/훈련생_산출물/1_16_브란도_레스토랑_반응형포트폴리오 (master)
+$ git remote add origin https://github.com/classicblue03/brando.git
+error: remote origin already exists.
+
+TJ@1304-04 MINGW64 /d/주말과정_강민채/훈련생_산출물/1_16_브란도_레스토랑_반응형포트폴리오 (master)
+$ git remote -v
+origin  https://github.com/classicblue03/brando.git (fetch)
+origin  https://github.com/classicblue03/brando.git (push)
+
+TJ@1304-04 MINGW64 /d/주말과정_강민채/훈련생_산출물/1_16_브란도_레스토랑_반응형포트폴리오 (master)
+$ git add .
+
+TJ@1304-04 MINGW64 /d/주말과정_강민채/훈련생_산출물/1_16_브란도_레스토랑_반응형포트폴리오 (master)
+$ git commit -m 'update'
+[master 34fd7d7] update
+ 3 files changed, 108 insertions(+), 22 deletions(-)
+
+TJ@1304-04 MINGW64 /d/주말과정_강민채/훈련생_산출물/1_16_브란도_레스토랑_반응형포트폴리오 (master)
+$ git push
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.72 KiB | 1.72 MiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/classicblue03/brando.git
+   08e3c5f..34fd7d7  master -> master
+
+TJ@1304-04 MINGW64 /d/주말과정_강민채/훈련생_산출물/1_16_브란도_레스토랑_반응형포트폴리오 (master)
+$ git add .
+
+TJ@1304-04 MINGW64 /d/주말과정_강민채/훈련생_산출물/1_16_브란도_레스토랑_반응형포트폴리오 (master)
+$ git commit -m 'update'
+[master 94fd381] update
+ 2 files changed, 200 insertions(+), 42 deletions(-)
+
+TJ@1304-04 MINGW64 /d/주말과정_강민채/훈련생_산출물/1_16_브란도_레스토랑_반응형포트폴리오 (master)
+$ git push origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.58 KiB | 1.58 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/classicblue03/brando.git
+   34fd7d7..94fd381  master -> master
+
+TJ@1304-04 MINGW64 /d/주말과정_강민채/훈련생_산출물/1_16_브란도_레스토랑_반응형포트폴리오 (master)
+$ ^C
+
+TJ@1304-04 MINGW64 /d/주말과정_강민채/훈련생_산출물/1_16_브란도_레스토랑_반응형포트폴리오 (master)
+$

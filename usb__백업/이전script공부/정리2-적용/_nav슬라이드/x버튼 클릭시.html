@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>버튼효과</title>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="xBtn_click.css">
+</head>
+
+<body>
+    <a href="#void" onclick="toggle_function()" class="btn">
+        <div class="close_icon"><span></span><span></span></div>
+    </a>
+    <ul class="toggle_cnt">
+        <li><a href="http://www.naver.com" target="blank">cnt_list1</a></li>
+        <li><a href="#">cnt_list2</a></li>
+        <li><a href="#">cnt_list3</a></li>
+        <li><a href="#">cnt_list4</a></li>
+    </ul>
+
+    <script>
+        function toggle_function() {
+            var toggle_c = document.getElementsByClassName('toggle_cnt')[0];
+            var btn_i = document.getElementsByClassName('close_icon')[0];
+            toggle_c.classList.toggle('toggle_on');
+            btn_i.classList.toggle('rotate_on');
+        }
+    </script>
+</body>
+
+</html>

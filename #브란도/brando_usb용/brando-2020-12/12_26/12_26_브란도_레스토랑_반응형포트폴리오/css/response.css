@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/* header메뉴버튼 */
+@media all and (max-width:1200px){
+    #wrap #header .wrap .gap .container .right-wrap .aside span:nth-child(1){display: none;}
+}
+@media all and (max-width:990px){
+    #wrap #header .wrap .gap .container .left-wrap #gnb{display: none;}
+    #wrap #header .wrap .gap .container .right-wrap{display: none;}
+}
+
+/* hingry축소할때 */
+/* 기본(세로) */
+@media all and (max-width: 980px){
+    #wrap #main #section01{background-attachment: scroll;}
+    #wrap #main #section02 .wrap .gap .container .box{right:50%; margin-right:-225px; /*너비값450/2*/}
+    #wrap #main #section04 .wrap .gap .container .box{right:50%; margin-right:-225px; /*너비값450/2*/}
+    #wrap #main #section03 .wrap .gap .container .box{left:50%; margin-left:-225px;}
+}
+/* 가로방향 */
+@media all and (max-width: 980px) and (orientation:landscape){
+    #wrap #main #section01 .wrap .gap .container .title img{width: 60%;} /* 전체너비에서 60% */
+}
+/* 기본(세로) */
+@media all and (max-width: 980px) and (orientation:portrait){
+    #wrap #main #section01 .wrap .gap .container .title img{width: 90%;} /* 전체너비에서 60% */
+}

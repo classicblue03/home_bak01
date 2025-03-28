@@ -1,0 +1,62 @@
+1번방법 폴더
+<------ github 내려받을 새폴더 만들기 ------>
+D:/주말과정_강민채/brando이미지/새폴더
+
+
+
+TJ@1304-04 MINGW64 ~
+$ cd d:
+
+TJ@1304-04 MINGW64 /d (master)
+$ cd D:/주말과정_강민채/brando이미지/새폴더
+
+TJ@1304-04 MINGW64 /d/주말과정_강민채/brando이미지/새폴더 (master)
+$ ls -la
+total 80
+drwxr-xr-x 1 TJ 197121 0 Jan 16 13:19 ./
+drwxr-xr-x 1 TJ 197121 0 Jan 16 13:15 ../
+
+TJ@1304-04 MINGW64 /d/주말과정_강민채/brando이미지/새폴더 (master)
+$ git clone https://github.com/classicblue03/brando.git (git clone + github code복사)
+Cloning into 'brando'...
+remote: Enumerating objects: 116, done.
+remote: Counting objects: 100% (116/116), done.
+remote: Compressing objects: 100% (114/114), done.
+remote: Total 116 (delta 2), reused 116 (delta 2), pack-reused 0
+Receiving objects: 100% (116/116), 8.00 MiB | 4.67 MiB/s, done.
+Resolving deltas: 100% (2/2), done.
+
+TJ@1304-04 MINGW64 /d/주말과정_강민채/brando이미지/새폴더 (master)
+
+
+--
+2번방법 vs code
+새파일-리포지토리 복제+ github code복사한것 붙여넣기
+폴더선택
+
+
+pw minchae94!
+
+
+git remote add origin (code url)
+외진, 먼곳에 기존것 추가하기
+
+
+섹션8
+div.content>ul>li*3>div.img-gap>div.box-wrap>div.img-wrap>img[src='.img/restaurant-img$@33.png']
+
+섹션9
+div.content>ul>li*8>div.gallery-gap>div.box>div.img-box>img[src="./img/restaurant-img$@25"]^div.img-caption>div.caption-gap>h3+h4
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="flower_click_slide.js"></script>
+    <title>버튼 클릭슬라이드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #wrap {
+            width: 600px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        #banner {
+
+            border-radius: 15px;
+            padding: 15px 35px;
+            margin-bottom: 10px;
+        }
+
+        .frame {
+            width: 550px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .frame ul {
+            width: 550px;
+        }
+
+        .frame li {
+            width: 500px;
+            padding: 0 8px;
+        }
+
+        .frame li.on {
+            display: block;
+        }
+
+        #indicator {
+            position: absolute;
+            margin-top: -100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="banner">
+            <div class="frame">
+                <ul>
+                    <li><a href="#"><img src="img/spring.jpg"></a></li>
+                    <li><a href="#"><img src="img/summer.jpg"></a></li>
+                    <li><a href="#"><img src="img/autumn.jpg"></a></li>
+                    <li><a href="#"><img src="img/winter.jpg"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="indicator">
+            <a href="#"><img src="img/1_off.jpg"></a>
+            <a href="#"><img src="img/2_off.jpg"></a>
+            <a href="#"><img src="img/3_off.jpg"></a>
+            <a href="#"><img src="img/4_off.jpg"></a>
+        </div>
+    </div>
+
+</body>
+
+</html>

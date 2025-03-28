@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+.slick-top {
+    img {height: 500px;}
+
+    //slick-slide slick-current slick-active
+    .slick-slide {
+        position: relative;
+
+        .slide-txt {
+            position: absolute;
+            top: 50%; left: 50%; //가운데정렬
+            transform: translate(-50%, 50%); //가운데정렬
+            transition: all 1.5s;
+            opacity: 0;
+
+            font-size: 5em;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, .5); //w3cschools 찾아보기, blur 4px
+        }
+
+        img {
+            transform: scale(1.1);
+            transition: transform .5s;
+        }
+
+        //&. -> 형제선택
+        &.slick-active {
+            .slide-txt {transform: translate(-50%, -50%); opacity: 1;}
+            img {transform: scale(1);}
+        }
+    }
+
+    .slick-arrow {
+        z-index: 10;
+        width: 50px; height: 50px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, .2);
+
+        &:hover {
+            background: rgba(255, 255, 255, .5);
+            &::before {color: #000;}
+        }
+
+        &::before {
+            //라인어썸 arrow -> font-family: 수정
+            font-family: 'Line Awesome Free';
+            font-weight: 900; font-size: 40px;
+        }
+    }
+
+    .slick-prev {
+        left: 25px;
+        &::before {content: "\f104";}
+    }
+
+    .slick-next {
+        right: 25px;
+        &::before {content: "\f105";}
+    }
+
+
+    //점 네비게이션
+    .slick-dots {
+        bottom: 25px;
+
+        li {
+            //활성화된 버튼
+            &.slick-active button {background: coral;}
+
+            button {
+                width: 10px; height: 10px;
+                border: 3px solid coral;
+                border-radius: 50%;
+                &:before {display: none;}
+            }
+        }
+    }
+}
+
+.slick-banner {
+    width: 1000px;
+    margin: 100px auto;
+
+    strong {
+        display: block;
+        width: 95%; height: 200px; //사이간격이 벌어짐
+        margin: 0 auto;
+        text-align: center;
+        transition: all .5s;
+        background:pink;
+    }
+
+    .slick-list {padding: 80px 200px !important;}
+    .slick-center {
+        strong {
+            transform: scale(1.2);
+            background: #e99;
+        }
+    }
+}
+
+//시작,정지버튼
+.slick-wrap {
+    position: relative;
+
+    .slide-btn-wrap {
+        position: absolute;
+        bottom: 20px;
+        left: 50%; /* 가운데정렬 */
+        transform: translateX(60px);
+
+        .slide-btn-pause {
+            width: 30px; height: 30px;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            background: #fff;
+        }
+
+        .slide-play {
+            &::before {
+                content: "\f04b";
+                font-family: 'Line Awesome Free';
+                font-weight: 900;
+            }
+        }
+
+        .slide-pause {
+            &::before {
+                content: "\f04c";
+                font-family: 'Line Awesome Free';
+                font-weight: 900;
+            }
+        }
+    }
+}

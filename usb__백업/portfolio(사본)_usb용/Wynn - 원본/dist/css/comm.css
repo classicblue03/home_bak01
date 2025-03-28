@@ -1,0 +1,325 @@
+@import url(../css/reset.css);
+.wrap {
+  padding-left: 300px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  background-size: cover;
+  background: #fff;
+}
+
+header .logo {
+  height: 200px;
+}
+
+header .logo a {
+  display: block;
+  width: 100%;
+  height: 7rem;
+  margin: 3rem auto 0;
+  background: url(../../images/wynn-animated-logo.gif) 50% 50% no-repeat;
+  background-size: contain;
+  text-indent: -9999px;
+}
+
+header #gnb {
+  margin-top: 100px;
+}
+
+header #gnb a {
+  display: block;
+  padding: 15px 0 14px 60px;
+  font-size: 1.714em;
+  color: #000;
+}
+
+header #gnb a:hover {
+  color: #104E96;
+}
+
+header .nav-goto {
+  margin: auto 0 100px;
+}
+
+header .nav-goto ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .nav-goto ul.link-goto li:first-child a::before {
+  display: none;
+}
+
+header .nav-goto ul.link-goto a {
+  display: block;
+  padding: 4px 5px;
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+
+header .nav-goto ul.link-goto a::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 19px;
+  margin: -4px 13px 0 5px;
+  vertical-align: middle;
+  background: #999;
+}
+
+header .nav-goto ul.link-sns a {
+  font-size: 3em;
+}
+
+.container {
+  height: calc(100vh);
+  background: url(../../images/aside.jpg);
+  background-size: cover;
+}
+
+article {
+  overflow: hidden;
+  float: left;
+  position: relative;
+  width: 20%;
+  height: 25%;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+}
+
+article:hover::before {
+  display: none;
+}
+
+article::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+article a {
+  display: block;
+  height: 100%;
+  padding: 2rem;
+}
+
+article h2 {
+  margin-bottom: 15px;
+  font-size: 1.571em;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+  opacity: 0;
+  -webkit-animation: ani-txt 1s forwards;
+          animation: ani-txt 1s forwards;
+}
+
+article p {
+  font-size: 1em;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+  opacity: 0;
+  -webkit-animation: ani-txt 1s forwards;
+          animation: ani-txt 1s forwards;
+}
+
+@-webkit-keyframes ani-txt {
+  0% {
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes ani-txt {
+  0% {
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+article .la-sync {
+  position: absolute;
+  bottom: -2vw;
+  right: -4vw;
+  color: #fff;
+  font-size: 15vw;
+  -webkit-animation-name: ani-sync;
+          animation-name: ani-sync;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes ani-sync {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes ani-sync {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+article:first-child {
+  width: 60%;
+  height: 50%;
+  background: url(../../images/w02.jpg) 100% 25% no-repeat;
+  background-size: cover;
+}
+
+article:first-child strong {
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  font-weight: 700;
+  color: #fff;
+  font-size: 3.7rem;
+}
+
+article:nth-child(2) {
+  width: 40%;
+  height: 25%;
+}
+
+article:nth-child(2)::before {
+  display: none;
+}
+
+article:nth-child(3) {
+  background: url(../../images/reserv.jpg) no-repeat;
+  background-size: cover;
+}
+
+article:nth-child(3)::before {
+  display: none;
+}
+
+article:nth-child(3) h2 {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+article:nth-child(4) {
+  background: url(../../images/photo-11.jfif) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+article:nth-child(5) {
+  background: url(../../images/photo-14.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  background-position: left top;
+}
+
+article:nth-child(6) {
+  width: 40%;
+  height: 25%;
+}
+
+article:nth-child(6)::before {
+  display: none;
+}
+
+article:nth-child(6) h2 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+article:nth-child(6) p {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+article:nth-child(7) {
+  background: url(../../images/photo-5.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+article:nth-child(8)::before {
+  display: none;
+}
+
+article:nth-child(8) h2 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+article:nth-child(8) p {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+article:nth-child(9) {
+  width: 40%;
+  height: 25%;
+  background: url(../../images/photo-20.jpg) 50% 80% no-repeat;
+  background-size: cover;
+}
+
+article:nth-child(10) {
+  background: url(../../images/photo-4.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+article:nth-child(11)::before {
+  display: none;
+}
+
+article:nth-child(11) h2 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+article:nth-child(11) p {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+article:last-child {
+  background: url(../../images/photo-7.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+/*# sourceMappingURL=comm.css.map */

@@ -1,0 +1,146 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+	
+	<!--*input태그
+	=>사용자 입력 태그(단독태그)
+	=>아이디, 비번, 회원가입, 설문조사
+	=>한번 클릭하면 체크가 되고 다시 한번 클릭하면 체크 해제가 됨
+	(버튼 하나로 체크가 되었다 풀렸다)
+	=>css에서 클릭이벤트 대신 활용
+	=>숨김메뉴 작업시 사용-->
+	
+	<input type="button" value="가입하기" />
+	<br/>
+	<button>가입하기</button>
+	<br/><br/><br/>
+	
+	
+	<input type="checkbox" /> 이용약관 동의
+	<!--=>글자 클릭시 체크박스 체크 안됨-->
+	<br/>
+	<input type="checkbox" id="toggle"/>
+	<label for="toggle">이용약관 동의</label>
+	<!--=>라벨태그는 연결되는 input과 위치에서의 제약이 없음
+	for~연결된 input태그의 앞에 있든 뒤에 있든 형제로 있든 자손으로 있든-->
+	<br/><br/><br/>
+	
+	
+	<input type="radio" />만족합니다
+	<br/>
+	<input type="radio" />보통입니다
+	<br/>
+	<input type="radio" />별로입니다
+	<br/><br/>
+	<input type="radio" id="tab_1" />
+	<label for="tab_1">만족합니다</label>
+	<br/>
+	<input type="radio" id="tab_2" />
+	<label for="tab_2">보통입니다</label>
+	<br/>
+	<input type="radio" id="tab_3" />
+	<label for="tab_3">별로입니다</label>
+	<br/><br/>
+	<input type="radio" id="tab_01" name="tab" />
+	<label for="tab_01">만족합니다</label>
+	<br/>
+	<input type="radio" id="tab_02" name="tab" />
+	<label for="tab_02">보통입니다</label>
+	<br/>
+	<input type="radio" id="tab_03" name="tab" />
+	<label for="tab_03">별로입니다</label>
+	<!--=>한번 체크되면 해지할 수 없음
+	=>여러개의 radio버튼을 작성 후 하나의 그룹(name)으로 인식
+	=>여러개 중에 하나만 체크할 수 있음 ex: 설문조사 복수선택 아닐 때-->
+	<br/><br/><br/>
+	
+	
+	이메일 : <input type="email" />
+	<!--=>기본 텍스트 박스, 해당 type 안 쪽 내용은 메일주소라는 표시의미-->
+	<br/><br/><br/>
+	
+	
+	<input type="search" />
+	<br/>
+	<input type="search" value="내용을 입력해주세요" />
+	<!--=>미리설정된 값, 클릭해도 글자가 살아있음-->
+	<br/>
+	<input type="search" placeholder="내용을 입력해주세요" />
+	<!--=>미리보기, 글자를 넣어둠, 글자를 적을때 사라짐-->
+	<br/><br/><br/>
+	
+	
+	<input type="submit" />
+	<br/>
+	<input type="submit" value="가입하기" />
+	<!--=>기본으로 제출이라는 내용으로 나오지만
+	value를 사용하면 넣은 내용으로 출력-->
+	<br/><br/><br/>
+	
+	
+	전화번호 : <input type="tel" />
+	<!--=>전화번호, email과 동일한 형식-->
+	<br/><br/><br/>
+	
+	
+	<input type="text" />
+	<!--=>한줄의 기본 텍스트박스-->
+	<br/><br/><br/>
+	
+	
+	<textarea cols="50" rows="5"></textarea>
+	<!--=>여러줄의 텍스트박스
+	=>게시판
+	=>cols:행(가로-자)
+	=>rows:열(세로-줄)-->
+	<br/><br/><br/>
+	
+	<input type="color" />
+	<!--=>컬러 픽업창 생성-->
+	<br/><br/><br/>
+	
+	
+	url주소 : <input type="url" />
+	<!--=>url주소 의미-->
+	<br/><br/><br/>
+	
+	
+	<input type="time" />
+	<!--=>시간 입력-->
+	<br/><br/><br/>
+	
+	
+	<input type="date" />
+	<!--=>날짜 입력-->
+	<br/><br/><br/>
+	
+	
+	<input type="week" />
+	<!--=>주 단위로 표현-->
+	<br/><br/><br/>
+		
+	
+	<select>
+	    <option>선택해주세요</option>
+	    <option>곱창</option>
+	    <option>떡볶이</option>
+	    <option>피자</option>
+	    <option>치킨</option>
+	</select>
+	<!--=>옵션,선택창-->
+	
+	
+	
+	
+	
+	<br/><br/><br/><br/><br/><br/>
+	
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <script src="jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <div id="box"></div>
+
+  <script>
+    $(document).ready(function () {
+      $('#box').css({
+        width: 300,
+        height: 300,
+        backgroundColor: 'red'
+      });
+
+      // $('#box').click(function(){
+      // 	$(this).css({
+      // 		backgroundColor:'salmon'
+      // 	});
+      // });
+
+
+      // 클릭시 배경색이 계속 변경되도록
+      var i = 0;
+      $('#box').click(function() {
+        if (i == 0) {
+          $(this).css({backgroundColor:'blue'});
+          $(this).animate({width:600});
+          i++;
+        } else if (i == 1) {
+          $(this).css({backgroundColor:'green'});
+          $(this).animate({height:600});
+          i++;
+        } else if (i == 2) {
+          $(this).css({backgroundColor:'red'});
+          $(this).animate({width:300, height:300});
+          i -= 2;
+          // i=0;
+          // i--;
+          // i--;
+          // i를 0으로 만들면됨
+        }
+      });
+
+    }); //end
+  </script>
+  
+</body>
+</html>

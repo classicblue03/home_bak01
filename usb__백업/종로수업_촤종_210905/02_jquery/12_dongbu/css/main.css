@@ -1,0 +1,214 @@
+@charset "utf-8";
+*{
+    margin: 0;padding: 0;
+}
+body{
+    font-family: '맑은 고딕','Malgun Gothic';
+}
+header{
+    width: 100%;
+    position: fixed;
+}
+header .header_inner{
+    height: 60px;
+    background:#fff;
+    border-bottom: 1px solid #ddd;
+}
+
+header .header_inner h1{
+    position: absolute;
+    left:3%;
+    top:50%;
+    transform: translateY(-50%);
+}
+header .header_inner .btn_lang{
+    position: absolute;
+    right:57px;
+    top:50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 32px;
+}
+header .header_inner .btn_lang>a{
+    display: block;
+    width: 60px;
+    height: 32px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    color: #555;
+    box-sizing: border-box;
+    line-height: 32px;
+    position: relative;
+    text-indent: 6px;
+}
+
+header .header_inner .btn_lang>a::before{
+    content:'';
+    background: url('../imgs/select_ico.png') no-repeat;
+    width: 9px;
+    height: 5px;
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    margin-right: 6px;
+}
+
+header .header_inner .btn_lang .lang{
+    display: none;
+    position: absolute;
+    left:0;
+    top: 32px;
+    background: #fff;
+}
+
+header .header_inner .btn_lang .lang li a{
+    display: block;
+    width: 60px;
+    height: 32px;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: #555;
+    line-height: 32px;
+    text-align: center;
+    width: 60px;
+    height: 32px;
+    border: 1px solid #ddd;
+    border-top: none;
+    box-sizing: border-box;
+}
+
+
+
+header .header_inner .m_btn{
+    position: absolute;
+    right:15px;
+    top:50%;
+    transform: translateY(-50%);
+}
+header .header_inner .m_btn a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+header .header_inner .m_btn a span{
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #333;
+    text-indent: -99999px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+header .header_inner .m_btn.on a span{
+    background: rgba(0,0,0,0);
+    transition: all .2s ease;
+}
+
+header .header_inner .m_btn a span::before{
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    top:-12px;
+    left: 0;
+    transition: all .3s ease;
+}
+
+header .header_inner .m_btn.on a span::before{
+    transform: rotate(45deg);
+    top:0;
+}
+header .header_inner .m_btn a span::after{
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    top:12px;
+    left: 0;
+    transition: all .3s ease;
+}
+
+header .header_inner .m_btn.on a span::after{
+    transform: rotate(-45deg);
+    top:0;
+}
+/* =======hamburger end======== */
+
+.main{
+    width: 100%;
+    height: 915px;
+    background: url('../imgs/main_visual1.jpg') no-repeat center top;
+}
+
+.m_gnb{
+    position: fixed;
+    top:60px;
+    right: -100%;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    transition: all .3s ease;
+}
+.m_gnb.on{
+    right:0;
+}
+
+.m_gnb>ul>li>a{
+    display: block;
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    border-bottom: 1px solid #e7e7e7;
+    font-size: 15px;
+    font-weight: 400;
+    padding-left: 45px;
+    color:#333;
+    position: relative;
+}
+
+.m_gnb>ul>li>a::after{
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top:50%;
+    right: 70px;
+    border-top: 6px solid #ccc;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    transform: rotate(0);
+    transition: all .2s ease-in-out;
+}
+
+.m_gnb>ul>li.on>a::after{
+    transform: rotate(180deg);
+    border-top: 6px solid #00a086;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+/* 모바일 메뉴 depth */
+.m_gnb .depth{
+    background: #eaeaea;
+    display: none;
+}
+
+.m_gnb .depth li a{
+    display: block;
+    padding: 17px 20px 17px 50px;
+    font-size: 13px;
+    border-bottom: 1px solid #ddd;
+    font-weight: 400;
+    color:#333
+}
+
+.m_gnb>ul>li.on>a{
+    color: #00a086;
+}

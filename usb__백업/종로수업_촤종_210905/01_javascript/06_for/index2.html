@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for반복문 구구단</title>
+  </head>
+  <body>
+    <script>
+      let num = prompt("2부터 9까지 숫자를 입력해주세요");
+      num = Number(num);
+
+      switch (num) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+          document.write("구구단 " + num + "단 <br>");
+          console.log(`구구단  ${num} 단 \n`);
+          for (let i = 2; i <= 9; i++) {
+            document.write(num + " x " + i + " = " + num * i + " <br>");
+          }
+          break;
+        default:
+          alert("2부터 9까지 숫자를 입력해주세요");
+      }
+    </script>
+  </body>
+</html>

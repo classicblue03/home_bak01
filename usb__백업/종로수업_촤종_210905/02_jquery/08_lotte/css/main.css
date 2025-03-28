@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+#main{
+    width: 100%;
+    position: relative;
+}
+#main .visual a{
+    display: block;
+    width: 100%;
+    height: 720px;
+
+}
+
+#main .visual .visual1 a{
+    background: url('../imgs/202102250823081450.jpg') no-repeat center;
+    background-size: auto 720px;
+    /* background-size: contain; */
+}
+#main .visual .visual2 a{
+    background: url('../imgs/202005111050316900.jpg') no-repeat center;
+}
+#main .visual .visual3 a{
+    background: url('../imgs/201902220555000140.jpg') no-repeat center;
+}
+#main .visual .visual4 a{
+    background: url('../imgs/202005130508091810.jpg') no-repeat center;
+}
+
+/* arrow btn costom */
+#main .visual .slick-prev{
+    width: 70px;
+    height: 70px;
+    background:url('../imgs/imgRoll_prev.png') no-repeat;
+    position: absolute;
+    top:50%;
+    left: 40px;
+    transform: translateY(-50%);
+    text-indent: -99999px;
+    z-index: 5;
+    border: none;
+}
+
+#main .visual .slick-next{
+    width: 70px;
+    height: 70px;
+    background:url('../imgs/imgRoll_next.png') no-repeat;
+    position: absolute;
+    top:50%;
+    right: 40px;
+    transform: translateY(-50%);
+    text-indent: -99999px;
+    z-index: 5;
+    border: none;
+}
+
+/* dots custom */
+
+#main .visual .slick-dots{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom:70px;
+    padding: 13px 45px 13px 30px;
+    background:rgba(0, 0, 0, 0.5) ;
+    border-radius: 35px;
+}
+
+#main .visual .slick-dots li{
+    float: left;
+    margin-right: 10px;
+}
+
+#main .visual .slick-dots li button{
+    border: none;
+    width: 11px;
+    height: 11px;
+    background:url('../imgs/imgRoll_indi.png') no-repeat;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+#main .visual .slick-dots li.slick-active button{
+    background:url('../imgs/imgRoll_indi_on.png') no-repeat ;
+}
+
+#main .pause{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 60px;
+    bottom:70px;
+    width: 41px;
+    height: 41px;
+    background: url('../imgs/play_bt.png') no-repeat;
+    border:none;
+    cursor: pointer;
+}
+
+#main .pause.on{
+    background: url('../imgs/play_bt_on.png') no-repeat;
+}

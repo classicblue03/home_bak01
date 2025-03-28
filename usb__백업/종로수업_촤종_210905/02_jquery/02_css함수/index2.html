@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트&CSS Rainbow</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  <style>
+    li {
+      list-style: none;
+      width: 200px;
+      height: 50px;
+      border:1px solid #000;
+      text-align: center;
+      line-height: 50px;
+      margin-bottom: 10px;
+      transition: all 1s ease;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      display: block;
+    }
+  </style>
+  <body>
+    <ul>
+      <li><a href="#">빨</a></li>
+      <li><a href="#">주</a></li>
+      <li><a href="#">노</a></li>
+      <li><a href="#">초</a></li>
+      <li><a href="#">파</a></li>
+      <li><a href="#">남</a></li>
+      <li><a href="#">보</a></li>
+    </ul>
+
+
+    <script>
+
+        $(function(){
+            $('li:eq(0)').click(function(){
+                $('li').eq(0).css('background', 'red').css('width', 800);
+                // $(this).css("background", "red")
+                 $('li a').eq(0).css('color', '#fff');
+            });
+
+            $('li:eq(1)').click(function(){
+                $('li').eq(1).css({
+                    background : 'orange',
+                    width:800
+                });
+                $('li a').eq(1).css('color', '#fff');
+            });
+
+            $('li:eq(2)').click(function(){
+                $('li').eq(2).css({
+                    background : 'yellow',
+                    width:800
+                });
+                $('li a').eq(2).css('color', '#fff');
+            });
+
+            $('li:eq(3)').click(function(){
+                $('li').eq(3).css({
+                    background : 'green',
+                    width:800
+                });
+                $('li a').eq(3).css('color', '#fff');
+            });
+
+            $('li:eq(4)').click(function(){
+                $('li').eq(4).css({
+                    background : 'blue',
+                    width:800
+                });
+                $('li a').eq(4).css('color', '#fff');
+            });
+            $('li:eq(5)').click(function(){
+                $('li').eq(5).css({
+                    background : 'navy',
+                    width:800
+                });
+                $('li a').eq(5).css('color', '#fff');
+            });
+
+            $('li:eq(6)').click(function(){
+                $('li').eq(6).css({
+                    background : 'purple',
+                    width:800
+                });
+                $('li a').eq(6).css('color', '#fff');
+            });
+
+        })
+    </script>
+  </body>
+</html>

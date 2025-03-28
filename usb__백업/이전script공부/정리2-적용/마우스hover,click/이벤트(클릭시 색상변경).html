@@ -1,0 +1,204 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>7일차</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		
+		<style>
+		
+		
+		
+		</style>
+		
+		<script src="jquery-3.5.1.js"></script>
+		
+		<script>
+		
+		
+			$(document).ready(function(){
+				
+				
+//				*이벤트
+//				사용자가 윈도우 영역에서 마우스 또는 키보드로 어떠한 행동을 하면
+//				반응해서 또 다른 결과를 만들어내는 명령
+//				
+//				이벤트 명령
+//				$(선택자).이벤트명(function(){
+//					내용
+//				});
+				
+				/*$('#box').css({
+					width: 300,
+					height: 300,
+					backgroundColor: 'gold'
+				});*/
+				
+				/*$('#box').mousemove(function(){
+					$('#box').css({
+						backgroundColor: 'crimson'
+					});
+				});*/
+				/*=>mousemove 마우스가 움직일때 실행 이벤트*/
+				
+				
+				/*$('#box').mouseenter(function(){
+					$('#box').css({
+						backgroundColor: 'lightblue'
+					});
+				});*/
+				/*=>mouseenter 마우스가 객체영역에 들어갈때*/
+				
+				
+				/*$('#box').mouseleave(function(){
+					$('#box').css({
+						backgroundColor: 'gray'
+					});
+				});*/
+				/*=>mouseleave 마우스가 객체영역에서 나올때*/
+				
+				
+				/*$('#box').mousedown(function(){
+					$('#box').css({
+						backgroundColor: 'orange'
+					});
+				});*/
+				/*=>mousedown 마우스를 눌렀을때 실행*/
+				
+				
+				/*$('#box').mouseup(function(){
+					$('#box').css({
+						backgroundColor: 'darkgreen'
+					});
+				});*/
+				/*=> mouseup 마우스를 뗐을때 실행*/
+				
+				
+				/*$('#box').click(function(){
+					$('#box').css({
+						backgroundColor: 'tan'
+					});
+				});*/
+				/*=> click 마우스를 눌렸다 뗐을때 (mousedown+mouseup)*/
+				
+				
+				/*$('#box').dblclick(function(){
+					$('#box').css({
+						backgroundColor: 'darkblue'
+					});
+				});*/
+				/*=> dblclick 마우스를 일정시간 안에 두번 눌렸다 뗐을때*/
+				
+				
+				/*$('#box').hover(function(){
+					$('#box').css({
+						backgroundColor: 'steelblue'
+					});
+				});*/
+				/*=>hover mouseenter+mouseleave*/
+				
+				/**콜백함수
+				=>function(){}
+				함수가 끝나고 다음 실행하고 싶은 또 다른
+				행동 또는 명령을 삽입할 때 사용하는 함수*/
+				
+				/**hover 기본 틀
+				
+				$('선택자').hover(function(){
+					$('선택자').명령어({
+						...
+					});
+				},function(){         <- 콜백함수
+						$('선택자').명령어({
+							...
+						});
+					});*/
+				
+				
+				/*$('#box').hover(function(){
+					$('#box').css({
+						backgroundColor: 'orange'
+					});
+				},function(){
+					$('#box').css({
+						backgroundColor: 'steelblue'
+					});
+				});*/
+				
+				/**문제
+				box를 클릭하면 색상 변경*/
+				
+				/*$('#box').css({
+					width:300,
+					height:300,
+					backgroundColor:'gold'
+				});
+				
+				$('#box').click(function(){
+					$('#box').css({
+						backgroundColor: 'tomato'
+					});
+				});
+				*/
+				
+				/*$('#box').css({
+					width:300,
+					height:300,
+					backgroundColor:'lightblue'
+				});
+				
+				$('#box').click(function(){
+					$(this).css({
+						backgroundColor:'steelblue'
+					});
+				});*/
+				
+				/**this
+				첫번째 선택자를 선택한 다음에 명령 들어갔고,
+				또 한번 더 자기자신을 선택할때 사용*/
+				
+				
+				$('#box').css({
+					width:300,
+					height:300,
+					backgroundColor:'lightblue'
+				}).click(function(){
+					$(this).css({
+						backgroundColor:'steelblue'
+					});
+				});
+				/*=>선택자가 동일하면 이어서 적어줄수있음*/
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			});//end
+		
+		
+		</script>
+		
+	</head>
+
+	<body>
+		
+		
+		<div id="box"></div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	</body>
+</html>

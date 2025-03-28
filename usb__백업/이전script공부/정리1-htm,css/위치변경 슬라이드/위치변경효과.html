@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #wrap {
+            width: 400px;
+            height: 600px;
+            position: relative;
+            left: 0;
+            top: 0;
+            border: 5px solid black;
+            overflow: hidden;
+        }
+        
+        #left {
+            width: 400px;
+            height: 600px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /*위치값을 잡고 이벤트를 적용할때, 만약 클래스로 한꺼번테 위치를 잡았고, 이벤트를 적용할때
+            작동을 안하면 클래스로 잡아준 위치값을 빼야함*/
+        }
+        
+        #right {
+            width: 400px;
+            height: 600px;
+            position: absolute;
+            background-color: blue;
+            top: 0;
+            left: 400px;
+            transition-duration: 1s;
+        }
+        
+        #wrap:hover>#right {
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="left"></div>
+        <div id="right"></div>
+    </div>
+</body>
+
+</html>

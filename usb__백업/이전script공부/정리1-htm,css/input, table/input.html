@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+	
+<!--input태그
+-사용자 입력 태그(단독태그)
+-아이디, 비번, 회원가입, 설문조사 
+-한번 클릭하면 체크가 되고 다시 한번 클릭하면 체크 해제가 됨
+-버튼 하나로 체크가 되었다 풀렸다
+-css에서 클릭이벤트 대신 활용
+-단독으로 선택 활용 가능, 여러개를 동시에 사용 선택됨
+-숨김메뉴 작업시 사용-->
+
+<input type="button" value="버튼"/><br/>
+<button>버튼</button><br/><br/>
+<input type="checkbox" id="toggle" />
+    <label for="toggle">체크박스</label><br/><br/>
+<!--
+->label태그를 이용하여서 체크박스와 연동할수있음
+->for옵션에 input태그 아이디값을 동일하게 해주면됨
+->for로 연동시켜줬으면 위치에 대한 제약이 없음
+->숨김메뉴에 사용됨
+-->
+이메일:<input type="email" /><br/><br/>
+<!--기본 텍스트 박스, 해당 type 안쪽 내용은 메일주소라는 표시의미-->
+<input type="radio" id="tab_1" name="tab" />
+<input type="radio" id="tab_2" name="tab" /><br/><br/>
+<!--
+한번 체크되면 해지할 수 없음 여러개의 radio버튼을 작성 후 하나의 그룹(name태그)으로 여러개 중에 하나만 체크할 수 있음 ex:설문조사 복수선택 아닐 때 
+->name을 이용하여 하나의 그룹으로 인식하게 만들수있음
+-->
+<input type="search" placeholder="검색할 내용을 입력해주세요" />
+<!--->검색할때 사용함-->
+<!--->placeholder 검색창에 미리 글을 띄움 클릭할때 사라짐-->
+<input type="search" value="검색할 내용을 입력해주세요" /><br/><br/>
+<!--->value에 내용을 적게되면 클릭을 하여도 내용이 살아있음-->
+
+
+<input type="submit" value="로그인" /><br/><br/>
+<!--->기본으로 제출이지만 value를 사용하면 넣은 내용으로 출력-->
+
+전화번호:<input type="tel" /><br/><br/>
+<!--->전화번호 입력할 때 사용 email과 동일한 형식-->
+
+아이디:<input type="text" /><br/><br/>
+<!--->한줄의 기본 텍스트 박스, 아이디 작업(search, email, tel동일)-->
+    
+<textarea cols="10" rows="10"></textarea><br/><br/>
+<!--->여러줄의 텍스트 박스
+->게시판
+->cols:행(가로)
+->rows:열(세로)-->
+<input type="color" /><br/><br/>
+<!--->컬러 픽업창 생성-->
+
+URL주소:<input type="url" /><br/><br/>
+<!--->url주소 의미-->
+
+<input type="time" /><br/><br/>
+<!--->시간 출력-->
+<input type="date" /><br/><br/>
+<!--->날짜 표현-->
+
+<input type="week" /><br/><br/>
+<!--->주 단위로 표현-->
+
+<select>
+    <option>옵션선택</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+</select>
+<!--->옵션선택할때 사용-->
+
+
+
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #wrap {
+            width: 600px;
+            height: 400px;
+            margin: 30px auto;
+            border: 5px solid black;
+            box-sizing: border-box;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        #con_wrap {
+            width: 3600px;
+            height: 400px;
+            background-color: aquamarine;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation-duration: 10s;
+            animation-name: slide;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes slide {
+            0% {
+                left: 0;
+            }
+            20% {
+                left: -600px;
+            }
+            40% {
+                left: -1200px;
+            }
+            60% {
+                left: -1800px;
+            }
+            80% {
+                left: -2400px;
+            }
+            100% {
+                left: -3000px;
+            }
+        }
+        
+        .in_box {
+            width: 600px;
+            height: 400px;
+            float: left;
+            background-color: cadetblue;
+            font-size: 50px;
+            line-height: 400px;
+            text-align: center;
+            border: 1px solid white;
+            box-sizing: border-box
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="con_wrap">
+            <div class="in_box">1</div>
+            <div class="in_box">2</div>
+            <div class="in_box">3</div>
+            <div class="in_box">4</div>
+            <div class="in_box">5</div>
+            <div class="in_box">6</div>
+        </div>
+    </div>
+</body>
+
+</html>

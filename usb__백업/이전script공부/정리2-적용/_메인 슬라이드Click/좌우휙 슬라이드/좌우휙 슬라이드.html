@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Page Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		#wrap {
+			width: 600px;
+			height: 400px;
+			border: 10px solid black;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+		}
+
+		#img_wrap {
+			width: 3000px;
+			height: 400px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		#img_wrap>img {
+			width: 600px;
+			height: 400px;
+			display: block;
+			border: 0;
+			float: left;
+		}
+
+		.arrow {
+			width: 50px;
+			height: 50px;
+			background-color: whitesmoke;
+			position: absolute;
+			top: 50%;
+			margin-top: -25px;
+			font-size: 30px;
+			text-align: center;
+			line-height: 50px;
+		}
+
+		#left {
+			left: 0;
+		}
+
+		#right {
+			right: 0;
+		}
+	</style>
+
+	<script src="jquery-3.4.1.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			// 1.변수 만들기
+			// 2.오른쪽 버튼을 클릭할때마다 변수가 1씩 증가,
+			// 마지막이미지 숫자 번째에 도착했을때 다시 변수가 0으로 되게만들기
+			// 3.변수증가와 동시에 img_wrap이 -600으로 애니메이트 이동 
+			// 4.오른쪽 버튼을 만들었다면 왼쪽버튼은 반대로 제작
+
+			var i = 0;
+
+			$('#right').click(function () {
+				// 변수를 0~4까지 계속 반복
+				i++;
+				if (i > 4) {
+					i = 0;
+				}
+				
+				$('#img_wrap').stop().animate({
+					left: -600 * i
+				});
+				// .stop() ---> 첫 애니메이트가 끝날때까지 다음행동을 멈추게만듦
+				// 이미지를 -600만큼 움직임 
+				// 상단 변수와 함께 같이 움직이게 *값으로 묶어줌
+			});
+
+			$('#left').click(function () {
+				i--;
+				if (i < 0) {
+					i = 4;
+				}
+				$('#img_wrap').stop().animate({
+					left: -600 * i
+				});
+			});
+
+		}); //end
+	</script>
+</head>
+
+<body>
+	<div id="wrap">
+		<div id="img_wrap">
+			<img src="img/a.jpg" alt="" />
+			<img src="img/b.jpg" alt="" />
+			<img src="img/c.png" alt="" />
+			<img src="img/d.jpg" alt="" />
+			<img src="img/e.jpg" alt="" />
+		</div>
+
+		<h1 class="arrow" id="left">&lt;</h1>
+		<h1 class="arrow" id="right">&gt;</h1>
+	</div>
+
+</body>
+
+</html>

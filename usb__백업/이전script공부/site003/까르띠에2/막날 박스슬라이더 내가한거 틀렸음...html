@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>제이쿼리 ui -박스슬라이더 없이~ </title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery.bxslider.min.js"></script>
+    
+
+
+
+
+    <script>
+
+            $(function(){
+            var mySlider=$("#slide_banner").bxSlider({       
+            mode:"horizontal",
+            speed:500,  //0.5초
+            pager:false,
+            moveSlider:1,   //슬라이딩되는 갯수
+            slideWidth:200,    //200짜리 이미지라서(단위 적지않음)
+            maxSlides:3,    //'맥스,민'은 항상 일치시키기
+            minSlides:3,
+            slideMargin:10,
+            auto:true,
+            autoHover:true,
+            controls:false
+        });
+
+
+            $("prevBtn").click(function(){
+                mySlider.goToPrevSlide();   //이전으로 넘어가는 공식
+                return false;
+            });
+
+            $("nextBtn").click(function(){
+                mySlider.goToNextSlide(); 
+                return false;
+            });
+
+
+        });
+
+    </script>
+
+
+
+
+    <style>
+        *{margin: 0; padding: 0;}
+
+        #banner_wrap{
+            position: relative;
+            width: 730px;
+            margin: 0 auto; /*가운데정렬*/
+        }
+
+        #prevBtn{
+            position: absolute;
+            top: 10px; left: 0;
+        }
+
+        #nextBtn{
+            position: absolute;
+            top: 10px; right: 10px;
+        }
+    </style>
+
+</head>
+
+
+
+
+
+<body>
+    <div id="banner_wrap">
+        <ul id="slide_banner">
+            <li><a href="#"><img src="images/spring_01.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/spring_02.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/summer_01.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/summer_02.jpg" alt=""></a></li>
+
+            <li><a href="#"><img src="images/autumn_01.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/autumn_02.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/winter_01.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/winter_02.jpg" alt=""></a></li>
+        </ul>
+
+        <p>
+            <a href="#" id="prevBtn"><img src="images/prev_btn.png" alt=""></a>
+        </p>
+        <p>
+            <a href="#" id="nextBtn"><img src="images/next_btn.png" alt=""></a>
+        </p>
+
+
+
+
+
+    </div>
+
+</body>
+</html>

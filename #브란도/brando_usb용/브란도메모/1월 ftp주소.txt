@@ -1,0 +1,61 @@
+http://classicblue.co.kr/
+웹서버ip 	112.175.184.76
+FTP, DB 아이디 
+
+<http://classicblue.co.kr/work/lotusfestival/index.html>
+simple FTP 확장프로그램
+
+F1(ftp simple), ctrl shift p
+
+[
+	{
+		"name": "classicblue.co.kr",
+		"host": "classicblue.co.kr",
+		"port": 21,
+		"type": "ftp",
+		"username": "classicblue",
+		"password": "gksk7124!",
+		"path": "/html",
+		"autosave": true,
+		"confirm": false
+	}
+]
+
+
+1.19
+셀바이 올인원
+내쇼핑몰 > 플러스샵
+
+ftp
+닷홈 classicblue.co.kr minchae gksk7124! 포트-21
+
+고도몰 gksk7124
+
+브라켓->	FTP기능 synapse
+
+
+[
+	{
+		"name": "classicblue.co.kr",
+		"host": "classicblue.co.kr",
+		"port": 21,
+		"type": "ftp",
+		"username": "classicblue",
+		"password": "minchae94!",
+		"path": "/html",
+		"autosave": true,
+		"confirm": false
+	},
+	{
+		"name": "고도몰",
+		"host": "engl1994.godomall.com",
+		"port": 21,
+		"type": "ftp",
+		"username": "engl1994",
+		"password": "minchae94",
+		"path": "/",
+		"autosave": true,
+		"confirm": false
+	}
+]
+

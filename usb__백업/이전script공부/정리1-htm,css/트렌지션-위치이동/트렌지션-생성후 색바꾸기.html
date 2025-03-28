@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>0503 문제</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		
+		<style>
+        
+            *{margin: 0; padding: 0;}
+            
+            
+        
+            
+            #box1{
+                width: 50px;
+                height: 50px;
+                background-color: gold;
+                color: azure;
+                font-size: 10px;
+           
+            }
+        
+            
+            #box2{
+                width: 100px;
+                height: 100px;
+   
+                display: none;
+            }
+        
+        
+        
+        </style>
+        <script src="jquery-3.4.1.js"></script>
+		<script>
+        /* 클릭-서서히 나타남,  또클릭-색상변하면서 서서히사라짐*/
+            
+            
+            
+        $(document).ready(function(){
+            
+            var i=0;
+            
+            $('#box1').click(function(){
+               
+                if(i==0){
+                    $('#box2').fadeIn(1000).css({
+                       backgroundColor:'red' 
+                    });
+                    
+                    i++;
+                }else if(i==1){
+                     $('#box2').fadeOut(1000).css({
+                       backgroundColor:'teal' 
+                });
+                    i--;
+            }   
+        });
+           
+            
+            
+        })//end
+        
+        
+        
+        
+        </script>
+	</head>
+
+	<body>
+        
+       
+           
+            <div id="box1">
+                <h2>클릭</h2>
+            </div>
+            
+            <div id="box2">박스2</div>
+
+   
+	</body>
+</html>
+
+
+
+

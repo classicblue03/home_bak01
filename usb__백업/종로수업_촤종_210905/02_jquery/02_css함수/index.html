@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css함수</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      li {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>제이쿼리 함수(css())</h1>
+    <ul>
+      <li>빨</li>
+      <li>주</li>
+      <li>노</li>
+      <li>초</li>
+      <li>파</li>
+      <li>남</li>
+      <li>보</li>
+    </ul>
+
+    <script>
+      $(document).ready(function () {
+        $("h1").css("text-align", "center");
+        $("li:first-child").css("background", "red");
+        $("li:nth-child(2)").css("background", "orange");
+        $("li:nth-child(3)").css("background", "yellow");
+        $("li:nth-child(4)").css("background", "green");
+        $("li:nth-child(5)").css("background", "blue");
+        $("li:nth-child(6)").css({ background: "navy", color: "white" });
+        $("li:last-child").css("background", "purple");
+
+        //홀수만 선택
+        $("li:nth-child(odd)").css("background", "pink");
+        //짝수만 선택
+        $("li:nth-child(even)").css("background", "grey");
+        //3개씩묶음중에 첫번째 요소
+        $("li:nth-child(3n+1)").css("background", "orange");
+        //3개씩 묶음중에 두번재 요소
+        $("li:nth-child(3n+2)").css("background", "yellow");
+        $("li:nth-child(4n+1)").css("background", "green");
+        //3의 배수
+        $("li:nth-child(3n)").css("background", "hotpink");
+
+        $("li:first-child")
+          .css("background", "purple")
+          .css("border", "5px solid pink")
+          .css("font-size", 24);
+
+        $("li:last-child").css({
+          background: "red",
+          border: "5px dashed #000",
+          color: "#fff",
+          fontSize: "24px",
+        });
+      });
+      $(function () {});
+    </script>
+  </body>
+</html>

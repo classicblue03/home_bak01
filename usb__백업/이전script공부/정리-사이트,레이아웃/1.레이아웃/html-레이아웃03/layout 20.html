@@ -1,0 +1,256 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>레이아웃 20</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<style>
+            
+            *{ margin: 0px; padding: 0px; }
+            a{text-decoration: none; color: black;}
+            ul,li{list-style: none;}
+            #wrap{width: 100%;}
+            
+            header{
+                width: 100%;
+                height: 150px;
+                float: left;
+                background-color: lightgreen;
+                border-bottom: 1px solid black;}
+            
+            #in_header{
+                width: 1200px;
+                height: 100%;
+                margin: 0 auto;
+                background-color: lightcyan;
+            }
+            #logo{
+                width: 200px;
+                height: 50px;
+                background-color: crimson;
+                margin: 0 auto;
+                font: 20px/50px '';
+                text-align: center;
+            }
+            
+            #menu_wrap{
+                width: 100%;
+                height: 75px;
+                background-color: tan;
+                margin-top: 15px;
+            }
+            #menu_wrap>li{
+                width: 200px;
+                height: 100%;
+                float: left;
+                font: 18px/75px '';
+                text-align: center;
+            }
+            /*header end*/
+            
+            section{
+                width: 100%;
+                float: left;
+            }
+            #container{
+                width: 1200px;
+                margin: 0 auto;
+                background-color: lightblue;
+            }
+            #top_wrap{
+                width: 100%;
+                height: 510px;
+                background-color: tomato;
+                float: left;
+            }
+            #t_left_wrap{
+                width: 940px;
+                height: 100%;
+                background-color: royalblue;
+                float: left;
+            }
+            #t_right_wrap{
+                width: 250px;
+                height: 100%;
+                background-color: lightgreen;
+                float: right;
+            }
+            .t_r_con{
+                width: 250px;
+                height: 250px;
+                background-color: royalblue;
+            }
+            .t_r_con:first-child{
+                margin-bottom: 10px;
+            }
+        /*top wrap end*/
+            #center_wrap{
+                width: 100%;
+                float: left;
+                margin-top: 10px;
+            }
+            #c_left_wrap,#c_center_wrap{
+                width: 250px;
+                height: 1020px;
+                background-color: lightgreen;
+                float: left;
+                margin-right: 10px;
+            }
+            .small_con{
+                width: 250px;
+                height: 250px;
+                background-color: royalblue;
+            }
+            .long_con{
+                width: 250px;
+                height: 500px;
+                background-color: royalblue;
+            }
+            .margin_con{ margin: 10px 0;}
+            
+            #c_right_wrap{
+                width: 680px;
+                height: 1020px;
+                background-color: tomato;
+                float: right;
+            }
+            .c_r_con_wrap{
+                width: 100%;
+                height: 505px;
+                background-color: forestgreen;
+            }
+            .c_r_con_wrap:first-child{
+                margin-bottom: 10px;
+            }
+            .c_r_right_wrap{
+                width: 335px;
+                height: 100%;
+                background-color: aqua;
+                float: left;
+                margin-right: 10px;
+            }
+            .c_r_right_wrap:last-child{
+                margin-right: 0;
+            }
+            .c_r_r_con{
+                width: 335px;
+                height: 247.5px;
+                background-color: royalblue;
+            }
+            .margin-con{
+                margin-bottom: 10px;
+            }
+            #bottom_wrap{
+                width: 100%;
+                height: 250px;
+                float: left;
+                margin-top: 10px;
+                background-color: tomato;
+                
+            }
+            #b_left_wrap{
+                width: 510px;
+                height: 100%;
+                background-color: royalblue;
+                float: left;
+                margin-right: 10px;
+            }
+            .b_small_con{
+                width: 335px;
+                height: 100%;
+                background-color:royalblue;
+                float: left;
+                margin-right: 10px;
+            }
+            .b_small_con:last-child{
+                margin-right: 0;
+            }
+        
+        </style>
+	</head>
+
+
+	<body>
+	<div id="wrap">
+        <header>
+            <div id="in_header">
+                <div id="logo">
+                    <a href="#">로고</a>
+                </div>
+                                        <!--<ul id="menu_wrap">
+                                            <li><a href="#">메뉴</a></li>
+                                            </ul>
+                                        -->
+                <ul id="menu_wrap">
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                </ul>
+            </div><!--in_header-->
+        </header>
+	    
+	    
+	    
+	    <section>
+	        <div id="container">
+	             <div id="top_wrap">
+	                 <div id="t_left_wrap"></div>
+	                 <div id="t_right_wrap">
+	                     <div class="t_r_con"></div>
+	                     <div class="t_r_con"></div>
+	                 </div>
+	             </div><!--top_wrap-->
+	            
+	              
+            <div id="center_wrap">
+                    <div id="c_left_wrap">
+	                    <div class="small_con"></div>
+	                    <div class="long_con margin_con"></div>
+	                    <div class="small_con"></div>
+	                </div>
+	               
+                    
+	                <div id="c_center_wrap">
+	                    <div class="long_con"></div>
+	                    <div class="small_con margin_con"></div>
+	                    <div class="small_con"></div>
+	                </div>
+	               
+	                
+	               <div id="c_right_wrap">          
+	                   <div class="c_r_con_wrap">                    
+	                       <div class="c_r_right_wrap">
+	                           <div class="c_r_r_con margin-con"></div>
+	                           <div class="c_r_r_con"></div>
+	                       </div>
+	                       
+	                       <div class="c_r_right_wrap">
+	                           <div class="c_r_r_con margin-con"></div>
+	                           <div class="c_r_r_con"></div>
+	                       </div>
+	                   </div><!--c_r_con_wrap-->
+	                   <div class="c_r_con_wrap"></div> 
+	                </div><!--c_right_wrap-->
+            </div><!--center_wrap-->
+
+	           
+	           <div id="bottom_wrap">
+	                <div id="b_left_wrap"></div>
+	                <div class="b_small_con"></div>
+	                <div class="b_small_con"></div>
+	            </div>
+
+            </div><!--container-->
+	    </section>
+	</div><!--wrap-->
+	
+	
+	
+	
+	
+	</body>
+</html>

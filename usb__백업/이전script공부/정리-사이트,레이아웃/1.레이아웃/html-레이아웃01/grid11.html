@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>그리드 연습</title>
+<style>
+    *{margin:0;   /*불필요한 값 없애기*/
+    padding:0;}
+        
+    body{height:3000px;} /**/
+
+    
+    
+    
+    
+    
+    
+    
+    
+    #wrap
+    { width:960px;
+    margin:0 auto; } /*위아래, 좌우*/
+
+    #wrap #header
+    { height:150px;
+    background:red;}
+    
+    
+    
+    
+    
+    
+    
+    #wrap #mainvisual{
+        height:380px;
+        background:darkblue;
+    }
+    
+    #wrap .row1 {margin:20px 0;}
+    
+    #wrap .row1:after{ /*부모의 사라진 높이값 찾기*/
+        content:'';
+        display:block;
+        clear:both;
+    }
+
+    #wrap .row1 li {                /*자식-보라색 원*/
+   
+        float:left; /*밑으로 떨어진거 옆으로 가로배열*/
+        width:225px;
+        height:225px;
+        border-radius:50%;
+        background:purple;
+        list-style:none; 
+        margin-right:20px;
+    }
+    
+    #wrap .row1 li:last-child{ 
+        margin-right:0;    /* 보라색 마지막값 없애기*/
+     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    #wrap .row2/*푸터와 간격띄우기*/
+    {margin-bottom:40px; } 
+    
+    
+    #wrap .row2:after /*땡애프터, 부모의 사라진높이값 찾아주려고*/
+    {content:'';
+    display:block;
+    clear:both; }
+    
+    
+    #wrap .row2 p /*자식-*/
+    {width:300px;
+    height:200px;
+    background:yellowgreen;
+    float:left;
+    margin-right:30px; }
+    
+    #wrap .row2 p:last-child/*자식-네모*/
+    {margin-right:0; }
+    
+    
+    #wrap #footer/*하단*/
+    {height:80px;
+    background:skyblue;}
+    
+    
+</style>
+</head>
+
+
+
+
+<body>
+
+
+    <div id="wrap">  
+
+            <div id="header"></div><!--빨-->
+            <div id="mainvisual"></div><!--파-->
+
+           
+            <ul class="row1"><!--보라-->
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+           
+            <div class="row2"><!--연두-->
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+
+            <div id="footer"></div>   
+    
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+

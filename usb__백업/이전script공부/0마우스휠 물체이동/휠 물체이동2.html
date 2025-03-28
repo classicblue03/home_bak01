@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Page Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="jquery.mousewheel.min.js"></script>
+	<script src="jquery.easing.1.3.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul,
+		li {
+			list-style: none;
+		}
+
+		#menu_wrap {
+			width: 100%;
+			height: 100px;
+			background: rgba(255, 0, 0, 0.5);
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 999;
+		}
+
+		.menu {
+			width: 25%;
+			height: 100%;
+			float: left;
+			font: 30px/100px '';
+			text-align: center;
+		}
+
+		.on {
+			background-color: crimson;
+			color: gold;
+		}
+
+		#con_wrap {
+			font: 100px/800px '';
+			text-align: center;
+		}
+
+		section {
+			position: relative;
+		}
+
+		.box {
+			width: 300px;
+			height: 300px;
+			background: deeppink;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -150px;
+			margin-top: -150px;
+		}
+
+		#box_1 {
+			top: 100%;
+			opacity: 0;
+		}
+
+		#box_2 {
+			left: 80%;
+			opacity: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<ul id="menu_wrap">
+		<li class="menu on">menu1</li>
+		<li class="menu">menu2</li>
+		<li class="menu">menu3</li>
+		<li class="menu">menu4</li>
+	</ul>
+	<div id="con_wrap">
+		<section>content1</section>
+		<section>
+			<div class="box" id="box_1"></div>
+		</section>
+		<section>
+			<div class="box" id="box_2"></div>
+		</section>
+		<section>content4</section>
+	</div>
+
+
+	<script>
+		$(document).ready(function () {
+			var ww = $(window).width();
+			var wh = $(window).height();
+			var bg = ['lightblue', 'lightgreen', 'tan', 'pink'];
+
+			$('#con_wrap').css({
+				width: ww,
+				height: wh * 4
+			});
+			$('section').css({
+				width: ww,
+				height: wh,
+				backgroundColor: function (index) {
+					return bg[index];
+				}
+			});
+
+			$('.menu').each(function (index) {
+				$(this).attr('data-index', index);
+			}).click(function () {
+
+				var i = $(this).attr('data-index');
+				$('html,body').animate({
+					scrollTop: wh * i
+				}, 1000, 'easeInCirc');
+
+			});
+
+			$(window).scroll(function () {
+
+				sct = $(window).scrollTop();
+				if (sct > 0 && sct < wh) {
+					$('.menu').removeClass('on');
+					$('.menu').eq(0).addClass('on');
+				} else if (sct >= wh && sct < wh * 2) {
+					$('.menu').removeClass('on');
+					$('.menu').eq(1).addClass('on');
+
+					$('#box_1').animate({
+						top: '50%',
+						opacity: 1
+					}, 1500, 'easeInCirc');
+
+				} else if (sct >= wh * 2 && sct < wh * 3) {
+					$('.menu').removeClass('on');
+					$('.menu').eq(2).addClass('on');
+
+					$('#box_2').animate({
+						left: '50%',
+						opacity: 1
+					}, 1500);
+
+				} else if (sct >= wh * 3) {
+					$('.menu').removeClass('on');
+					$('.menu').eq(3).addClass('on');
+				}
+
+			});
+
+
+			/**마우스 휠 이벤트
+			=>마우스 휠 플러그인 사용(jquery.mousewheel)
+			=>기본틀
+			$("선택자").on("mousewheel",function(event,delta){
+				if(delta>0){
+					var prev=$(this).prev().offset().top;
+					명령어
+				}else if(delta<0){
+					var next=$(this).next().offset().top;
+					명령어
+				}
+			});
+			=>prev는 마우스휠 올렸을때
+			=>next는 마우스 휠 내렸을때*/
+
+			$("section").on("mousewheel", function (event, delta) {
+				if (delta > 0) {
+					var prev = $(this).prev().offset().top;
+					$('html,body').stop().animate({
+						scrollTop: prev
+					}, 1500, 'easeInOutQuint');
+				} else if (delta < 0) {
+					var next = $(this).next().offset().top;
+					$('html,body').stop().animate({
+						scrollTop: next
+					}, 1500, 'easeInOutElastic');
+				}
+			});
+
+
+			/*문제
+			1.두번째 세번째 섹션 안쪽으로 박스 제작 크기는 300*300
+			2.두번째 섹션에 왔을땐 박스가 밑에서 위로 (투명도0~1)
+			2.세번째 섹션에 왔을땐 박스가 오른쪽에서 가운데로 (투명도0~1)*/
+		}); //end
+	</script>
+</body>
+
+</html>

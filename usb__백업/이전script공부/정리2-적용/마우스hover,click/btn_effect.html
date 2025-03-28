@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>맨위로</title>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <style>
+        .good-button {
+            display: block;
+            width: 300px;
+            padding: 50px 0;
+            box-sizing: border-box;
+            background: royalblue;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .button-ink {
+            display: block;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 100%;
+            transform: scale(0);
+        }
+
+        .animate {
+            animation: ink 0.65s linear;
+        }
+
+        @keyframes ink {
+            100% {
+                opacity: 0;
+                transform: scale(2.5);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="good-button">good-button</a>
+
+    <script>
+        var link = document.querySelector('.good-button');
+        link.addEventListener('click', function (e) {
+            var targetEl = e.target;
+            var inkEl = targetEl.querySelector('.button-ink');
+            if (inkEl) {
+                inkEl.classList.remove('animate')
+            } else {
+                inkEl = document.createElement('SPAN');
+                inkEl.classList.add('button-ink');
+                inkEl.style.width = inkEl.style.height = Math.max(targetEl.offsetWidth, targetEl.offsetHeight) +
+                    'px';
+                targetEl.appendChild(inkEl);
+            }
+            inkEl.style.left = (e.offsetX - inkEl.offsetWidth / 2) + 'px';
+            inkEl.style.top = (e.offsetY - inkEl.offsetHeight / 2) + 'px';
+            inkEl.classList.add('animate');
+        }, false);
+        
+    </script>
+</body>
+
+</html>

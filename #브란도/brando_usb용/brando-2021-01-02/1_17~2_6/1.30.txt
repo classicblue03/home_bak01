@@ -1,0 +1,12 @@
+div.slide_container>div.slide_view>ul.slide_wrap>li.slide.slide$0>div.content_box>div.left_wrap+div.right_Wrap
+
+아이콘
+https://www.w3schools.com/icons/icons_reference.asp
+
+터미널 
+git config user.email
+
+git add .
+git commit
+git push origin master
+

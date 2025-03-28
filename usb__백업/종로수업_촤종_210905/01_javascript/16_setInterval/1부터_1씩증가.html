@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>setIntarval</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 200px;
+            height: 50px;
+            border: 1px solid red;
+            font-size: 30px;
+            text-align: center;
+            line-height: 50px;
+            color: #000;
+            font-weight: bold;
+            margin: 100px auto 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <script>
+        $(function () {
+            var i = 1;
+
+            function time() {
+
+                $('.box').text("TIME : " + i);
+                if (i < 10) { //10초 후에 다시 1초부터 reset
+                    i++;
+                } else {
+                    i = 1;
+                }
+            }
+            //setInterval() : 일정한 시간 간격으로 작업을 수행하기 위해 
+            setInterval(function () {
+                time();
+            }, 1000) //1초마다 time()함수를 호출
+
+
+            setTimeout(function () {
+                // location.href="http://www.naver.com";
+            }, 10000)
+        })
+    </script>
+</body>
+
+</html>

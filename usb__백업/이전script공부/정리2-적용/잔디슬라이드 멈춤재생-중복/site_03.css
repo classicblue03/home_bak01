@@ -1,0 +1,60 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+img {vertical-align: top;}
+
+#container {
+    width:960px; 
+    padding: 50px 10px;
+    position: relative;
+    border: 1px solid black;
+}
+.slidingBox {
+    width: 950px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.imgList {
+    position: relative;
+    width:3800px;
+}
+.imgList::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.imgList li {
+    float: left;
+    width:950px;
+}
+.imgList li img {
+    width:100%;
+    height: auto;
+}
+
+.imgBtn {
+    width: 950px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.imgBtn li {
+    float: left;
+    width: 100px;
+    padding: 10px 5px;
+}
+
+.btns {position: absolute; top:10px;}
+.btns a {display: block; height: 40px; text-indent: -9999px; overflow: hidden; }
+.prevbtn {left: 800px;}
+.nextbtn {left: 840px;}
+.stopbtn {left: 880px;}
+.playbtn {left: 920px;}
+
+.prevbtn a {width:33px; background: url(img/btn_prev.png) no-repeat;}
+.nextbtn a {width:33px; background: url(img/btn_next.png) no-repeat;}
+.stopbtn a {width:40px; background: url(img/btn_stop.png) no-repeat;}
+.playbtn a {width:40px; background: url(img/btn_play.png) no-repeat;}
+
+.prevbtn a:focus, .prevbtn a:hover {background: url(img/btn_prev_o.png);}
+.nextbtn a:focus, .nextbtn a:hover {background: url(img/btn_next_o.png);}
+.stopbtn a:focus, .stopbtn a:hover {background: url(img/btn_stop_o.png);}
+.playbtn a:focus, .playbtn a:hover {background: url(img/btn_play_o.png);}

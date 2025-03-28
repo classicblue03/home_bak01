@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>서브메뉴 구조</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<style>
+            
+            *{ margin: 0px; padding: 0px;}
+        
+            #wrap{
+                width: 100%;
+                height: 100px;
+                background-color: darkblue;
+                position: relative;
+            }
+            #sub_menu{
+                width: 100%;
+                height: 300px;
+                background-color: lavender;
+                position: absolute;
+                top: 100px;
+                font: 50px/300px '';
+                text-align: center;
+                display: none;/*처음엔 안보이게*/               
+            }
+            
+            
+            #wrap:hover>#sub_menu{
+                display: block;
+            }
+            
+        
+        </style>
+	</head>
+
+
+
+	<body>
+     <!--이벤트 걸 때는 반드시 부모자식 관계-->
+	     <div id="wrap">
+	        
+	        <div id="sub_menu">서브메뉴</div>
+	        
+        </div> 
+          
+	</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>레이아웃1</title>
+    <style>
+        *{margin:0; padding:0;}
+    
+    /*
+        어짜피 다 p태그여서 애초에 p태그 속성 지정하고 갈수있음.
+        p{
+            width: 260px;
+            height: 260px;
+            background-color: cyan;
+        }    
+    */
+        
+        .wrap{
+            width:1092px;
+            margin:0 auto;
+            border:1px solid black;
+        }
+        
+
+        .con1{}
+        
+        .con1:after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        
+        .con1 p{
+            width:260px;
+            height:260px;
+            background:cyan;
+            float:left;
+            margin-right:17px;
+            margin-bottom:17px;
+            
+        }
+        
+        .con1 p:nth-child(1){
+            width: 538px;
+            /*margin-right:0;*/
+        }
+        
+        .con1 p:last-child{
+            margin-right:0;
+        }
+        
+        
+        
+        
+        
+        .con2:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .con2>div{
+            float: left;
+            margin-right:17px;
+        }
+        
+        
+        .con2>div:last-child {margin-right: 0;}
+           
+        
+        .con2 p{
+            width: 260px;
+            height: 260px;
+            background-color: cyan;
+            margin-bottom: 17px;
+        }
+        
+        .con2>div:last-child p {height: 538px;}
+
+        .con2 p:last-child {margin-bottom: 0;}
+        
+    </style>
+</head>
+
+
+<body>
+   
+    <div class="wrap">
+        <div class="con1">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        
+        <div class="con2">
+            <div class="con2_1">
+                <p>1</p>
+                <p>2</p>
+            </div>
+            <div class="con2_2">
+                <p>1</p>
+                <p>2</p>
+            </div>
+            <div class="con2_3">
+                <p>1</p>
+                <p>2</p>
+            </div>
+            <div class="con2_4">
+                <p>11</p>
+            </div>   
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+

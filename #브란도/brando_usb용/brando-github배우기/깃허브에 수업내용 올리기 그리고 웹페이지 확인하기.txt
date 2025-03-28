@@ -1,0 +1,65 @@
+
+본인 프로젝트 폴더 위치 탐색창에서 경로 복사
+\ 역슬래쉬를 / 슬래쉬로 변경
+D:/주말과정_반응형포트폴리오/훈련생산출물/교사문선종/01_24_브란도_레스토랑_반응형포트폴리오
+
+
+git Bash 실행과
+터미널 에서
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+경로 위치 바꾸기
+$ cd D:/주말과정_반응형포트폴리오/훈련생산출물/교사문선종/01_24_브란 도_레스토랑_반응형포트폴리오
+
+
+
+TJ@1304-▒▒▒▒ MINGW64 /d/주말과정_반응형포트폴리오/훈련생산출물/교사문선종/01_24_브란도_레스토랑_반응형포트폴리오 (master)
+$ git config user.email
+moonseonjong@naver.com
+
+
+
+리모트(원격접속) 확인 
+
+$ git remote -v
+origin  https://github.com/moonjongjs/brando.git (fetch)
+origin  https://github.com/moonjongjs/brando.git (push)
+
+
+
+///////////////////////////////////////////////
+리모트 접속 정보 없으면 
+$ git remote  add  origin  리포지토리주소
+$ git remote  add  origin  https://github.com/moonjongjs/brando.git
+////////////////////////////////////////////////
+
+
+
+$ git add .
+
+
+$ git commit -m 'update'
+
+ 6 files changed, 1275 insertions(+), 28 deletions(-)
+ create mode 100644 js/_brando.js
+ create mode 100644 "js/_\353\236\200\353\236\265\354\213\235\354\235\264\354\240\204\354\265\234\354\242\205\354\231\204\353\243\214\353\213\250\352\263\204\354\275\224\353\224\251_brando.js"
+ create mode 100644 "js/\354\204\271\354\205\230 9 \353\266\204\354\204\235 \352\263\204\355\232\215 \354\204\244\352\263\204.txt"
+
+
+
+$ git push
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 8.10 KiB | 2.02 MiB/s, done.
+Total 11 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 5 local objects.
+To https://github.com/moonjongjs/brando.git
+   1e205d4..f8b2f95  master -> master
+
+
+
+웹페이지 접속
+moonjongjs.github.io/리포지토리/
+moonjongjs.github.io/brando/

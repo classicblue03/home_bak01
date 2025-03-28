@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <title>토글 기본시각효과</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <style>
+    * {margin: 0;padding: 0;}
+    .out_box {float: left;margin-right: 30px;width: 300px;height: 500px;border: 10px solid black;}
+    .in_box {display: none;width: 100%;height: 100%;background-color: lightslategray;}
+  </style>
+</head>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    // 나타나면 css값으로 display:block 자동설정
+    // 사라지면 css값으로 display:none 자동설정
+
+    // toggle = 크기변경
+    $(document).ready(function() {
+      $('#con_1').click(function() {
+        $('#toggle_box').stop().toggle(1000);
+      });
+
+      // slideToggle 위아래
+      $('#con_2').click(function() {
+        $('#slide_box').stop().slideToggle(1000);
+      });
+      
+      // fadeToggle 투명도 0 -> 1
+      $('#con_3').click(function() {
+        $('#fade_box').stop().fadeToggle(1000);
+      });
+    });
+  </script>
+
+  <div class="out_box" id="con_1">
+    <div class="in_box" id="toggle_box">
+      <h3>좌측상에서 서서히 나타남</h3>
+    </div>
+  </div>
+  <div class="out_box" id="con_2">
+    <div class="in_box" id="slide_box">
+      <h3>상단에서 아래로 떨어짐</h3>
+    </div>
+  </div>
+  <div class="out_box" id="con_3">
+    <div class="in_box" id="fade_box">
+      <h3>서서히 나타나고 사라짐</h3>
+    </div>
+  </div>
+
+</body>
+</html>

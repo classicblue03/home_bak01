@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>마우스 이벤트</title>
+
+    <script>
+        function on(obj) { //obj =변수,내가 맘대로 이름적음
+            obj.src = obj.src.replace('_off.jpg', '_on.jpg');
+        }
+
+        function off(obj) { //오프시에-on ,온시에-off
+            obj.src = obj.src.replace('_on.jpg', '_off.jpg');
+        }
+    </script>
+</head>
+
+<body>
+    <a href="http://www.naver.com">
+        <img src="img/event01_off.jpg" onMouseover="on(this)" onmouseout="off(this)">
+    </a>
+    <a href="http://www.naver.com">
+        <img src="img/event02_off.jpg" onMouseover="on(this)" onmouseout="off(this)">
+    </a>
+    <a href="http://www.naver.com">
+        <img src="img/event03_off.jpg" onMouseover="on(this)" onmouseout="off(this)">
+    </a>
+
+
+</body>
+
+</html>

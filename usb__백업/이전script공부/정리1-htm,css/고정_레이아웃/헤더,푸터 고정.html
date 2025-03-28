@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>고정레이아웃</title>
+<meta name="keywords" content="검색되는 단어 키워드 ">
+<meta name="copyright" content="저작권지정">
+<meta name="description" content="검색 결과 표시 단어/소개내용">
+<meta http-equiv="Title" content="제목지정" />
+<meta http-equiv="Refresh" content="시간초단위;url=주소//입력한 주소 5초후 이동//" />
+<meta property="og:title" content="모바일 제목">
+<meta property="og:description" content="모바일 소개내용">
+<meta property="og:url" content="사이트 주소">
+<meta property="og:image" content="모바일 이미지:카카오이미지사이즈400-210xp"/>
+
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&subset=korean" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+ 
+<style>
+html,body,.wrap {height: 100%; /* 부모요소에 height 100% 부여 */ margin: 0; padding: 0}   
+.header{height: 50px;  background-color: aliceblue;
+     position: fixed;  /* position 고정 */  top: 0; left: 0; right: 0; /* 상단 위치 */}
+.container{min-height: 100%; /* 최소 높이값 100% */ padding: 50px 0; /* height, footer 뒤로 가려진 영역 노출 */  }
+.content{height:800px;    background-color: lavenderblush; }
+.footer{height:50px;    background-color: lightpink;
+     position: fixed;  /* position 고정 */  bottom: 0; left: 0; right: 0; /* 하단 위치 */}
+    
+</style> 
+    
+</head>
+<body>
+
+<div class="wrap">
+    <div class="header">header</div>
+    <div class="container">
+        <div class="content">content</div>
+    </div>
+    <div class="footer">footer</div>
+</div>
+
+
+
+</body>
+</html>

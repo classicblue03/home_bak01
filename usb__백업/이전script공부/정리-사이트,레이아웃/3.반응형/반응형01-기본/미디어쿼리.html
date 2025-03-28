@@ -1,0 +1,119 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		
+		<style>
+        
+            *{ margin:0; padding:0;}
+            
+            .content{
+                width:400px;
+                height:200px;
+                margin-bottom:20px;
+                border:3px solid black;
+                font-size:30px;
+                font-weight: 900;
+            }
+            
+            /**미디어 쿼리
+            =>각 기기크기에 맞게 반응하여 css를 표현함
+            @media 해당기기명 and (조건1) and (조건2){
+                선택자{
+                    스타일
+                 };
+            } 
+            
+            *max-width:최대 허용 가로값
+            *max-height:최대 허용 세로값
+            *min-width:최소 허용 가로값
+            *min-height:최소 허용 세로값
+            
+            *미디어 유형
+            =>all:모든 미디어장치
+            =>screen:컴퓨터,태블릿,모바일등
+            =>print:인쇄기기
+            =>tv:tv
+            =>projection:프로젝터*/
+            
+            
+            @media all and (max-width:1920px) and (min-width:1200px){
+                
+                #item_1{
+                    background-color: gold;
+                }
+                
+            }/*end*/
+
+        </style>
+        <style>
+        
+            @media all and (max-width:1199px) and (min-width:960px){
+                
+                #item_2{
+                    width:960px;
+                    background-color: lightgreen;
+                }
+                
+            }/*end*/
+        
+        </style>
+        <style>
+        
+            @media all and (max-width:959px) and (min-width:760px){
+                
+                #item_3{
+                    height:400px;
+                    background-color: salmon;
+                }
+                
+            }/*end*/
+        
+        </style>
+        <style>
+        
+            @media all and (max-width:759px) and (min-width:360px){
+                
+                #item_4{
+                    width:100%;
+                    height:500px;
+                    background-color: dodgerblue;
+                  
+                }
+                
+            }/*end*/
+        
+        </style>
+		
+	</head>
+
+	<body>
+	
+	    <div class="content" id="item_1">
+	        ~1200사이즈 배경색은 노란색
+	    </div>
+	    <div class="content" id="item_2">
+	        박스 크기가 변함 
+	    </div>
+	    <div class="content" id="item_3">
+	        박스 세로 길어짐 
+	    </div>
+	    <div class="content" id="item_4">
+	        박스 가로 가득 
+	    </div>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

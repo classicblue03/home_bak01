@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>계산기</title>
+  </head>
+  <body>
+    <input type="number" id="inp1" />
+    <input type="number" id="inp2" />
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+    <button id="multi">*</button>
+    <button id="div">/</button>
+    <button id="mod">%</button>
+    <button id="clear">clear</button>
+    <input id="res" type="number" readonly />
+
+    <script>
+    let inp1 = document.getElementById('inp1');
+    let inp2 = document.getElementById('inp2');
+    let res = document.getElementById('res');
+    let plus = document.getElementById('plus');
+    let minus = document.getElementById('minus');
+    let multi = document.getElementById('multi');
+    let div = document.getElementById('div');
+    let mod = document.getElementById('mod');
+    let clear = document.getElementById('clear');
+    let num1, num2, result;
+    
+
+
+      //더하기
+    function sum(){
+        num1 = Number(inp1.value);
+        num2 = Number(inp2.value);
+        result =  num1 + num2;
+        res.value = result;
+    }
+      plus.onclick = function(){ //자바스크립트에서는 클릭이벤트 onclick
+        sum();
+    }
+
+
+    function subtract(){
+        num1 = Number(inp1.value);
+        num2 = Number(inp2.value);
+        result = num1 - num2;
+        res.value = result;
+    }
+    minus.onclick = subtract;
+
+
+    function multiple(){
+        num1 = Number(inp1.value);
+        num2 = Number(inp2.value);
+        result = num1 * num2;
+        res.value = result;
+    }
+    multi.onclick = multiple;
+
+
+    function divide(){
+        num1 = Number(inp1.value);
+        num2 = Number(inp2.value);
+        result = num1 / num2;
+        res.value = result;
+    }
+    div.onclick = divide;
+
+    function modify(){
+        num1 = Number(inp1.value);
+        num2 = Number(inp2.value);
+        result = num1 % num2;
+        res.value = result;
+    }
+    mod.onclick = modify;
+
+
+    function dataClear(){
+        inp1.value ='';
+        inp2.value ='';
+        res.value ='';
+    }
+    clear.onclick = dataClear;
+
+
+    </script>
+  </body>
+</html>

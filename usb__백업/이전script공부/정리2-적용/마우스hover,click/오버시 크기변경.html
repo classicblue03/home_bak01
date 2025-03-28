@@ -1,0 +1,95 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>hover</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<style>
+            
+            *{
+                margin: 0; padding: 0;
+            }
+            #box{
+                width: 300px;
+                height: 300px;
+                background-color: tan;
+                margin: 50px auto;
+            }
+            #box:hover{
+                background-color: salmon;
+                color: gold;
+                width: 500px;
+            }
+            
+            /*hover이벤트 적용할때
+            =>객체에 마우스를 올리면 객체가 다른스타일로변경 식으로 적어주면 됨 */
+            
+            #box_2{
+                width: 1000px;
+                height: 400px;
+                background-color: teal;
+                border: 5px solid black;
+            }
+            #in_box{
+                width: 500px;
+                height: 200px;
+                background-color: cadetblue;
+                margin: 50px auto;
+                font-size: 25px;
+                color: white;
+            }
+            
+           /* *부모한테 마우스를 올리면 자식의 스타일 변경
+            =>부모:hover>자식{
+                스타일변경
+            }*/
+            
+            #box_2:hover>#in_box{
+                background-color: coral;
+            }
+            #box_2>#in_box:hover{
+                background-color: crimson;
+            }
+            /*=>부모안쪽 자식한테 마우스 올리면 자식색상 변경 */
+            
+            #box_3{
+                width: 300px;
+                height: 300px;
+                background-color: crimson;
+                margin: 500px auto;
+            }
+            #box_3:hover{
+                width: 600px;
+                height: 600px;
+                border: 10px solid red;
+                background-color: coral;
+                border-radius: 50%;
+            }
+            
+            
+            
+        
+        </style>
+	</head>
+
+	<body>
+	<!--hover
+	=>마우스를 올렸을때 내가 원하는 명령어 실행 = 이벤트
+	
+    *이벤트
+    =>사용자가 어떠한 행동을 했을때 다른 결과물로 표현해줌 -->
+    
+    <div id="box">
+        <h3>마우스 올리면 배경색 변경</h3>
+    </div>
+    
+    <div id="box_2">
+        <div id="in_box">부모에게 마우스 올리면<br/>자식 색상 변경</div>
+    </div>
+    
+    <div id="box_3"></div>
+	    
+
+	</body>
+</html>

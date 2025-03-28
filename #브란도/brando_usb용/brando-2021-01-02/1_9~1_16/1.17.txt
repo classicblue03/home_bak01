@@ -1,0 +1,14 @@
+flex
+
+container(ul)
+row, column
+nowrap,wrap
+
+item(li) 텍스트만 적으면 안되고, 태그로 감싸야함 <span>8</span>
+grow,shrink,basis = 약식표현가능
+grow늘리기
+shrink줄이기
+
+margin
+
+

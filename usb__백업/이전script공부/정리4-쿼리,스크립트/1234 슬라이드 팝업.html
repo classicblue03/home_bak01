@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <title>1234</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <style>
+    * {margin: 0;padding: 0;}
+    ul,li {list-style: none;}
+    #wrap {width: 600px;height: 700px;margin: 0 auto;border: 10px solid black;}
+
+    #btn_wrap {width: 600px;height: 100px;line-height: 100px;font-size: 30px;text-align: center;}
+    .btn {float: left;width: 25%;height: 100%;}
+
+    #cont_wrap {position: relative;width: 100%;height: 600px;font-size: 50px;line-height: 600px;text-align: center;}
+    .cont {display: none;position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <ul id="btn_wrap">
+      <li class="btn">1</li>
+      <li class="btn">2</li>
+      <li class="btn">3</li>
+      <li class="btn">4</li>
+    </ul>
+    <div id="cont_wrap">
+      <div class="cont">cont1</div>
+      <div class="cont">cont2</div>
+      <div class="cont">cont3</div>
+      <div class="cont">cont4</div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      var bg = ['aliceblue', 'antiquewhite', 'azure', 'lavender'];
+
+      $('.cont').css({
+        backgroundColor: function(index) {
+          return bg[index];
+        }
+      }).each(function(index) {
+        $(this).attr('data-index', index);
+      }).first().css({
+        display: 'block'
+      });
+
+
+      $('.btn').css({
+        backgroundColor: function(index) {
+          return bg[index];
+        }
+      }).each(function(index) {
+        $(this).attr('data-index', index);
+      }).click(function() {
+        var i = $(this).attr('data-index');
+          $('.cont[data-index!=' + i + ']').fadeOut(500);
+          $('.cont[data-index=' + i + ']').slideDown(500);
+        });
+
+    }); //end
+  </script>
+
+</body>
+</html>

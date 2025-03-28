@@ -1,0 +1,123 @@
+0520 브란도 재정리
+
+header (스크롤시 색상변경, addClass추가예정)
+w100% h75px
+
+wrap
+w1170 h100% margin 0 auto
+
+gap
+h 100% margin 0 15
+
+container
+w100% h100%
+
+===================
+섹션01 ARE YOU HUNGRY
+w100% h=win높이(풀스크린)
+
+wrap
+w100%
+
+gap
+w100%
+
+container
+w100%
+
+
+===================
+섹션02~04 동일! (아침,점심,저녁)
+w100% h=win높이(풀스크린)
+
+wrap
+w1170 margin 0 auto
+
+gap
+margin 0 15
+
+container
+w100% (실제 content 1140)
+
+===================
+섹션5 Discover story(좌:이미지, 우:텍스트)
+w100% h=win높이(전체배경), 패딩 130 0
+
+wrap
+w1170 margin 0 auto
+
+gap
+w100%
+
+container
+임시h 860
+
+===================
+섹션6 메뉴판3개
+w100% h740 padding 0
+
+wrap
+w100% h740 padding 0
+
+gap
+w100% h740 padding 0
+
+container
+w100% h740 padding 0
+content갤러리에서 margin 0 15 (오버시 메뉴판 때문인지??)
+
+===================
+섹션7 셰프4명
+w100% h-auto 패딩 130 0 0 0
+
+wrap
+w100%
+
+gap
+w100%
+
+container
+w100% 임시h 782
+content갤러리에서 margin 0 15 (오버시 소개텍스트 때문인지??)
+
+===================
+섹션8 스페셜디쉬(접시3개)
+w100% 패딩 130 0 (배경fixed)
+
+wrap
+w1170 margin 0 auto
+
+gap
+w100%
+
+container
+w100% 임시h 582
+content갤러리에서 margin 0 15(이건왜?? scale으로 커지기는 함)
+
+===================
+섹션9 푸드갤러리(ㅋㅋ)
+w100% 패딩 130 0 0 0
+
+wrap
+w100%
+
+gap
+w100%
+
+container
+w100% 임시h 932
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수2</title>
+  </head>
+  <body>
+    <pre>
+        1. 모듈화(묶음) 프로그램
+        2. 입력인자(매개변수)와 출력(반환 return)으로 구성되어있다
+        3. 사용자정의함수(), 내장함수()
+        4. 인자(매개변수)에는 갯수가 제한이 없음 ,로 구분.
+        5. 반환(return)은 함수가 결괏값으로 출력해주는 값
+        6. 반환(return)후에는 함수가 종료된다
+    </pre>
+    <hr />
+
+    <script>
+      let num1, num2, num3, num4, num5;
+      (num1 = 10), (num2 = 20), (num3 = 30), (num4 = 40);
+      let res1 = num1 + num2;
+
+      // document.write(res1 + "<br>");
+
+      // let res2 = num3 + num4;
+      // document.write(res2 + "<br>");
+
+      // let res3 = num1 + num3;
+      // document.write(res3 + "<br>");
+      function sum(num1, num2) {
+        let res = num1 + num2;
+        return res;
+      }
+
+      document.write(sum(10, 20)+"<br>");
+      document.write(sum(30, 40)+"<br>");
+      document.write(sum(10, 30)+"<br>");
+      document.write(sum(20, 40)+"<br>");
+
+      document.write("<hr>");
+
+      //자바스크립트 선택자
+
+    </script>
+  </body>
+</html>

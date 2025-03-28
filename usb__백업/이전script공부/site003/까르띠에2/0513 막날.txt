@@ -1,0 +1,41 @@
+0513 막날
+
+
+1 이전과 같이 제이쿼리 UI 플러그인을 배웠다.
+
+
+2 Bxslider 연동파일 다운해서 사용해야함\
+
+
+3 컬러박스
+http://www.jacklmoore.com/colorbox/
+
+
+4 
+컨셉,기획의도,기획서, ui구조&ui디자인 ui ux
+,브랜드스토리,문제점
+
+스타일시트 중요 ㅠㅠ
+영상컨텐츠(에펙,프리미어)
+
+
+
+5 https://www.dothome.co.kr/index.php 닷홈 300mb무료
+- 무료호스팅 - FTP (게정 3개까지가능, 최대900MB까지 가능)
+1 웹이력서, 2 이력서에 연동시킬 소스 3그외..
+
+
+
+6 참고사이트!!
+-디비컷 https://www.dbcut.com/bbs/index.php (F12보면서 만들기)
+-미디어쿼리즈 MEDIA QUERIES	.es
+-https://jqmgallery.com/ 제이쿼리모바일
+
+
+-한국은 웹표준으로가는 추세, 외국사이트를 참조할것
+-무료템플릿 오픈소스를 참고하여 만들것.
+-ybmCC
+
+
+
+

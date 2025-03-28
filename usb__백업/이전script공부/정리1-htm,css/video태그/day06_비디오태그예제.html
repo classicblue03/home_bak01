@@ -1,0 +1,145 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		
+		<style>
+            
+            *{margin: 0; padding: 0;}
+            ul,li{list-style: none;}
+            
+            #wrap{
+                width: 100%;
+                margin: 0 auto;
+            }
+            
+            header{
+                width: 100%;
+                height: 100px;
+                float: left;
+                position: fixed;
+            }
+            
+            #in_header{
+                width: 1200px;
+                height: 100%;
+                margin: 0 auto;
+            }
+            
+            #logo{
+                width: 10%;
+                height: 100%;
+                float: left;
+                color: white;
+            }
+            
+            #menu{
+                width: 60%;
+                float: right;
+            }
+            
+            #menu li{
+                width: 20%;
+                float: left;
+                color: white;
+            }
+            
+            /*header end*/
+            
+            #section_1{
+                width: 100%;
+                height: 800px;
+                background-color: lightgray;
+            }
+            
+            #section_1 video{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            #text_box{
+                position: absolute;
+                top: 400px;
+                left: 1200px;
+                color: white;
+                text-align: center;
+            }
+            
+            
+            /*section_1 end*/
+            
+            #section_2{
+                width: 100%;
+                height: 700px;
+                background-color: lightblue;
+                float: left;
+            }
+            
+            #container{
+                width: 1200px;
+                height: 500px;
+                background-color: tan;
+                margin: 100px auto;
+                
+            }
+            
+            .con{
+                width: 380px;
+                height: 100%;
+                background-color: salmon;
+                margin-right: 30px;
+                float: left;
+            }
+            
+            .con:last-child{
+                margin-right: 0;
+            }
+            
+            /*section_2 end*/
+            
+        </style>
+		
+	</head>
+
+	<body>
+	    
+	    <div id="wrap">
+	        <header>
+	            <div id="in_header">
+	                <div id="logo">logo</div>
+	                <ul id="menu">
+	                    <li>menu</li>
+	                    <li>menu</li>
+	                    <li>menu</li>
+	                    <li>menu</li>
+	                    <li>menu</li>
+	                </ul>
+	            </div>
+	        </header>
+	        <!--header end-->
+	        <section id="section_1">
+                <video autoplay muted>
+                    <source src="video/vid1.mp4" type="video/mp4" />
+                </video>
+                <div id="text_box">
+                <h1>HTML5 Video Tag</h1>
+                <h4>about HTML5 Video Tag</h4>
+	            </div>
+	        </section>
+	        <!--section_1 end-->
+	        <section id="section_2">
+	            <div id="container">
+	                <div class="con"></div>
+	                <div class="con"></div>
+	                <div class="con"></div>
+	            </div>
+	        </section>
+	        <!--section_2 end-->
+	    </div>
+        
+	</body>
+</html>
